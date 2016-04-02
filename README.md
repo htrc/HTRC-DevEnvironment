@@ -23,3 +23,9 @@ This Vagrant configuration uses [Ansible](https://www.ansible.com) provisioner. 
 # Configuration
 
 ```settings.yml``` can be used to customize synced directories and port forwarding.
+
+# TODO
+
+- Login to HTRC Docker registry during provisioning
+- Service configurations specific to Vagrant development environment
+- Tutorial on how to use the development environment
