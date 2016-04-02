@@ -22,4 +22,4 @@ This Vagrant configuration uses [Ansible](https://www.ansible.com) provisioner. 
 
 # Configuration
 
-```settings.yml``` can be used customize synced directories and port forwarding.
+```settings.yml``` can be used to customize synced directories and port forwarding.
