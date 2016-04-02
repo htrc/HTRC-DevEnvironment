@@ -19,3 +19,7 @@ $ vagrant plugin install vagrant-hostsupdater
 ## Ansible
 
 This Vagrant configuration uses [Ansible](https://www.ansible.com) provisioner. Please follow installation instructions for your host operating system from [here](http://docs.ansible.com/ansible/intro_installation.html).
+
+# Configuration
+
+```settings.yml``` can be used customize synced directories and port forwarding.
