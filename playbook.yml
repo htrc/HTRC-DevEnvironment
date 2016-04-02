@@ -1,0 +1,51 @@
+---
+- hosts: all
+  become: yes
+  become_method: sudo
+  remote_user: vagrant
+  tasks:
+    - name: Update apt cache
+      apt: update_cache=yes
+    - name: Install apt https transport
+      apt: name=apt-transport-https state=present
+    - name: Install ca certs
+      apt: name=ca-certificates state=present
+    - name: Add Docker GPG key
+      apt_key: keyserver=hkp://p80.pool.sks-keyservers.net:80 id=58118E89F3A912897C070ADBF76221572C52609D
+    - name: Add Docker apt repository
+      apt_repository: repo='deb https://apt.dockerproject.org/repo ubuntu-wily main' state=present
+    - name: Update apt cache
+      apt: update_cache=yes
+    - name: Purge lxc-docker
+      apt: name='lxc-docker' state=absent purge=yes
+    - name: Verify apt is pulling from right repo
+      command: apt-cache policy docker-engine
+    - name: Install Docker
+      apt: name=docker-engine state=present
+    - name: Start Docker daemon
+      service: name=docker state=started
+    - name: Configure Docker to start on boot
+      command: systemctl enable docker
+    - name: Install pip
+      apt: name='python-pip' state=present
+    - name: Install docker-compose
+      pip: name='docker-compose'
+    - name: Docker group
+      user: name=vagrant groups=docker append=yes
+    - name: Install docker-py
+      pip: state=present name="docker-py"
+    - name: Run cAdvisor docker container
+      docker:
+        name: cadvisor
+        image: google/cadvisor:latest
+        state: started
+        ports:
+          - "8080:8080"
+        volumes:
+          - "/:/rootfs:ro"
+          - "/var/run:/var/run:rw"
+          - "/sys:/sys:ro"
+          - "/var/lib/docker:/var/lib/docker:ro"
+          - "/cgroup:/cgroup:ro"
+        privileged: yes
+        restart_policy: always
