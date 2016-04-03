@@ -3,6 +3,11 @@
   become: yes
   become_method: sudo
   remote_user: vagrant
+  roles:
+    - role: ansiblebit.oracle-java
+      oracle_java_set_as_default: yes
+    - role: milinda.sbt
+    - role: tecris.maven
   tasks:
     - name: Update apt cache
       apt: update_cache=yes

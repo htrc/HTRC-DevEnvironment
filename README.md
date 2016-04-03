@@ -20,6 +20,27 @@ $ vagrant plugin install vagrant-hostsupdater
 
 This Vagrant configuration uses [Ansible](https://www.ansible.com) provisioner. Please follow installation instructions for your host operating system from [here](http://docs.ansible.com/ansible/intro_installation.html).
 
+Following Ansible roles are used in the provisioning script and those roles can be installed using ```ansible-galaxy```.
+
+### [ansiblebit.oracle-java](https://galaxy.ansible.com/detail#/role/3375)
+
+```
+$ sudo ansible-galaxy install ansiblebit.oracle-java
+```
+
+### [milinda.sbt](https://galaxy.ansible.com/milinda/sbt/)
+
+```
+$ sudo ansible-galaxy install milinda.sbt
+```
+
+### [tecris.maven](https://galaxy.ansible.com/tecris/maven/)
+
+```
+$ sudo ansible-galaxy install tecris.maven
+```
+
+
 # Configuration
 
 ```settings.yml``` can be used to customize synced directories and port forwarding.
