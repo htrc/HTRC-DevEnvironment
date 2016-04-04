@@ -5,7 +5,7 @@ require 'yaml'
 settings = YAML.load_file 'settings.yml'
 
 Vagrant.configure(2) do |config|
-  config.vm.box = "ubuntu/wily64"
+  config.vm.box = "boxcutter/centos72"
 
   config.vm.box_check_update = true
 
@@ -15,7 +15,7 @@ Vagrant.configure(2) do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.network "private_network", ip: "192.168.10.10"
   config.vm.hostname = "htrc-devenv"
 
   settings["synced"].each do |s|
@@ -32,4 +32,3 @@ Vagrant.configure(2) do |config|
     ansible.playbook = "playbook.yml"
   end
 end
-

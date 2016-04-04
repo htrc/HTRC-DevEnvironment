@@ -50,3 +50,5 @@ $ sudo ansible-galaxy install tecris.maven
 - Login to HTRC Docker registry during provisioning
 - Service configurations specific to Vagrant development environment
 - Tutorial on how to use the development environment
+- Improve Ansible roles to work on Redhat based operating systems
+- Convert Docker installation to a Ansible role

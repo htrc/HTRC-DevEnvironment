@@ -1,0 +1,24 @@
+---
+- name: Install Maven download directory
+  tags: maven
+  file:
+    state=directory
+    owner=0
+    group=0
+    mode=0755
+    dest={{ ansible_data_path }}
+
+- name: Download Maven archive
+  get_url: dest={{ ansible_data_path }}/{{ maven_archive_filename }} url={{ maven_mirror }}/maven-{{ maven_version_major }}/{{ maven_version }}/binaries/{{ maven_archive_filename }} owner=0 group=0 mode=0644 checksum="md5:{{ maven_md5 }}"
+
+- name: Make sure Maven installation directory is present
+  file: state=directory owner=0 group=0 mode=0755 dest={{ maven_install_dir }}
+
+- name: Install Maven
+  unarchive: src={{ ansible_data_path }}/{{ maven_archive_filename }} dest={{ maven_install_dir }} copy=no
+
+- name: Make sure Maven bin directory is present
+  file: state=directory owner=0 group=0 mode=0755 dest={{ maven_bin_path }}
+
+- name: Install Maven binary
+  file: state=link force=true src={{ maven_install_dir }}/apache-maven-{{ maven_version }}/bin/mvn dest={{ maven_bin_path }}/mvn
