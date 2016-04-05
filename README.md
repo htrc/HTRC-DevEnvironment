@@ -1,3 +1,4 @@
+
 # HTRC-DevEnvironment
 
 [Vagrant](https://www.vagrantup.com) based development environment for HTRC.
@@ -15,6 +16,16 @@ Vagrant::Hostupdater can be found [here](vagrant host updater). Install hostupda
 ```
 $ vagrant plugin install vagrant-hostsupdater
 ```
+
+## vagrant-vbguest plugin
+
+This plugin automatically installs the host's VirtualBox Guest Additions on the guest system if guest additions are not present in the guest system. Install the plugin using following command:
+
+```
+$ vagrant plugin install vagrant-vbguest
+```
+
+**Note: This plugin is required because VirtualBox guest additions get de-activated when kernel is updated before a restart of Vagrant VM.**
 
 ## Ansible
 
