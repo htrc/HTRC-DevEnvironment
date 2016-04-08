@@ -25,7 +25,7 @@ This plugin automatically installs the host's VirtualBox Guest Additions on the 
 $ vagrant plugin install vagrant-vbguest
 ```
 
-**Note: This plugin is required because VirtualBox guest additions get de-activated when kernel is updated before a restart of Vagrant VM.**
+**Note: This plugin is required because VirtualBox guest additions get de-activated when kernel is updated before a restart of the Vagrant VM.**
 
 ## Ansible
 

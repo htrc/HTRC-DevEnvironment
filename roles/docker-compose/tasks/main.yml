@@ -1,0 +1,9 @@
+---
+- name: Install epel-release
+  yum: name=epel-release state=present
+
+- name: Install pip
+  yum: name=python-pip state=present
+
+- name: Install docker-compose
+  pip: name=docker-compose state=present

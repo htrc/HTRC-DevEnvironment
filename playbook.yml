@@ -4,8 +4,7 @@
   become_method: sudo
   remote_user: vagrant
   roles:
-    - docker
+    - docker-compose
     - jdk
     - maven
     - sbt
-    - vbguest
