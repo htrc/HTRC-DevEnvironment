@@ -1,6 +1,6 @@
 ---
 - name: Install SBT yum repository
-  get_url: url=https://bintray.com/sbt/rpm/rpm dest=/etc/yum.repos.d/bintray-sbt-rpm.repo
+  apt_repository: repo='deb https://dl.bintray.com/sbt/debian /' state=present
 
 - name: Install SBT
-  yum: name=sbt state=present
+  apt: name=sbt state=present update_cache=yes force=yes

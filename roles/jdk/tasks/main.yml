@@ -1,20 +1,9 @@
 ---
-- name: Download Oracle JDK  RPM
-  shell:
-    "curl -L  -H 'Cookie:oraclelicense=accept-securebackup-cookie' -o {{ oracle_java_dir_source }}/{{ oracle_java_rpm_filename }} {{ oracle_java_rpm_url }}"
-  args:
-    creates: "{{ oracle_java_dir_source }}/{{ oracle_java_rpm_filename }}"
+- name: Add WebUpd8 repo
+  apt_repository: repo='ppa:webupd8team/java' state=present
 
-- name: Install Oracle JDK from RPM
-  yum: name="{{ oracle_java_dir_source }}/{{ oracle_java_rpm_filename }}" state=present
+- name: Automatically select the Oracle License
+  shell: echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
 
-- name: Update alternatives to use Oracle JDK
-  alternatives:
-    name="{{ item.exe }}"
-    link="/usr/bin/{{ item.exe }}"
-    path="{{ item.path }}/{{ item.exe }}"
-  with_items:
-    - { path: "{{ oracle_java_home }}/jre/bin", exe: 'java' }
-    - { path: "{{ oracle_java_home }}/jre/bin", exe: 'keytool' }
-    - { path: "{{ oracle_java_home }}/bin", exe: 'javac' }
-    - { path: "{{ oracle_java_home }}/bin", exe: 'javadoc' }
+- name: Install Java8
+  apt: name=oracle-java8-installer state=present update_cache=yes
