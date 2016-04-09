@@ -31,4 +31,10 @@ Vagrant.configure(2) do |config|
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "playbook.yml"
   end
+
+  # Setting up environment variables required by docker-compose.
+  config.vm.provision :shell, inline: "echo 'export HTRC_CONF=/vagrant/HTRC-Configuration' >> /home/vagrant/.bashrc "
+  config.vm.provision :shell, inline: "echo 'export PORTAL_VERSION=3.2.0-SNAPSHOT' >> /home/vagrant/.bashrc "
+  config.vm.provision :shell, inline: "echo 'export IDP_VERSION=1.1.1-SNAPSHOT' >> /home/vagrant/.bashrc "
+
 end
