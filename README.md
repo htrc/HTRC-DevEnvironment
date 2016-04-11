@@ -32,6 +32,10 @@ $ vagrant plugin install vagrant-vbguest
 This Vagrant configuration uses [Ansible](https://www.ansible.com) provisioner. Please follow installation instructions for your host operating system from [here](http://docs.ansible.com/ansible/intro_installation.html).
 
 
+# How To
+
+
+
 # Configuration
 
 ```settings.yml``` can be used to customize synced directories and port forwarding.
