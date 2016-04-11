@@ -34,7 +34,15 @@ This Vagrant configuration uses [Ansible](https://www.ansible.com) provisioner. 
 
 # How To
 
+First clone the repository using following command to include submodules. Configurations for the local development envioronment is coming from HTRC-Configuration project's 'local' branch. We have added it as a git submodule to this repository.
 
+```
+$ git clone --recursive https://github.com/htrc/HTRC-DevEnvironment.git
+```
+
+Then you can run ```vagrant up``` to create an instance of HTRC development environment locally and use ```vagrant ssh``` to log into the VM.
+
+We have created a Docker Compose script which runs IDP and Portal with required dependencies and you can find it at ```/vagrant/HTRC-Configuration/docker/idp+portal``` directory within the VM. Running ```docker-compose up``` while you in ```idp+portal``` directory will spawn Portal and IDP instances and setup Nginx to serve Portal and IDP via ```htrc-devenv``` domain from the Vagrant host (We use Vagrant host-updater plugin to configure hostnames in your machine). HTRC Portal will be available at [https://htrc-devenv:1143](https://htrc-devenv:1143) and IDP will be available at [https://htrc-devenv:1043](https://htrc-devenv:1043).
 
 # Configuration
 
