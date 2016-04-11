@@ -48,10 +48,11 @@ We have created a Docker Compose script which runs IDP and Portal with required 
 
 ```settings.yml``` can be used to customize synced directories and port forwarding.
 
+# Notes
+
+* Docker Hub is used to host Docker images
+* Current version uses Ubuntu as VM operating system due to an issue with CentOS and Vagrant integration.
+
 # TODO
 
-- Login to HTRC Docker registry during provisioning
-- Service configurations specific to Vagrant development environment
-- Tutorial on how to use the development environment
-- Improve Ansible roles to work on Redhat based operating systems
-- Convert Docker installation to a Ansible role
+- Get CentOS based development environment working.
