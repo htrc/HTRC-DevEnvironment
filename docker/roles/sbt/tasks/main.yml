@@ -1,6 +1,0 @@
----
-- name: Install SBT yum repository
-  apt_repository: repo='deb https://dl.bintray.com/sbt/debian /' state=present
-
-- name: Install SBT
-  apt: name=sbt state=present update_cache=yes force=yes

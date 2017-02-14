@@ -1,4 +1,0 @@
-[submodule "HTRC-Configuration"]
-	path = HTRC-Configuration
-	url = https://github.com/htrc/HTRC-Configuration.git
-	branch = local
