@@ -156,6 +156,7 @@
         "scripts/common/virtualbox.sh",
         "scripts/centos/vmware.sh",
         "scripts/common/parallels.sh",
+        "scripts/htrc/install-dependencies.sh",
         "scripts/centos/cleanup.sh",
         "scripts/common/minimize.sh"
       ],
