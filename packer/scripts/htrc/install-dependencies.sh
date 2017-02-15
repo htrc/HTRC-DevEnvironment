@@ -20,3 +20,4 @@ yum -y install epel-release
 yum -y install redis
 yum -y install tomcat
 yum -y install nginx
+yum -y install unzip
