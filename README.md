@@ -34,7 +34,7 @@ This Vagrant configuration uses [Ansible](https://www.ansible.com) provisioner. 
 
 # How To
 
-First clone the repository using following command to include submodules. Configurations for the local development envioronment is coming from HTRC-Configuration project's 'local' branch. We have added it as a git submodule to this repository.
+First clone the repository using following command to include submodules. Configurations for the local development environment is coming from HTRC-Configuration project's 'local' branch. We have added it as a git submodule to this repository.
 
 ```
 $ git clone --recursive https://github.com/htrc/HTRC-DevEnvironment.git
@@ -56,3 +56,15 @@ We have created a Docker Compose script which runs IDP and Portal with required 
 # TODO
 
 - Get CentOS based development environment working.
+
+# CA and certs generation - https://jamielinux.com/docs/openssl-certificate-authority/create-the-root-pair.html
+
+# Building and registering vagrant box
+`cd packer`
+`packer build -only=virtualbox-iso centos-7.3-x86_64.json`
+`vagrant box add htrc/devenv builds/centos-7.3.virtualbox.box`
+`cd ..`
+`vagrant init htrc/devenv`
+`vagrant up`
+
+`vagrant destroy`
