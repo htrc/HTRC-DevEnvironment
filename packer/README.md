@@ -10,7 +10,7 @@ Set of configurations and provisioning scripts for [Packer](https://www.packer.i
 $ packer build -only=virtualbox-iso centos-7.3=x86_64.json
 ```
 
-# Addign OpenLDAP
+# Adding OpenLDAP
 
 There are some unresolved issues in LDAP provisioning scripts. So we are postponing support for OpenLDAP until those issues are resolved. When the issues are fixed, use following provisioning blocks to clode openLDAP repo and copy it to VM.
 
