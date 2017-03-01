@@ -4,6 +4,12 @@ wget -P /tmp/ http://analytics.hathitrust.org/files/wso2is-${WSO2IS_VERSION}.zip
 unzip /tmp/wso2is-${WSO2IS_VERSION}.zip -d /usr/share
 ln -s /usr/share/wso2is-${WSO2IS_VERSION} /usr/share/wso2is
 
+# Copying Registry Extension API to WSO2IS using gradle
+cd /opt/regx
+gradle copyWar
+cd
+rm -r /opt/regx
+
 cat > /etc/default/wso2is <<EOF
 JAVA_HOME=/usr/java/default
 CARBON_HOME=/usr/share/wso2is

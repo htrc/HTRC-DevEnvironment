@@ -18,7 +18,10 @@ yum -y install mysql-server
 
 yum -y install epel-release
 yum -y install redis
+
 yum -y install tomcat
+systemctl enable tomcat
+
 yum -y install nginx
 yum -y install unzip
 yum -y install openldap-servers openldap-clients
@@ -30,5 +33,8 @@ easy_install pip
 yum -y install mlocate
 yum -y install openssl-devel
 yum -y install openssl-perl
+
+curl -s "https://get.sdkman.io" | bash
+sdk install gradle 3.4
 
 updatedb

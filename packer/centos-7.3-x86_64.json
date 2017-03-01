@@ -156,6 +156,26 @@
       "type": "file"
     },
     {
+      "destination": "/etc/nginx/sites-available",
+      "source": "configurations/nginx/sites-available/",
+      "type": "file"
+    },
+    {
+      "destination": "/etc/nginx/",
+      "source": "configurations/nginx/nginx.conf",
+      "type": "file"
+    },
+    {
+      "destination": "/opt/dcapi/",
+      "source": "configurations/dcapi/build.gradle",
+      "type": "file"
+    },
+    {
+      "destination": "/opt/regx/",
+      "source": "configurations/regx/build.gradle",
+      "type": "file"
+    },
+    {
       "destination": "/etc/htrc/configurations/",
       "source": "configurations/dcapi/sites.xml",
       "type": "file"
@@ -178,6 +198,7 @@
         "scripts/centos/vmware.sh",
         "scripts/common/parallels.sh",
         "scripts/htrc/install-dependencies.sh",
+        "scripts/htrc/nginx.sh"
         "scripts/centos/cleanup.sh",
         "scripts/common/minimize.sh"
       ],
