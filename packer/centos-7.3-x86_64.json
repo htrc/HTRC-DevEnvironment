@@ -198,7 +198,10 @@
         "scripts/centos/vmware.sh",
         "scripts/common/parallels.sh",
         "scripts/htrc/install-dependencies.sh",
-        "scripts/htrc/nginx.sh"
+        "scripts/htrc/gradle.sh",
+        "scripts/htrc/nginx.sh",
+        "scripts/htrc/wso2is.sh",
+        "scripts/htrc/dcapi.sh",
         "scripts/centos/cleanup.sh",
         "scripts/common/minimize.sh"
       ],

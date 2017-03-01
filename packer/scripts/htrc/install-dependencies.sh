@@ -24,6 +24,7 @@ systemctl enable tomcat
 
 yum -y install nginx
 yum -y install unzip
+yum -y install zip
 yum -y install openldap-servers openldap-clients
 yum -y install svn
 yum -y install git
@@ -34,7 +35,5 @@ yum -y install mlocate
 yum -y install openssl-devel
 yum -y install openssl-perl
 
-curl -s "https://get.sdkman.io" | bash
-sdk install gradle 3.4
 
 updatedb
