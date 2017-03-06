@@ -8,7 +8,7 @@ cd /opt/dcapi
  mysql htrcvirtdb --user=root  --password=y*MS2eb;&!&%p < dc_schema.sql
 
 # Copy the DC API to tomcapt webapps directory
-gradle copyWar
+/opt/gradle/latest/bin/gradle copyWar
 
 # Deleting scripts used for provisioning
 rm -r /opt/dcapi
