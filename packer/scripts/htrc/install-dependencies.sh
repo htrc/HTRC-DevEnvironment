@@ -16,12 +16,23 @@ rm /tmp/mysql57-community-release-el7-9.noarch.rpm
 
 yum -y install mysql-server
 
+systemctl daemon-reload
+systemctl enable mysqld
+systemctl start mysqld
+
+systemctl status mysqld.service
+
+echo 'Finally the root password needed for mysql to start'
+echo 'oldpass will contain the temporary password value'
+echo 'newpass must be written here and must meet Mysql Password Policies'
+oldpass=$( grep 'temporary.*root@localhost' /var/log/mysqld.log |
+        tail -n 1 |  sed 's/.*root@localhost: //' )
+newpass="y*MS2eb;&!&%p"
+mysqladmin -u root --password=${oldpass} password $newpass
+
 yum -y install epel-release
 yum -y install redis
-
 yum -y install tomcat
-systemctl enable tomcat
-
 yum -y install nginx
 yum -y install unzip
 yum -y install zip
@@ -35,5 +46,9 @@ yum -y install mlocate
 yum -y install openssl-devel
 yum -y install openssl-perl
 
+systemctl daemon-reload
+systemctl enable tomcat
+systemctl enable mysqld
+systemctl enable nginx
 
 updatedb
