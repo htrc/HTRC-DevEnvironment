@@ -4,7 +4,7 @@
 cd /opt/dcapi
 
 # Create the MySQL database
- mysql --user=root  --password=root -e "CREATE DATABASE IF NOT EXISTS `htrcvirtdb`;"
+ mysql --user=root  --password=y*MS2eb;&!&%p -e "CREATE DATABASE IF NOT EXISTS `htrcvirtdb`;"
  mysql htrcvirtdb --user=root  --password=y*MS2eb;&!&%p < dc_schema.sql
 
 # Copy the DC API to tomcapt webapps directory
