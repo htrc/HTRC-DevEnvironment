@@ -6,6 +6,9 @@ require 'fileutils'
 RESOURCE_DIR = ".sources"
 DC_SRC = "HTRC-DataCapsules"
 DC_GIT_REPO = "https://github.com/htrc/HTRC-DataCapsules.git"
+DOWNLOADS_DIR = ".devenv_downloads"
+WSO2IS_ZIP = "wso2is-5.3.0.zip"
+HTRC_FILES = "http://analytics.hathitrust.org/files"
 
 Vagrant.configure("2") do |config|
   config.vm.box = "centos/7"
@@ -16,14 +19,30 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder RESOURCE_DIR, "/devenv_sources"
   config.vm.synced_folder "configurations", "/devenv_configurations"
   config.vm.synced_folder "certs", "/devenv_certs"
+  config.vm.synced_folder "~/#{DOWNLOADS_DIR}", "/devenv_downloads"
 
   config.trigger.before :up do
+    # Create a directory in home directory to hold downloads
+    devenv_downloads_dir = File.join(File.expand_path('~'), DOWNLOADS_DIR)
+    unless File.exists?(devenv_downloads_dir)
+      FileUtils.mkdir_p(devenv_downloads_dir)
+    end
+
+    # Download WSO2 IS ZIP
+    wso2is_zip = File.join(devenv_downloads_dir, WSO2IS_ZIP)
+    unless File.exists?(wso2is_zip)
+      info "Downloading #{WSO2IS_ZIP}..."
+      file = File.open(wso2is_zip, 'wb' ) do |output|
+        output.write RestClient.get("#{HTRC_FILES}/#{WSO2IS_ZIP}")
+      end
+    end
+
     # Create a directory to hold HTRC git repos
     resources_dir = File.join(File.dirname(__FILE__), RESOURCE_DIR)
     unless File.exists?(resources_dir)
       FileUtils.mkdir_p(resources_dir)
     else
-      info ".resources directory is already there."
+      info "#{RESOURCE_DIR} directory is already there."
     end
 
     # Cloning/updating HTRC-DataCapsules source
