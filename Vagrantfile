@@ -9,12 +9,15 @@ DC_GIT_REPO = "https://github.com/htrc/HTRC-DataCapsules.git"
 DOWNLOADS_DIR = ".devenv_downloads"
 WSO2IS_ZIP = "wso2is-5.3.0.zip"
 HTRC_FILES = "http://analytics.hathitrust.org/files"
+PRIVATE_IP = "192.168.100.100"
 
 Vagrant.configure("2") do |config|
   config.vm.box = "centos/7"
 
   config.vm.box_check_update = false
-  config.vm.network "private_network", ip: "192.168.100.100"
+  config.vm.network "private_network", ip: PRIVATE_IP
+  config.vm.hostname = "devenv-is"
+  config.hostsupdater.aliases = ["devenv-dc", "devenv-agent", "devenv-regx"]
 
   config.vm.synced_folder RESOURCE_DIR, "/devenv_sources"
   config.vm.synced_folder "configurations", "/devenv_configurations"
