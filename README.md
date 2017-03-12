@@ -41,4 +41,6 @@ $ vagrant plugin install vagrant-triggers
 Run ```vagrant up``` to create an instance of HTRC development environment locally and use ```vagrant ssh``` to log into the VM.
 
 
-# CA and certs generation - https://jamielinux.com/docs/openssl-certificate-authority/create-the-root-pair.html
+# CA and certs generation
+
+* https://jamielinux.com/docs/openssl-certificate-authority/create-the-root-pair.html
