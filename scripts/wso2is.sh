@@ -6,7 +6,7 @@ ln -s /usr/share/wso2is-${WSO2IS_VERSION} /usr/share/wso2is
 
 # Copying Registry Extension API to WSO2IS using gradle
 cd /opt/regx
-gradle copyWar
+/opt/gradle/latest/bin/gradle copyWar
 cd
 rm -r /opt/regx
 

@@ -4,11 +4,10 @@
 cd /opt/dcapi
 
 # Create the MySQL database
- mysql --user=root  --password=root -e "CREATE DATABASE IF NOT EXISTS `htrcvirtdb`;"
- mysql htrcvirtdb --user=root  --password=y*MS2eb;&!&%p < dc_schema.sql
+mysql --user=root  --password="y*MS2eb;&!&%p" < dc_schema.sql
 
 # Copy the DC API to tomcapt webapps directory
-gradle copyWar
+/opt/gradle/latest/bin/gradle copyWar
 
 # Deleting scripts used for provisioning
 rm -r /opt/dcapi
