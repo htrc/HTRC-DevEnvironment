@@ -1,5 +1,5 @@
 #!/bin/sh -eux
-
+yum -y install wget
 cd /tmp
 
  wget -P /tmp/ --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/jdk-8u121-linux-x64.rpm"
@@ -52,3 +52,23 @@ systemctl enable mysqld
 systemctl enable nginx
 
 updatedb
+
+
+downloadLatestVersion ()
+{
+  sleep 5s
+  wget -cN http://services.gradle.org/distributions/gradle-${gradle_version}-all.zip
+  sleep 5s
+  unzip -od /opt/gradle gradle-${gradle_version}-all.zip
+  sleep 5s
+  ln -sfn gradle-${gradle_version} /opt/gradle/latest
+  printf "export GRADLE_HOME=/opt/gradle/latest\nexport PATH=\$PATH:\$GRADLE_HOME/bin\nexport GRADLE_INSTALLED_VERSION='${gradle_version}'" > gradle.sh
+  chmod +x gradle.sh
+  mv gradle.sh /etc/profile.d/
+  . /etc/profile.d/gradle.sh
+}
+
+gradle_service_url='http://services.gradle.org/versions/current'
+gradle_version=$(echo $(wget -O - -q -t 1 $gradle_service_url) | grep version | awk '{ print $2 }' | sed s/\"//g | sed s/,//g | sed s/version://g)
+
+downloadLatestVersion

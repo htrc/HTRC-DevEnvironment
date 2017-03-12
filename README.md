@@ -27,6 +27,14 @@ $ vagrant plugin install vagrant-vbguest
 
 **Note: This plugin is required because VirtualBox guest additions get de-activated when kernel is updated before a restart of the Vagrant VM.**
 
+## vagrant-triggers
+
+This plugin is used to perform some tasks before provisioning, after provisioning and after destroying the VM.
+
+```
+$ vagrant plugin install vagrant-triggers
+```
+
 ## Ansible
 
 This Vagrant configuration uses [Ansible](https://www.ansible.com) provisioner. Please follow installation instructions for your host operating system from [here](http://docs.ansible.com/ansible/intro_installation.html).
