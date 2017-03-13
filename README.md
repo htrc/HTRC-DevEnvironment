@@ -5,6 +5,10 @@
 
 # Prerequisites
 
+## VirtualBox
+
+Install VirtualBox from [https://www.virtualbox.org](https://www.virtualbox.org).
+
 ## Vagrant
 
 Please follow the [Vagrant installation guide](https://www.vagrantup.com/docs/installation/).
@@ -35,6 +39,13 @@ This plugin is used to perform some tasks before provisioning, after provisionin
 $ vagrant plugin install vagrant-triggers
 ```
 
+## Wget
+
+If you are on Mac OS X you need to install Wget using Homebrew.
+
+```
+$ brew install wget
+```
 
 # How To
 

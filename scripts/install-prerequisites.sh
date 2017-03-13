@@ -37,8 +37,6 @@ yum -y install nginx
 yum -y install unzip
 yum -y install zip
 yum -y install openldap-servers openldap-clients
-yum -y install svn
-yum -y install git
 yum -y install python-setuptools
 yum -y install python-devel
 easy_install pip

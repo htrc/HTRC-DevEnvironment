@@ -10,14 +10,14 @@ configurations.all {
 }
 
 configurations {
-  dcapi
+  regex
 }
 
 dependencies {
-  dcapi "edu.illinois.i3.htrc.registry:ExtensionAPI:1.4.0-SNAPSHOT"
+  regex "edu.illinois.i3.htrc.registry:ExtensionAPI:1.4.0-SNAPSHOT"
 }
 
 task copyWar(type: Copy) {
-  from configurations.dcapi
+  from configurations.regex
   into "/usr/share/wso2is/repository/deployment/server/webapps"
 }
