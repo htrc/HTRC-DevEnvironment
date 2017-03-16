@@ -3,140 +3,151 @@
 	<!-- db configuration -->
     <property>
       	<name>sloan.ws.db.driverclass</name>
-		<value>com.mysql.jdbc.Driver</value>
+		    <value>com.mysql.jdbc.Driver</value>
     </property>
     <property>
-		<name>sloan.ws.db.jdbcurl</name>
-		<value>jdbc:mysql://localhost:3306/htrcvirtdb</value>
+		    <name>sloan.ws.db.jdbcurl</name>
+		    <value>jdbc:mysql://localhost:3306/htrcvirtdb</value>
     </property>
     <property>
-		<name>sloan.ws.db.user</name>
-		<value>root</value>
+		    <name>sloan.ws.db.user</name>
+		    <value>root</value>
     </property>
-        <property>
-		<name>sloan.ws.db.pwd</name>
-		<value>root</value>
+    <property>
+		    <name>sloan.ws.db.pwd</name>
+		    <value>y*MS2eb;&!&%p</value>
     </property>
-
     <property>
       	<name>sloan.ws.vm.workdir.prefix</name>
-		<value>/u/hathitrust/htrc-sloan/script-simulator/vm-workingdir</value>
+		    <value>/u/hathitrust/htrc-sloan/script-simulator/vm-workingdir</value>
     </property>
 
     <!--  -->
     <property>
-		<name>sloan.ws.hosts</name>
-		<value>smoketree.cs.indiana.edu</value>
+		    <name>sloan.ws.hosts</name>
+		    <value>smoketree.cs.indiana.edu</value>
     </property>
     <property>
-		<name>sloan.ws.port.range.min</name>
-		<value>2000</value>
+		    <name>sloan.ws.port.range.min</name>
+		    <value>2000</value>
     </property>
     <property>
-		<name>sloan.ws.port.range.max</name>
-		<value>2019</value>
+		    <name>sloan.ws.port.range.max</name>
+		    <value>2019</value>
     </property>
     <property>
-		<name>host.ssh.username</name>
-		<value>hathitrust</value>
+		    <name>host.ssh.username</name>
+		    <value>hathitrust</value>
     </property>
     <property>
-		<name>host.ssh.passwd</name>
-		<value>XXX</value>
+		   <name>host.ssh.passwd</name>
+		   <value>XXX</value>
     </property>
     <property>
-		<name>host.ssh.private.key.path</name>
-		<value>XXX</value>
+		   <name>host.ssh.private.key.path</name>
+		   <value>XXX</value>
     </property>
 
 	    <!-- hypervisor scripts -->
     <property>
       	<name>resp.kv.delimiter</name>
-		<value>\t</value>
+		    <value>\t</value>
     </property>
     <property>
       	<name>resp.vm.status.key</name>
-		<value>status</value>
+		    <value>status</value>
     </property>
     <property>
       	<name>cmd.create.vm</name>
-		<value>/u/hathitrust/htrc-sloan/script-simulator/create_vm_script.sh</value>
+		    <value>XXX</value>
     </property>
     <property>
       	<name>cmd.launch.vm</name>
-		<value>/u/hathitrust/htrc-sloan/script-simulator/launch_vm_script.sh</value>
+		    <value>XXX</value>
     </property>
     <property>
       	<name>cmd.query.vm</name>
-		<value>/u/hathitrust/htrc-sloan/script-simulator/query_vm_script.sh</value>
+		    <value>XXX</value>
     </property>
     <property>
       	<name>cmd.switch.vm</name>
-		<value>/u/hathitrust/htrc-sloan/script-simulator/switch_vm_script.sh </value>
+		    <value>XXX</value>
     </property>
     <property>
       	<name>cmd.stop.vm</name>
-		<value>/u/hathitrust/htrc-sloan/script-simulator/stop_vm_script.sh</value>
+		    <value>XXX</value>
     </property>
     <property>
       	<name>cmd.delete.vm</name>
-		<value>/u/hathitrust/htrc-sloan/script-simulator/delete_vm_script.sh</value>
+		    <value>XXX</value>
     </property>
 
     <!-- fire wall policy -->
     <property>
       	<name>hypervisor.fw.maintenance</name>
-		<value>/u/hathitrust/htrc-sloan/script-simulator/maintenance.fw</value>
+		    <value>XXX</value>
     </property>
     <property>
       	<name>hypervisor.fw.secure</name>
-		<value>/u/hathitrust/htrc-sloan/script-simulator/secure.fw</value>
+		    <value>XXX</value>
     </property>
 
     <!-- email setting -->
     <property>
       	<name>email.sendername</name>
-		<value>XX</value>
+		    <value>sharc</value>
     </property>
     <property>
-      	<name>email.password</name>
-		<value>XX</value>
+        <name>email.sender.addr</name>
+        <value>sharc@indiana.edu</value>
     </property>
     <property>
-      	<name>email.smtp.host</name>
-		<value>smtp.gmail.com</value>
+        <name>email.password</name>
+        <value>zJR-fnF-VVS-76R</value>
     </property>
     <property>
-      	<name>email.smtp.port</name>
-		<value>587</value>
+        <name>email.smtp.host</name>
+        <value>mail-relay.iu.edu</value>
     </property>
+    <property>
+        <name>email.smtp.port</name>
+        <value>465</value>
+    </property>
+
+    <!-- reviewer email addresses -->
+    <property><name>result.review.human</name><value>true</value></property>
+    <property><name>result.review.email</name><value>shliyana@indiana.edu</value></property>
 
     <!-- result download url prefix -->
     <property>
       	<name>result.download.prefix</name>
-		<value>${URL}/download?randomid=</value>
+		    <value>https://devenv-dc/download?randomid=</value>
     </property>
     <property>
     	<!-- -1 means never expire -->
-		<name>result.expire.sec</name>
-		<value>43200</value>
+		    <name>result.expire.sec</name>
+		    <value>43200</value>
     </property>
 
     <!-- volume size, user quota -->
     <property>
-		<name>sloan.ws.volume.size.gb</name>
-		<value>10</value>
+		    <name>sloan.ws.volume.size.gb</name>
+		    <value>10</value>
     </property>
     <property>
-		<name>user.disk.quota.in.gb</name>
-		<value>100</value>
+		    <name>user.disk.quota.in.gb</name>
+		    <value>100</value>
     </property>
     <property>
-		<name>user.cpu.quota.in.num</name>
-		<value>20</value>
+		    <name>user.cpu.quota.in.num</name>
+		    <value>20</value>
     </property>
     <property>
-		<name>user.memory.quota.in.mb</name>
-		<value>20480</value>
+		    <name>user.memory.quota.in.mb</name>
+		    <value>20480</value>
+    </property>
+    <property>
+		    <name>log4j.properties.path</name>
+		    <value>/etc/htrc/dcapi/log4j.properties</value>
     </property>
 </configuration>

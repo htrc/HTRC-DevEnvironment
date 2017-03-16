@@ -2,4 +2,5 @@
 systemctl start tomcat
 
 # Start nginx
-systemctl start nginx 
+setsebool -P httpd_can_network_connect 1
+systemctl start nginx

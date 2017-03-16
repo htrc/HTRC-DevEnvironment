@@ -51,6 +51,10 @@ $ brew install wget
 
 Run ```vagrant up``` to create an instance of HTRC development environment locally and use ```vagrant ssh``` to log into the VM.
 
+## Setting Up Mutual TLS for Firefox
+
+* https://blog.codeship.com/how-to-set-up-mutual-tls-authentication/
+
 
 # CA and certs generation
 
