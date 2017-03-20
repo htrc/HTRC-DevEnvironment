@@ -1,0 +1,5 @@
+Hostname: c145.karst.uits.iu.edu
+18:43:37.506 [main] DEBUG htrc.agent.jobclient.AgentJobClient - Executing command: [/bin/bash, /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/88d3d92e-8bcb-478e-a48e-eec39f1d27a1/run_Meandre_Classification_NaiveBayes.sh]
+18:44:15.768 [main] DEBUG htrc.agent.jobclient.AgentJobClient - Job exit value: 0
+18:44:15.768 [main] DEBUG htrc.agent.jobclient.AgentJobClient - Job completion status: Job finished successfully 
+18:44:15.768 [main] DEBUG htrc.agent.jobclient.AgentJobClient - Job runtime: 38 seconds

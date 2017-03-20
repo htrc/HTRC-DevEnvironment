@@ -1,0 +1,526 @@
+Meandre MAU Executor [1.0.2vcli/1.4.12.8759 (Sara)]
+All rights reserved by DITA, NCSA, UofI (2007-2013)
+THIS SOFTWARE IS PROVIDED UNDER University of Illinois/NCSA OPEN SOURCE LICENSE.
+
+Executing MAU file /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/3fe18772-4022-44d0-8209-e476e501ece1/HTRC_Spellcheck_Report_Per_Volume.mau
+Creating temp dir /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/3fe18772-4022-44d0-8209-e476e501ece1/HTRC_Spellcheck_Report_Per_Volume.mau.run
+Creating temp dir /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/3fe18772-4022-44d0-8209-e476e501ece1/HTRC_Spellcheck_Report_Per_Volume.mau.public_resources
+
+Preparing flow: meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/
+Preparation completed correctly
+
+Execution started at: 2017-03-02T18:08:56
+----------------------------------------------------------------------------
+03/02/17 18:09:02 [INFO]: Total number of words (including duplicates): 10393	[SpellCheck.executeCallBack] <spell_check_with_counts [spell_check_with_counts]>
+03/02/17 18:09:02 [INFO]: Number of unique misspelled words: 770	[SpellCheck.executeCallBack] <spell_check_with_counts [spell_check_with_counts]>
+03/02/17 18:09:02 [INFO]: Number of unique corrected words: 3	[SpellCheck.executeCallBack] <spell_check_with_counts [spell_check_with_counts]>
+03/02/17 18:09:04 [INFO]: Total number of words (including duplicates): 9879	[SpellCheck.executeCallBack] <spell_check_with_counts [spell_check_with_counts]>
+03/02/17 18:09:04 [INFO]: Number of unique misspelled words: 451	[SpellCheck.executeCallBack] <spell_check_with_counts [spell_check_with_counts]>
+03/02/17 18:09:04 [INFO]: Number of unique corrected words: 2	[SpellCheck.executeCallBack] <spell_check_with_counts [spell_check_with_counts]>
+03/02/17 18:09:06 [INFO]: Total number of words (including duplicates): 7651	[SpellCheck.executeCallBack] <spell_check_with_counts [spell_check_with_counts]>
+03/02/17 18:09:06 [INFO]: Number of unique misspelled words: 571	[SpellCheck.executeCallBack] <spell_check_with_counts [spell_check_with_counts]>
+03/02/17 18:09:06 [INFO]: Number of unique corrected words: 0	[SpellCheck.executeCallBack] <spell_check_with_counts [spell_check_with_counts]>
+03/02/17 18:09:07 [INFO]: Total number of words (including duplicates): 6343	[SpellCheck.executeCallBack] <spell_check_with_counts [spell_check_with_counts]>
+03/02/17 18:09:07 [INFO]: Number of unique misspelled words: 158	[SpellCheck.executeCallBack] <spell_check_with_counts [spell_check_with_counts]>
+03/02/17 18:09:07 [INFO]: Number of unique corrected words: 0	[SpellCheck.executeCallBack] <spell_check_with_counts [spell_check_with_counts]>
+03/02/17 18:09:07 [INFO]: File accessible at: http://c182-eth0:30083/public/resources/../job_results/replacement_rules.txt	[WriteFile.executeCallBack] <write_to_file [write_to_file]>
+03/02/17 18:09:07 [INFO]: File accessible at: http://c182-eth0:30083/public/resources/../job_results/misspellings.txt	[WriteFile.executeCallBack] <write_to_file_2 [write_to_file_2]>
+03/02/17 18:09:07 [INFO]: File accessible at: http://c182-eth0:30083/public/resources/../job_results/spellcheck_report.html	[WriteFile.executeCallBack] <write_to_file_4 [write_to_file_4]>
+03/02/17 18:09:07 [INFO]: File accessible at: http://c182-eth0:30083/public/resources/../job_results/misspellings_with_counts.txt	[WriteFile.executeCallBack] <write_to_file_3 [write_to_file_3]>
+----------------------------------------------------------------------------
+Execution finished at: 2017-03-02T18:09:07
+Execution finished gracefully.
+----------------------------------------------------------------------------
+
+Flow execution statistics
+
+Flow unique execution ID : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/95A5E9B6/1488496136296/1959448205/
+Flow state               : ended
+Started at               : Thu Mar 02 18:08:56 EST 2017
+Last update              : Thu Mar 02 18:09:07 EST 2017
+Total run time (ms)      : 11018
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/tuple_value_to_string
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 1
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/token_counter-mapper-tokens-4
+	Executable components state                : disposed
+	Times the executable components fired      : 1204
+	Accumulated executable components run time : 11
+	Pieces of data pulled                      : 2408
+	Pieces of data pushed                      : 1234
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/token_counter-reducer-error-4
+	Executable components state                : disposed
+	Times the executable components fired      : 0
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 0
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/text_cleaner_2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 7
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/text_cleaner-mapper-text-4
+	Executable components state                : disposed
+	Times the executable components fired      : 1204
+	Accumulated executable components run time : 863
+	Pieces of data pulled                      : 2408
+	Pieces of data pushed                      : 1234
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/text_accumulator_3
+	Executable components state                : disposed
+	Times the executable components fired      : 14
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 42
+	Pieces of data pushed                      : 11
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/text_accumulator_2
+	Executable components state                : disposed
+	Times the executable components fired      : 14
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 42
+	Pieces of data pushed                      : 11
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/text_cleaner-reducer-text-4
+	Executable components state                : disposed
+	Times the executable components fired      : 1234
+	Accumulated executable components run time : 69
+	Pieces of data pulled                      : 4409
+	Pieces of data pushed                      : 1204
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/universal_text_extractor
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 285
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/stream_delimiter_filter_5
+	Executable components state                : disposed
+	Times the executable components fired      : 11
+	Accumulated executable components run time : 1
+	Pieces of data pulled                      : 33
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/stream_delimiter_filter_4
+	Executable components state                : disposed
+	Times the executable components fired      : 11
+	Accumulated executable components run time : 1
+	Pieces of data pulled                      : 33
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/stream_delimiter_filter_2
+	Executable components state                : disposed
+	Times the executable components fired      : 11
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 33
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/flow_parameter
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 137
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 6
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/opennlp_tokenizer-reducer-error-4
+	Executable components state                : disposed
+	Times the executable components fired      : 0
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 0
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/csv_to_tuple
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 17
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/token_counter-reducer-token_counts-4
+	Executable components state                : disposed
+	Times the executable components fired      : 1234
+	Accumulated executable components run time : 11
+	Pieces of data pulled                      : 4833
+	Pieces of data pushed                      : 1204
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/search_text
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 2
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 6
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/add_tuple_attribute
+	Executable components state                : disposed
+	Times the executable components fired      : 14
+	Accumulated executable components run time : 3
+	Pieces of data pulled                      : 172
+	Pieces of data pushed                      : 28
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/flow_parameter_4
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 134
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 6
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/push_text
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 134
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/flow_parameter_3
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 137
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 6
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/text_cleaner-parallel-3
+	Executable components state                : disposed
+	Times the executable components fired      : 308
+	Accumulated executable components run time : 884
+	Pieces of data pulled                      : 924
+	Pieces of data pushed                      : 308
+	Number of properties read                  : 10
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/flow_parameter_2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 136
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 6
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/text_cleaner-parallel-2
+	Executable components state                : disposed
+	Times the executable components fired      : 308
+	Accumulated executable components run time : 936
+	Pieces of data pulled                      : 924
+	Pieces of data pushed                      : 308
+	Number of properties read                  : 10
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/csv_to_token_counts
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 714
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 7
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/text_cleaner-parallel-1
+	Executable components state                : disposed
+	Times the executable components fired      : 309
+	Accumulated executable components run time : 895
+	Pieces of data pulled                      : 927
+	Pieces of data pushed                      : 309
+	Number of properties read                  : 10
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/text_cleaner-parallel-0
+	Executable components state                : disposed
+	Times the executable components fired      : 309
+	Accumulated executable components run time : 904
+	Pieces of data pulled                      : 927
+	Pieces of data pushed                      : 309
+	Number of properties read                  : 10
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/text_cleaner-reducer-error-4
+	Executable components state                : disposed
+	Times the executable components fired      : 0
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 0
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/token_counter-parallel-3
+	Executable components state                : disposed
+	Times the executable components fired      : 308
+	Accumulated executable components run time : 37
+	Pieces of data pulled                      : 924
+	Pieces of data pushed                      : 308
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/token_counter-parallel-2
+	Executable components state                : disposed
+	Times the executable components fired      : 308
+	Accumulated executable components run time : 30
+	Pieces of data pulled                      : 924
+	Pieces of data pushed                      : 308
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/token_counter-parallel-1
+	Executable components state                : disposed
+	Times the executable components fired      : 309
+	Accumulated executable components run time : 32
+	Pieces of data pulled                      : 927
+	Pieces of data pushed                      : 309
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/token_counter-parallel-0
+	Executable components state                : disposed
+	Times the executable components fired      : 309
+	Accumulated executable components run time : 31
+	Pieces of data pulled                      : 927
+	Pieces of data pushed                      : 309
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/token_counter_reducer
+	Executable components state                : disposed
+	Times the executable components fired      : 1204
+	Accumulated executable components run time : 2726
+	Pieces of data pulled                      : 3612
+	Pieces of data pushed                      : 14
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/opennlp_tokenizer-parallel-3
+	Executable components state                : disposed
+	Times the executable components fired      : 308
+	Accumulated executable components run time : 53
+	Pieces of data pulled                      : 924
+	Pieces of data pushed                      : 308
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/opennlp_tokenizer-parallel-2
+	Executable components state                : disposed
+	Times the executable components fired      : 308
+	Accumulated executable components run time : 55
+	Pieces of data pulled                      : 924
+	Pieces of data pushed                      : 308
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/opennlp_tokenizer-parallel-1
+	Executable components state                : disposed
+	Times the executable components fired      : 309
+	Accumulated executable components run time : 81
+	Pieces of data pulled                      : 927
+	Pieces of data pushed                      : 309
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/opennlp_tokenizer-parallel-0
+	Executable components state                : disposed
+	Times the executable components fired      : 309
+	Accumulated executable components run time : 47
+	Pieces of data pulled                      : 927
+	Pieces of data pushed                      : 309
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/push_text_4
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 135
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/htrc_page_retriever
+	Executable components state                : disposed
+	Times the executable components fired      : 4
+	Accumulated executable components run time : 2796
+	Pieces of data pulled                      : 12
+	Pieces of data pushed                      : 3612
+	Number of properties read                  : 11
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/push_text_3
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 138
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/push_text_2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 130
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/tokens_to_text
+	Executable components state                : disposed
+	Times the executable components fired      : 14
+	Accumulated executable components run time : 28
+	Pieces of data pulled                      : 42
+	Pieces of data pushed                      : 14
+	Number of properties read                  : 7
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/search_text_2
+	Executable components state                : disposed
+	Times the executable components fired      : 14
+	Accumulated executable components run time : 2604
+	Pieces of data pulled                      : 42
+	Pieces of data pushed                      : 24
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/stream_delimiter_filter
+	Executable components state                : disposed
+	Times the executable components fired      : 11
+	Accumulated executable components run time : 1
+	Pieces of data pulled                      : 33
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/spell_check_with_counts
+	Executable components state                : disposed
+	Times the executable components fired      : 17
+	Accumulated executable components run time : 9283
+	Pieces of data pulled                      : 94
+	Pieces of data pushed                      : 98
+	Number of properties read                  : 13
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/opennlp_tokenizer-reducer-tokens-4
+	Executable components state                : disposed
+	Times the executable components fired      : 1234
+	Accumulated executable components run time : 13
+	Pieces of data pulled                      : 4774
+	Pieces of data pushed                      : 1204
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/token_counts_to_csv
+	Executable components state                : disposed
+	Times the executable components fired      : 11
+	Accumulated executable components run time : 39
+	Pieces of data pulled                      : 33
+	Pieces of data pushed                      : 11
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/token_counter_reducer_2
+	Executable components state                : disposed
+	Times the executable components fired      : 14
+	Accumulated executable components run time : 1
+	Pieces of data pulled                      : 42
+	Pieces of data pushed                      : 11
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/write_to_file
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 7
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/write_to_file_4
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 3
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/strings_to_java_string
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/write_to_file_3
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 3
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/tuple_to_html
+	Executable components state                : disposed
+	Times the executable components fired      : 11
+	Accumulated executable components run time : 35
+	Pieces of data pulled                      : 72
+	Pieces of data pushed                      : 11
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/text_accumulator
+	Executable components state                : disposed
+	Times the executable components fired      : 1204
+	Accumulated executable components run time : 43
+	Pieces of data pulled                      : 3612
+	Pieces of data pushed                      : 14
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/write_to_file_2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 8
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/tuple_aggregator
+	Executable components state                : disposed
+	Times the executable components fired      : 14
+	Accumulated executable components run time : 3
+	Pieces of data pulled                      : 92
+	Pieces of data pushed                      : 22
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/random_sample
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 4
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/to_lowercase
+	Executable components state                : disposed
+	Times the executable components fired      : 1204
+	Accumulated executable components run time : 72
+	Pieces of data pulled                      : 3612
+	Pieces of data pushed                      : 1204
+	Number of properties read                  : 2
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/read_text
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 27
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 8
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/opennlp_tokenizer-mapper-text-4
+	Executable components state                : disposed
+	Times the executable components fired      : 1204
+	Accumulated executable components run time : 17
+	Pieces of data pulled                      : 2408
+	Pieces of data pushed                      : 1234
+	Number of properties read                  : 1
+
+Cleaning temp dir /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/3fe18772-4022-44d0-8209-e476e501ece1/HTRC_Spellcheck_Report_Per_Volume.mau.run
+Cleaning temp dir /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/3fe18772-4022-44d0-8209-e476e501ece1/HTRC_Spellcheck_Report_Per_Volume.mau.public_resources
+
+Cleaning up working directory...

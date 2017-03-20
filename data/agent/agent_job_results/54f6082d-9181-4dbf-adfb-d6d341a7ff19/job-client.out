@@ -1,0 +1,5 @@
+Hostname: c182.karst.uits.iu.edu
+18:10:21.638 [main] DEBUG htrc.agent.jobclient.AgentJobClient - Executing command: [/bin/bash, /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/54f6082d-9181-4dbf-adfb-d6d341a7ff19/run_Meandre_Tagcloud.sh]
+18:10:37.887 [main] DEBUG htrc.agent.jobclient.AgentJobClient - Job exit value: 0
+18:10:37.887 [main] DEBUG htrc.agent.jobclient.AgentJobClient - Job completion status: Job finished successfully 
+18:10:37.887 [main] DEBUG htrc.agent.jobclient.AgentJobClient - Job runtime: 16 seconds

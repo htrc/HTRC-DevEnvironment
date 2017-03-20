@@ -1,0 +1,747 @@
+Meandre MAU Executor [1.0.2vcli/1.4.12.8759 (Sara)]
+All rights reserved by DITA, NCSA, UofI (2007-2013)
+THIS SOFTWARE IS PROVIDED UNDER University of Illinois/NCSA OPEN SOURCE LICENSE.
+
+Executing MAU file /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/88d3d92e-8bcb-478e-a48e-eec39f1d27a1/HTRC_Classification_NaiveBayes.mau
+Creating temp dir /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/88d3d92e-8bcb-478e-a48e-eec39f1d27a1/HTRC_Classification_NaiveBayes.mau.run
+Creating temp dir /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/88d3d92e-8bcb-478e-a48e-eec39f1d27a1/HTRC_Classification_NaiveBayes.mau.public_resources
+
+Preparing flow: meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/
+Preparation completed correctly
+
+Execution started at: 2016-12-30T18:43:43
+----------------------------------------------------------------------------
+12/30/16 18:43:43 [INFO]: ignoreCase true	[TextReplacement.initializeCallBack] <text_replacement [text_replacement]>
+12/30/16 18:44:14 [INFO]: File accessible at: http://c145-eth0:30005/public/resources/../job_results/test_prediction.csv.txt	[WriteFile.executeCallBack] <write_to_file_3 [write_to_file_3]>
+12/30/16 18:44:14 [INFO]: File accessible at: http://c145-eth0:30005/public/resources/../job_results/test_confusion_matrix.csv.txt	[WriteFile.executeCallBack] <write_to_file_4 [write_to_file_4]>
+12/30/16 18:44:14 [INFO]: File accessible at: http://c145-eth0:30005/public/resources/../job_results/train_confusion_matrix.csv.txt	[WriteFile.executeCallBack] <write_to_file_2 [write_to_file_2]>
+12/30/16 18:44:14 [INFO]: File accessible at: http://c145-eth0:30005/public/resources/../job_results/train_prediction.csv.txt	[WriteFile.executeCallBack] <write_to_file [write_to_file]>
+----------------------------------------------------------------------------
+Execution finished at: 2016-12-30T18:44:15
+Execution finished gracefully.
+----------------------------------------------------------------------------
+
+Flow execution statistics
+
+Flow unique execution ID : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/95A5E991/1483141422923/1324221566/
+Flow state               : ended
+Started at               : Fri Dec 30 18:43:43 EST 2016
+Last update              : Fri Dec 30 18:44:15 EST 2016
+Total run time (ms)      : 31477
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/tuple_value_frequency_counter-mapper-tuples-4
+	Executable components state                : disposed
+	Times the executable components fired      : 12
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 24
+	Pieces of data pushed                      : 18
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/csv_to_token_counts
+	Executable components state                : disposed
+	Times the executable components fired      : 12
+	Accumulated executable components run time : 31
+	Pieces of data pulled                      : 36
+	Pieces of data pushed                      : 12
+	Number of properties read                  : 7
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/confusion_matrix_2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/featurefilterlite
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 38
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 7
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/strings_to_java_string
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 1
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/sentence_detector-reducer-sentences-4
+	Executable components state                : disposed
+	Times the executable components fired      : 18
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 71
+	Pieces of data pushed                      : 12
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/tuple_value_frequency_counter-mapper-meta_tuple-4
+	Executable components state                : disposed
+	Times the executable components fired      : 12
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 24
+	Pieces of data pushed                      : 18
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/fork_x5
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 181
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 5
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/sentence_detector-parallel-3
+	Executable components state                : disposed
+	Times the executable components fired      : 4
+	Accumulated executable components run time : 167
+	Pieces of data pulled                      : 12
+	Pieces of data pushed                      : 4
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/sentence_detector-parallel-2
+	Executable components state                : disposed
+	Times the executable components fired      : 4
+	Accumulated executable components run time : 76
+	Pieces of data pulled                      : 12
+	Pieces of data pushed                      : 4
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/fork_x2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 24
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/pos_tagger-parallel-3
+	Executable components state                : disposed
+	Times the executable components fired      : 4
+	Accumulated executable components run time : 16198
+	Pieces of data pulled                      : 12
+	Pieces of data pushed                      : 8
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/sentence_detector-parallel-1
+	Executable components state                : disposed
+	Times the executable components fired      : 5
+	Accumulated executable components run time : 290
+	Pieces of data pulled                      : 15
+	Pieces of data pushed                      : 5
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/pos_tagger-parallel-2
+	Executable components state                : disposed
+	Times the executable components fired      : 4
+	Accumulated executable components run time : 9335
+	Pieces of data pulled                      : 12
+	Pieces of data pushed                      : 8
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/sentence_detector-parallel-0
+	Executable components state                : disposed
+	Times the executable components fired      : 5
+	Accumulated executable components run time : 208
+	Pieces of data pulled                      : 15
+	Pieces of data pushed                      : 5
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/pos_tagger-parallel-1
+	Executable components state                : disposed
+	Times the executable components fired      : 5
+	Accumulated executable components run time : 18817
+	Pieces of data pulled                      : 15
+	Pieces of data pushed                      : 10
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/pos_tagger-reducer-error-4
+	Executable components state                : disposed
+	Times the executable components fired      : 0
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 0
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/pos_tagger-parallel-0
+	Executable components state                : disposed
+	Times the executable components fired      : 5
+	Accumulated executable components run time : 17214
+	Pieces of data pulled                      : 15
+	Pieces of data pushed                      : 10
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/stream_filter
+	Executable components state                : disposed
+	Times the executable components fired      : 3
+	Accumulated executable components run time : 1
+	Pieces of data pulled                      : 9
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/push_text_4
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 139
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/push_text_3
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 145
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/push_text_2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 145
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/pos_tagger-reducer-meta_tuple-4
+	Executable components state                : disposed
+	Times the executable components fired      : 18
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 67
+	Pieces of data pushed                      : 12
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/random_sample
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/sentence_tokenizer-parallel-3
+	Executable components state                : disposed
+	Times the executable components fired      : 4
+	Accumulated executable components run time : 5914
+	Pieces of data pulled                      : 12
+	Pieces of data pushed                      : 4
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/sentence_tokenizer-parallel-2
+	Executable components state                : disposed
+	Times the executable components fired      : 4
+	Accumulated executable components run time : 3131
+	Pieces of data pulled                      : 12
+	Pieces of data pushed                      : 4
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/sentence_tokenizer-parallel-1
+	Executable components state                : disposed
+	Times the executable components fired      : 5
+	Accumulated executable components run time : 7057
+	Pieces of data pulled                      : 15
+	Pieces of data pushed                      : 5
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/sentence_tokenizer-parallel-0
+	Executable components state                : disposed
+	Times the executable components fired      : 5
+	Accumulated executable components run time : 6300
+	Pieces of data pulled                      : 15
+	Pieces of data pushed                      : 5
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/flow_parameter
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 150
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 6
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/prediction_report_table_2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 7
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 2
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/tuple_labeler
+	Executable components state                : disposed
+	Times the executable components fired      : 12
+	Accumulated executable components run time : 2
+	Pieces of data pulled                      : 210
+	Pieces of data pushed                      : 24
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/createbintree
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 27
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 2
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/csv_to_tuple
+	Executable components state                : disposed
+	Times the executable components fired      : 12
+	Accumulated executable components run time : 1
+	Pieces of data pulled                      : 36
+	Pieces of data pushed                      : 24
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/trigger_stream_passthrough
+	Executable components state                : disposed
+	Times the executable components fired      : 13
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 40
+	Pieces of data pushed                      : 24
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/stream_filter_3
+	Executable components state                : disposed
+	Times the executable components fired      : 32
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 96
+	Pieces of data pushed                      : 12
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/stream_filter_2
+	Executable components state                : disposed
+	Times the executable components fired      : 32
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 96
+	Pieces of data pushed                      : 12
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/text_accumulator
+	Executable components state                : disposed
+	Times the executable components fired      : 4896
+	Accumulated executable components run time : 65
+	Pieces of data pulled                      : 14688
+	Pieces of data pushed                      : 32
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/pos_tagger-mapper-tokenized_sentences-4
+	Executable components state                : disposed
+	Times the executable components fired      : 12
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 24
+	Pieces of data pushed                      : 18
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/model_predict_2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 24
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 2
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/push_text
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 137
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/tuple_value_to_string_2
+	Executable components state                : disposed
+	Times the executable components fired      : 12
+	Accumulated executable components run time : 10462
+	Pieces of data pulled                      : 82
+	Pieces of data pushed                      : 24
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/text_cleaner_2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 1
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 7
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/write_to_file_4
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 6
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/read_text
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 4
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 8
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/write_to_file_3
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 6
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/write_to_file_2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 7
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/trigger_message_2
+	Executable components state                : disposed
+	Times the executable components fired      : 13
+	Accumulated executable components run time : 1
+	Pieces of data pulled                      : 51
+	Pieces of data pushed                      : 24
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/trigger_message
+	Executable components state                : disposed
+	Times the executable components fired      : 2
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/sentence_tokenizer-reducer-tokenized_sentences-4
+	Executable components state                : disposed
+	Times the executable components fired      : 18
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 72
+	Pieces of data pushed                      : 12
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/sentence_detector-mapper-text-4
+	Executable components state                : disposed
+	Times the executable components fired      : 12
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 24
+	Pieces of data pushed                      : 18
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/tuple_value_frequency_counter-reducer-tuples-4
+	Executable components state                : disposed
+	Times the executable components fired      : 18
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 70
+	Pieces of data pushed                      : 12
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/createnbmodel
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 18
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 2
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/table_to_csv
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/text_replacement
+	Executable components state                : disposed
+	Times the executable components fired      : 12
+	Accumulated executable components run time : 1953
+	Pieces of data pulled                      : 84
+	Pieces of data pushed                      : 12
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/sentence_tokenizer-mapper-sentences-4
+	Executable components state                : disposed
+	Times the executable components fired      : 12
+	Accumulated executable components run time : 1
+	Pieces of data pulled                      : 24
+	Pieces of data pushed                      : 18
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/model_predict
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 31
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 2
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/text_cleaner
+	Executable components state                : disposed
+	Times the executable components fired      : 4896
+	Accumulated executable components run time : 13502
+	Pieces of data pulled                      : 14688
+	Pieces of data pushed                      : 4896
+	Number of properties read                  : 9
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/universal_text_extractor_2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 2401
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/search_text
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 1
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 5
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/table_to_csv_4
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/table_to_csv_3
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/table_to_csv_2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/tuple_value_frequency_counter-reducer-meta_tuple-4
+	Executable components state                : disposed
+	Times the executable components fired      : 18
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 72
+	Pieces of data pushed                      : 12
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/write_to_file
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 7
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/sentence_detector-reducer-error-4
+	Executable components state                : disposed
+	Times the executable components fired      : 0
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 0
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/fork_x2_5
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 16
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/fork_x2_4
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/fork_x2_3
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 124
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/fork_x2_2
+	Executable components state                : disposed
+	Times the executable components fired      : 12
+	Accumulated executable components run time : 10461
+	Pieces of data pulled                      : 36
+	Pieces of data pushed                      : 24
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/autobin
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 118
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/flow_parameter_2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 129
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 6
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/htrc_page_retriever
+	Executable components state                : disposed
+	Times the executable components fired      : 3
+	Accumulated executable components run time : 15012
+	Pieces of data pulled                      : 9
+	Pieces of data pushed                      : 14688
+	Number of properties read                  : 11
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/pos_tagger-reducer-tuples-4
+	Executable components state                : disposed
+	Times the executable components fired      : 18
+	Accumulated executable components run time : 2
+	Pieces of data pulled                      : 67
+	Pieces of data pushed                      : 12
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/simpletraintest
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 2
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 7
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/token_count_to_feature_table
+	Executable components state                : disposed
+	Times the executable components fired      : 12
+	Accumulated executable components run time : 54
+	Pieces of data pulled                      : 153
+	Pieces of data pushed                      : 3
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/csv_to_tuple_3
+	Executable components state                : disposed
+	Times the executable components fired      : 12
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 36
+	Pieces of data pushed                      : 24
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/csv_to_tuple_2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 11
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/search_text_2
+	Executable components state                : disposed
+	Times the executable components fired      : 32
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 96
+	Pieces of data pushed                      : 54
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/tuple_to_csv
+	Executable components state                : disposed
+	Times the executable components fired      : 12
+	Accumulated executable components run time : 17
+	Pieces of data pulled                      : 86
+	Pieces of data pushed                      : 36
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/tuple_value_frequency_counter-parallel-3
+	Executable components state                : disposed
+	Times the executable components fired      : 4
+	Accumulated executable components run time : 123
+	Pieces of data pulled                      : 26
+	Pieces of data pushed                      : 8
+	Number of properties read                  : 7
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/tuple_value_frequency_counter-parallel-2
+	Executable components state                : disposed
+	Times the executable components fired      : 4
+	Accumulated executable components run time : 88
+	Pieces of data pulled                      : 26
+	Pieces of data pushed                      : 8
+	Number of properties read                  : 7
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/tuple_value_frequency_counter-parallel-1
+	Executable components state                : disposed
+	Times the executable components fired      : 5
+	Accumulated executable components run time : 170
+	Pieces of data pulled                      : 34
+	Pieces of data pushed                      : 10
+	Number of properties read                  : 7
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/tuple_value_frequency_counter-parallel-0
+	Executable components state                : disposed
+	Times the executable components fired      : 5
+	Accumulated executable components run time : 145
+	Pieces of data pulled                      : 34
+	Pieces of data pushed                      : 10
+	Number of properties read                  : 7
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/tuple_value_to_string
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 1
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/prediction_report_table
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 2
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/tuple_value_frequency_counter-reducer-error-4
+	Executable components state                : disposed
+	Times the executable components fired      : 0
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 0
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/confusion_matrix
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 7
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/sentence_tokenizer-reducer-error-4
+	Executable components state                : disposed
+	Times the executable components fired      : 0
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 0
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/text_accumulator_2
+	Executable components state                : disposed
+	Times the executable components fired      : 4896
+	Accumulated executable components run time : 55
+	Pieces of data pulled                      : 14688
+	Pieces of data pushed                      : 32
+	Number of properties read                  : 4
+
+Cleaning temp dir /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/88d3d92e-8bcb-478e-a48e-eec39f1d27a1/HTRC_Classification_NaiveBayes.mau.run
+Cleaning temp dir /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/88d3d92e-8bcb-478e-a48e-eec39f1d27a1/HTRC_Classification_NaiveBayes.mau.public_resources
+
+Cleaning up working directory...

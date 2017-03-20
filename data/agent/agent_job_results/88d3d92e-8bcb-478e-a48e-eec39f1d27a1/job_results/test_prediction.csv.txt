@@ -1,0 +1,5 @@
+_id,_class,_class_prediction
+mdp.39015006975265,Dickens,Dickens
+nyp.33433074920525,Austen,Austen
+nyp.33433074954219,Dickens,Dickens
+mdp.49015002596832,Dickens,Austen

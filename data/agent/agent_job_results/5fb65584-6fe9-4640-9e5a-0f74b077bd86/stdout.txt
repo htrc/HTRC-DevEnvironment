@@ -1,0 +1,113 @@
+http://chinkapin.pti.indiana.edu:9994/solr/MARC/?volumeIDs=uc2.ark:/13960/t3028rr5q|njp.32101041988641|njp.32101079666853|pst.000005337095|inu.32000002551713|uc2.ark:/13960/t5gb26d0k|inu.30000120254077|uc2.ark:/13960/t9862n445|uc1.31175035244972|nyp.33433067297477|uc1.b4068761|bc.ark:/13960/t85h96k83|uc1.b3576452|inu.39000003007635|wu.89099766701|mdp.39015028555616|mdp.39015024384870|uc2.ark:/13960/t88g8js1r|njp.32101067487601|hvd.32044072035108|njp.32101064790213|loc.ark:/13960/t4wh33447|hvd.hn5gas|uc1.b3576446|uc2.ark:/13960/t5bc4041v|mdp.39015010493859|nyp.33433074910088|uc2.ark:/13960/t4sj1d415|uc1.31158000867753|uc2.ark:/13960/t9x06b06z|osu.32435007124233|uc1.b3326147|uc1.b4103037|uc2.ark:/13960/t5w669z4s|uva.x000988759|hvd.32044020109245|uc1.b3553496|osu.32435027360452|hvd.32044020537015|mdp.39015008435235|hvd.32044019993088|mdp.39015066063101|uc2.ark:/13960/t5bc3vk05|njp.32101067487619|nyp.33433067297469|bc.ark:/13960/t3418nb7z|inu.39000005877274|uc1.b3492077|uc1.b3492076|uc2.ark:/13960/t9r211m0n|loc.ark:/13960/t4sj1z58mdownloading...
+filenameXtoYmarc_0TO51
+marcs_location /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/marc_0TO51.zip
+unzipped_path /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/marc_0TO51
+ris_0TO51
+start generating RIS files ...
+ris_files is changed to ris_0TO51 : true
+file /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/marc_0TO51.zip is removed !!
+/N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/marc_0TO51
+outputDir /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir
+Creating : result.zip
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/njp.32101079666853.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/uc2.ark+=13960=t9862n445.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/osu.32435027360452.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/uc1.31175035244972.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/uc2.ark+=13960=t9r211m0n.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/uc1.b3553496.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/uc1.b3326147.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/uva.x000988759.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/inu.30000120254077.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/pst.000005337095.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/hvd.32044019993088.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/bc.ark+=13960=t85h96k83.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/njp.32101064790213.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/uc1.b3576452.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/inu.39000005877274.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/inu.32000002551713.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/mdp.39015010493859.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/uc1.b3576446.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/mdp.39015028555616.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/nyp.33433074910088.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/uc2.ark+=13960=t5bc4041v.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/hvd.32044020109245.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/hvd.hn5gas.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/hvd.32044020537015.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/uc2.ark+=13960=t5bc3vk05.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/njp.32101041988641.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/uc2.ark+=13960=t88g8js1r.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/hvd.32044072035108.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/uc2.ark+=13960=t5gb26d0k.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/nyp.33433067297477.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/uc2.ark+=13960=t5w669z4s.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/nyp.33433067297469.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/uc1.31158000867753.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/wu.89099766701.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/uc2.ark+=13960=t3028rr5q.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/mdp.39015066063101.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/mdp.39015024384870.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/uc1.b3492077.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/loc.ark+=13960=t4wh33447.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/njp.32101067487619.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/bc.ark+=13960=t3418nb7z.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/osu.32435007124233.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/inu.39000003007635.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/uc2.ark+=13960=t9x06b06z.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/loc.ark+=13960=t4sj1z58m.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/uc2.ark+=13960=t4sj1d415.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/njp.32101067487601.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/uc1.b4068761.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/mdp.39015008435235.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/uc1.b4103037.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/ris_0TO51/uc1.b3492076.ris
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/pst.000005337095.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/mdp.39015066063101.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/uc2.ark+=13960=t9x06b06z.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/uc1.31158000867753.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/hvd.32044019993088.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/uc2.ark+=13960=t9r211m0n.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/uc1.b3492076.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/nyp.33433074910088.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/uc2.ark+=13960=t5bc3vk05.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/njp.32101067487601.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/nyp.33433067297477.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/bc.ark+=13960=t3418nb7z.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/uc2.ark+=13960=t4sj1d415.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/loc.ark+=13960=t4sj1z58m.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/uc2.ark+=13960=t9862n445.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/mdp.39015008435235.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/hvd.32044072035108.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/uc1.b4068761.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/osu.32435027360452.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/njp.32101079666853.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/uc1.b3576446.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/uc2.ark+=13960=t5w669z4s.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/hvd.32044020537015.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/mdp.39015010493859.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/hvd.hn5gas.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/bc.ark+=13960=t85h96k83.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/hvd.32044020109245.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/inu.30000120254077.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/uc2.ark+=13960=t88g8js1r.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/uc1.b3492077.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/njp.32101067487619.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/njp.32101041988641.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/uc1.31175035244972.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/wu.89099766701.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/nyp.33433067297469.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/uc1.b3553496.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/uva.x000988759.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/mdp.39015028555616.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/uc1.b3326147.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/uc1.b4103037.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/inu.32000002551713.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/mdp.39015024384870.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/loc.ark+=13960=t4wh33447.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/uc2.ark+=13960=t3028rr5q.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/inu.39000003007635.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/osu.32435007124233.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/uc2.ark+=13960=t5gb26d0k.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/inu.39000005877274.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/uc1.b3576452.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/uc2.ark+=13960=t5bc4041v.xml
+ Adding: /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/tmpDir/marc_0TO51/njp.32101064790213.xml

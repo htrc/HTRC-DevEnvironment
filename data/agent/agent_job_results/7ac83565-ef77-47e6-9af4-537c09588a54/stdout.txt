@@ -1,0 +1,343 @@
+Meandre MAU Executor [1.0.2vcli/1.4.12.8759 (Sara)]
+All rights reserved by DITA, NCSA, UofI (2007-2013)
+THIS SOFTWARE IS PROVIDED UNDER University of Illinois/NCSA OPEN SOURCE LICENSE.
+
+Executing MAU file /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/7ac83565-ef77-47e6-9af4-537c09588a54/HTRC_OpenNLP_Entities_List.mau
+Creating temp dir /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/7ac83565-ef77-47e6-9af4-537c09588a54/HTRC_OpenNLP_Entities_List.mau.run
+Creating temp dir /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/7ac83565-ef77-47e6-9af4-537c09588a54/HTRC_OpenNLP_Entities_List.mau.public_resources
+
+Preparing flow: meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/
+Preparation completed correctly
+
+Execution started at: 2017-03-02T18:04:44
+----------------------------------------------------------------------------
+03/02/17 18:06:22 [INFO]: File accessible at: http://c182-eth0:30081/public/resources/../job_results/named_entities_list.html	[WriteFile.executeCallBack] <write_to_file [write_to_file]>
+----------------------------------------------------------------------------
+Execution finished at: 2017-03-02T18:06:23
+Execution finished gracefully.
+----------------------------------------------------------------------------
+
+Flow execution statistics
+
+Flow unique execution ID : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/95A5E9B6/1488495883991/911062208/
+Flow state               : ended
+Started at               : Thu Mar 02 18:04:44 EST 2017
+Last update              : Thu Mar 02 18:06:23 EST 2017
+Total run time (ms)      : 99145
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_sentence_detector-reducer-error-4
+	Executable components state                : disposed
+	Times the executable components fired      : 0
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 0
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/flow_parameter
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 178
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 6
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_sentence_tokenizer-mapper-sentences-4
+	Executable components state                : disposed
+	Times the executable components fired      : 41232
+	Accumulated executable components run time : 207
+	Pieces of data pulled                      : 82464
+	Pieces of data pushed                      : 41238
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/write_to_file
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 77
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/strings_to_java_string
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/add_tuple_attribute
+	Executable components state                : disposed
+	Times the executable components fired      : 41232
+	Accumulated executable components run time : 804
+	Pieces of data pulled                      : 581872
+	Pieces of data pushed                      : 82464
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/tuple_to_html
+	Executable components state                : disposed
+	Times the executable components fired      : 3
+	Accumulated executable components run time : 566
+	Pieces of data pulled                      : 20
+	Pieces of data pushed                      : 3
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/random_sample
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 11
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_sentence_detector-mapper-text-4
+	Executable components state                : disposed
+	Times the executable components fired      : 41232
+	Accumulated executable components run time : 293
+	Pieces of data pulled                      : 82464
+	Pieces of data pushed                      : 41238
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_sentence_tokenizer-parallel-3
+	Executable components state                : disposed
+	Times the executable components fired      : 10309
+	Accumulated executable components run time : 29527
+	Pieces of data pulled                      : 30927
+	Pieces of data pushed                      : 10309
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_sentence_tokenizer-parallel-2
+	Executable components state                : disposed
+	Times the executable components fired      : 10309
+	Accumulated executable components run time : 29228
+	Pieces of data pulled                      : 30927
+	Pieces of data pushed                      : 10309
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_sentence_tokenizer-parallel-1
+	Executable components state                : disposed
+	Times the executable components fired      : 10310
+	Accumulated executable components run time : 29256
+	Pieces of data pulled                      : 30930
+	Pieces of data pushed                      : 10310
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_sentence_tokenizer-parallel-0
+	Executable components state                : disposed
+	Times the executable components fired      : 10310
+	Accumulated executable components run time : 29341
+	Pieces of data pulled                      : 30930
+	Pieces of data pushed                      : 10310
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/htrc_page_retriever
+	Executable components state                : disposed
+	Times the executable components fired      : 4
+	Accumulated executable components run time : 97507
+	Pieces of data pulled                      : 12
+	Pieces of data pushed                      : 123696
+	Number of properties read                  : 11
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/tuple_aggregator
+	Executable components state                : disposed
+	Times the executable components fired      : 41232
+	Accumulated executable components run time : 445
+	Pieces of data pulled                      : 303139
+	Pieces of data pushed                      : 6
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/push_text
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 179
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_sentence_tokenizer-reducer-tokenized_sentences-4
+	Executable components state                : disposed
+	Times the executable components fired      : 41238
+	Accumulated executable components run time : 239
+	Pieces of data pulled                      : 145582
+	Pieces of data pushed                      : 41232
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_named_entity-reducer-meta_tuple-4
+	Executable components state                : disposed
+	Times the executable components fired      : 41238
+	Accumulated executable components run time : 189
+	Pieces of data pulled                      : 144937
+	Pieces of data pushed                      : 41232
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_sentence_detector-reducer-sentences-4
+	Executable components state                : disposed
+	Times the executable components fired      : 41238
+	Accumulated executable components run time : 213
+	Pieces of data pulled                      : 145402
+	Pieces of data pushed                      : 41232
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_named_entity-reducer-error-4
+	Executable components state                : disposed
+	Times the executable components fired      : 0
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 0
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/text_cleaner
+	Executable components state                : disposed
+	Times the executable components fired      : 41232
+	Accumulated executable components run time : 74623
+	Pieces of data pulled                      : 123696
+	Pieces of data pushed                      : 41232
+	Number of properties read                  : 9
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_named_entity-reducer-tuples-4
+	Executable components state                : disposed
+	Times the executable components fired      : 41238
+	Accumulated executable components run time : 164
+	Pieces of data pulled                      : 145351
+	Pieces of data pushed                      : 41232
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_named_entity-mapper-tokenized_sentences-4
+	Executable components state                : disposed
+	Times the executable components fired      : 41232
+	Accumulated executable components run time : 156
+	Pieces of data pulled                      : 82464
+	Pieces of data pushed                      : 41238
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_sentence_detector-parallel-3
+	Executable components state                : disposed
+	Times the executable components fired      : 10309
+	Accumulated executable components run time : 876
+	Pieces of data pulled                      : 30927
+	Pieces of data pushed                      : 10309
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_sentence_detector-parallel-2
+	Executable components state                : disposed
+	Times the executable components fired      : 10309
+	Accumulated executable components run time : 885
+	Pieces of data pulled                      : 30927
+	Pieces of data pushed                      : 10309
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_sentence_detector-parallel-1
+	Executable components state                : disposed
+	Times the executable components fired      : 10310
+	Accumulated executable components run time : 907
+	Pieces of data pulled                      : 30930
+	Pieces of data pushed                      : 10310
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/add_tuple_attribute_2
+	Executable components state                : disposed
+	Times the executable components fired      : 41232
+	Accumulated executable components run time : 892
+	Pieces of data pulled                      : 581965
+	Pieces of data pushed                      : 82464
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_sentence_detector-parallel-0
+	Executable components state                : disposed
+	Times the executable components fired      : 10310
+	Accumulated executable components run time : 855
+	Pieces of data pulled                      : 30930
+	Pieces of data pushed                      : 10310
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/tuple_value_to_string
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 2
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/text_cleaner_2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 1
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 7
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_named_entity-parallel-3
+	Executable components state                : disposed
+	Times the executable components fired      : 10309
+	Accumulated executable components run time : 80090
+	Pieces of data pulled                      : 30927
+	Pieces of data pushed                      : 20618
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_named_entity-parallel-2
+	Executable components state                : disposed
+	Times the executable components fired      : 10309
+	Accumulated executable components run time : 78512
+	Pieces of data pulled                      : 30927
+	Pieces of data pushed                      : 20618
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_named_entity-parallel-1
+	Executable components state                : disposed
+	Times the executable components fired      : 10310
+	Accumulated executable components run time : 80273
+	Pieces of data pulled                      : 30930
+	Pieces of data pushed                      : 20620
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_named_entity-parallel-0
+	Executable components state                : disposed
+	Times the executable components fired      : 10310
+	Accumulated executable components run time : 79856
+	Pieces of data pulled                      : 30930
+	Pieces of data pushed                      : 20620
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/read_text
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 5
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 8
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/csv_to_tuple
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 32
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/search_text
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 2
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 6
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/stream_delimiter_filter
+	Executable components state                : disposed
+	Times the executable components fired      : 3
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 9
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_sentence_tokenizer-reducer-error-4
+	Executable components state                : disposed
+	Times the executable components fired      : 0
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 0
+	Number of properties read                  : 1
+
+Cleaning temp dir /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/7ac83565-ef77-47e6-9af4-537c09588a54/HTRC_OpenNLP_Entities_List.mau.run
+Cleaning temp dir /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/7ac83565-ef77-47e6-9af4-537c09588a54/HTRC_OpenNLP_Entities_List.mau.public_resources
+
+Cleaning up working directory...

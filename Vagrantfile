@@ -22,6 +22,7 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder RESOURCE_DIR, "/devenv_sources"
   config.vm.synced_folder "configurations", "/devenv_configurations"
   config.vm.synced_folder "certs", "/devenv_certs"
+  config.vm.synced_folder "data" , "/devenv_data"
   config.vm.synced_folder "~/#{DOWNLOADS_DIR}", "/devenv_downloads"
 
   config.trigger.before :up do
@@ -88,4 +89,5 @@ Vagrant.configure("2") do |config|
    config.vm.provision "shell", path: "scripts/wso2is.sh"
    config.vm.provision "shell", path: "scripts/nginx.sh"
    config.vm.provision "shell", path: "scripts/start-services.sh"
+   config.vm.provision "shell", path: "scripts/agent.sh"
 end

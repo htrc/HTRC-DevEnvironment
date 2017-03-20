@@ -1,0 +1,5 @@
+Hostname: c182.karst.uits.iu.edu
+18:08:54.534 [main] DEBUG htrc.agent.jobclient.AgentJobClient - Executing command: [/bin/bash, /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/3fe18772-4022-44d0-8209-e476e501ece1/run_Meandre_Spellcheck_Report_Per_Volume.sh]
+18:09:08.104 [main] DEBUG htrc.agent.jobclient.AgentJobClient - Job exit value: 0
+18:09:08.104 [main] DEBUG htrc.agent.jobclient.AgentJobClient - Job completion status: Job finished successfully 
+18:09:08.104 [main] DEBUG htrc.agent.jobclient.AgentJobClient - Job runtime: 13 seconds

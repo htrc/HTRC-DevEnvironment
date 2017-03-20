@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Tag Cloud</title>
+    <script type='text/javascript' src="https://htrc2.pti.indiana.edu/HTRC-UI-Portal2/js/d3.v2.min.js"></script>
+    <script type='text/javascript' src="https://htrc2.pti.indiana.edu/HTRC-UI-Portal2/js/d3.layout.cloud.js"></script>
+</head>
+<body>
+<script type='text/javascript'>
+    var data = {"words":["—","“","’","time","man","‘","”","world","made","men","back","grass","great","people","life","thought","long","things","mind","day","hand","earth","make","eyes","thing","moment","space","work","air","found","night","light","good","ralph","raymond","state","face","dalgard","left","place","raf","looked","head","part","turned","began","cavor","utopia","heard","side","half","small","machine","years","feet","felt","hands","sort","human","end","black","water","stood","high","moon","put","sun","love","knew","point","general","heart","city","nature","white","give","ﬁrst","sea","find","set","days","gave","1","death","green","suddenly","words","strange","power","body","idea","open","common","line","brought","order","women","voice","house","matter","perdita","country","sphere","doubt","sight","sky","clear","means","dark","round","lost","longer","mr","passed","door","hope","present","lay","room","brother","times","woman","dead","fear","coming","utopian","sound","told","asked","number","understand","feeling","sssuri","road","large","martians","fact","full","eye","change","sat","question","red","feel","making","francis","rest","return","miss","modern","miles","darkness","free","called","natural","form","appeared","london","past","glass","alice","children","read","public","hours","close","land","reason","interest","hour","kind","ground","hundred","living","home","story","paper","knowledge","friend","adrian","food","weener","sense","houses","short","suppose","presently","blue","manner","morning","fell","planet","young","call","leave","flyer","word","spirit","ran","heat"],"counts":[3368,1325,1323,1224,1017,870,820,811,782,680,667,631,627,622,612,570,565,528,512,490,476,467,454,449,441,400,397,396,396,392,392,388,382,376,357,355,350,350,349,345,344,335,328,319,308,307,306,305,301,295,293,291,289,284,282,280,279,277,275,275,274,271,270,266,266,265,264,263,262,258,257,254,253,252,248,247,245,244,241,241,240,236,235,233,232,230,229,227,226,225,225,224,223,222,220,219,219,217,216,215,214,213,213,209,209,208,203,198,198,197,197,197,197,196,196,195,194,191,191,190,189,189,188,188,187,187,185,184,184,182,177,176,176,174,174,173,173,172,172,172,170,170,168,167,167,167,167,167,166,164,164,164,163,162,161,161,161,160,160,160,158,157,156,156,156,155,155,153,153,153,153,153,152,151,150,149,149,148,148,148,146,146,146,145,144,144,144,144,143,143,143,143,142,141,141,141,141,141,140,140]};
+
+    var width = 1102,
+        height = 484,
+        fontMin = 20,
+        fontMax = 150,
+            rotation = 0;
+    
+    var scale = d3.scale.log();
+    var fill = d3.scale.category20();
+    scale.domain([d3.min(data.counts), d3.max(data.counts)]);
+    scale.range([fontMin, fontMax]);
+
+    d3.layout.cloud().size([width, height])
+        .words(data.words.map(function (d, i) {
+            var count = data.counts[i];
+            return {
+                'text': d ,
+                'size': scale(count)
+            };
+        }))
+                .rotate(function() { return ~~(Math.random() * 2) * rotation; })
+        .fontSize(function(d) { return d.size; })
+                .on("end", draw)
+        .start();
+
+    function draw(words) {
+      if (words.length < data.words.length)
+        console.log("Warning: Could only fit " + words.length + " words in the given space, out of " + data.words.length + " total words");
+      d3.select("body").append("svg")
+          .attr("width", width)
+          .attr("height", height)
+        .append("g")
+          .attr("transform", "translate(" + width/2 + "," + height/2 + ")")
+        .selectAll("text")
+          .data(words)
+        .enter()
+            .append("text")
+              .style("font-size", function(d) { return d.size + "px"; })
+                            .attr("text-anchor", "middle")
+              .attr("transform", function(d) {
+                return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+              })
+              .style("fill", function(d) { return fill(d.text.toLowerCase()); })
+              .text(function(d) { return d.text; })
+                            .append("title")
+                .text(function(d, i) { 
+                    var idx = data.words.indexOf(d.text);
+                    var count = data.counts[idx];
+                    return d.text + "\n" + count; 
+                })
+                            ;
+    }
+</script>
+</body>
+</html>

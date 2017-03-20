@@ -1,0 +1,23 @@
+apply plugin: "java"
+repositories {
+  maven {
+    url "http://nexus.htrc.illinois.edu/content/groups/public/"
+  }
+}
+
+configurations.all {
+    transitive = false
+}
+
+configurations {
+  agent
+}
+
+dependencies {
+  agent "edu.indiana.d2i.htrc:agent:3.2.6-SNAPSHOT"
+}
+
+task copyWar(type: Copy) {
+  from configurations.agent
+  into "/usr/share/tomcat/webapps"
+}

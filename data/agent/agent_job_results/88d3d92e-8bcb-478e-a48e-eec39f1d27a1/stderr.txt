@@ -1,0 +1,13 @@
+java version "1.8.0_73"
+Java(TM) SE Runtime Environment (build 1.8.0_73-b02)
+Java HotSpot(TM) 64-Bit Server VM (build 25.73-b02, mixed mode)
+
+2016.12.30 18:43:42.840::INFO:  Changing the logging level from INFO to INFO  
+2016.12.30 18:43:42.923::INFO:  Preparing flow meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/95A5E991/1483141422923/1324221566/  
+ INFO [main] (?:?) - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2016.12.30 18:43:43.522::WARNING:  The system resources missing. Adding them...  
+ INFO [main] (?:?) - jetty-6.1.x
+ INFO [main] (?:?) - Started SocketConnector@0.0.0.0:30005
+2016.12.30 18:43:43.561::INFO:  Flow prepared. meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/95A5E991/1483141422923/1324221566/ waiting for execution  
+2016.12.30 18:43:43.563::INFO:  Executing flow meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/95A5E991/1483141422923/1324221566/  
+2016.12.30 18:44:14.938::INFO:  Finishing flow meandre://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/95A5E991/1483141422923/1324221566/  

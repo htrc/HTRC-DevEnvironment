@@ -1,0 +1,457 @@
+Meandre MAU Executor [1.0.2vcli/1.4.12.8759 (Sara)]
+All rights reserved by DITA, NCSA, UofI (2007-2013)
+THIS SOFTWARE IS PROVIDED UNDER University of Illinois/NCSA OPEN SOURCE LICENSE.
+
+Executing MAU file /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/069abc0c-cac4-4ce2-82df-491cb5f98593/HTRC_Tagcloud_with_Cleaning.mau
+Creating temp dir /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/069abc0c-cac4-4ce2-82df-491cb5f98593/HTRC_Tagcloud_with_Cleaning.mau.run
+Creating temp dir /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/069abc0c-cac4-4ce2-82df-491cb5f98593/HTRC_Tagcloud_with_Cleaning.mau.public_resources
+
+Preparing flow: meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/
+Preparation completed correctly
+
+Execution started at: 2017-03-02T19:42:40
+----------------------------------------------------------------------------
+03/02/17 19:42:40 [INFO]: ignoreCase true	[TextReplacement.initializeCallBack] <text_replacement [text_replacement]>
+03/02/17 19:42:45 [INFO]: File accessible at: http://c25-eth0:30085/public/resources/../job_results/tagcloudcleantokencounts.csv.txt	[WriteFile.executeCallBack] <write_to_file_3 [write_to_file_3]>
+03/02/17 19:42:45 [INFO]: File accessible at: http://c25-eth0:30085/public/resources/../job_results/tagcloudcleantokencounts.html	[WriteFile.executeCallBack] <write_to_file_2 [write_to_file_2]>
+----------------------------------------------------------------------------
+Execution finished at: 2017-03-02T19:42:45
+Execution finished gracefully.
+----------------------------------------------------------------------------
+
+Flow execution statistics
+
+Flow unique execution ID : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/95A5E919/1488501759911/1714129182/
+Flow state               : ended
+Started at               : Thu Mar 02 19:42:40 EST 2017
+Last update              : Thu Mar 02 19:42:45 EST 2017
+Total run time (ms)      : 5018
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/token_counter-reducer-token_counts-4
+	Executable components state                : disposed
+	Times the executable components fired      : 17
+	Accumulated executable components run time : 1
+	Pieces of data pulled                      : 69
+	Pieces of data pushed                      : 11
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/read_text
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 23
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 8
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/fork_x2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/htrc_page_retriever
+	Executable components state                : disposed
+	Times the executable components fired      : 8
+	Accumulated executable components run time : 4060
+	Pieces of data pulled                      : 24
+	Pieces of data pushed                      : 7671
+	Number of properties read                  : 11
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/tuple_value_to_string
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 1
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/text_cleaner_2-reducer-text-4
+	Executable components state                : disposed
+	Times the executable components fired      : 2617
+	Accumulated executable components run time : 46
+	Pieces of data pulled                      : 9467
+	Pieces of data pushed                      : 2557
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/stream_delimiter_filter
+	Executable components state                : disposed
+	Times the executable components fired      : 29
+	Accumulated executable components run time : 2
+	Pieces of data pulled                      : 87
+	Pieces of data pushed                      : 11
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/text_accumulator
+	Executable components state                : disposed
+	Times the executable components fired      : 2557
+	Accumulated executable components run time : 72
+	Pieces of data pulled                      : 7671
+	Pieces of data pushed                      : 29
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/top_n_filter
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 55
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/token_counts_to_csv
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 9
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/text_cleaner_2-reducer-error-4
+	Executable components state                : disposed
+	Times the executable components fired      : 0
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 0
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/random_sample
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 3
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/strings_to_java_string
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/text_replacement
+	Executable components state                : disposed
+	Times the executable components fired      : 11
+	Accumulated executable components run time : 1385
+	Pieces of data pulled                      : 78
+	Pieces of data pushed                      : 11
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/to_lowercase
+	Executable components state                : disposed
+	Times the executable components fired      : 11
+	Accumulated executable components run time : 37
+	Pieces of data pulled                      : 33
+	Pieces of data pushed                      : 11
+	Number of properties read                  : 2
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/opennlp_tokenizer-mapper-text-4
+	Executable components state                : disposed
+	Times the executable components fired      : 11
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 22
+	Pieces of data pushed                      : 17
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/opennlp_tokenizer-reducer-tokens-4
+	Executable components state                : disposed
+	Times the executable components fired      : 17
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 69
+	Pieces of data pushed                      : 11
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/stream_delimiter_filter_2
+	Executable components state                : disposed
+	Times the executable components fired      : 3
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 9
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/search_text
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 2
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 10
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/push_text
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 191
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/concatenate_text
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 1
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/token_counter-mapper-tokens-4
+	Executable components state                : disposed
+	Times the executable components fired      : 11
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 22
+	Pieces of data pushed                      : 17
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/flow_parameter
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 197
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 6
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/tag_cloud
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 22
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 19
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/opennlp_tokenizer-parallel-3
+	Executable components state                : disposed
+	Times the executable components fired      : 4
+	Accumulated executable components run time : 19
+	Pieces of data pulled                      : 12
+	Pieces of data pushed                      : 4
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/text_cleaner
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 2
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 7
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/opennlp_tokenizer-parallel-2
+	Executable components state                : disposed
+	Times the executable components fired      : 4
+	Accumulated executable components run time : 37
+	Pieces of data pulled                      : 12
+	Pieces of data pushed                      : 4
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/opennlp_tokenizer-parallel-1
+	Executable components state                : disposed
+	Times the executable components fired      : 4
+	Accumulated executable components run time : 15
+	Pieces of data pulled                      : 12
+	Pieces of data pushed                      : 4
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/opennlp_tokenizer-parallel-0
+	Executable components state                : disposed
+	Times the executable components fired      : 5
+	Accumulated executable components run time : 48
+	Pieces of data pulled                      : 15
+	Pieces of data pushed                      : 5
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/token_counter-reducer-error-4
+	Executable components state                : disposed
+	Times the executable components fired      : 0
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 0
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/token_counter_reducer
+	Executable components state                : disposed
+	Times the executable components fired      : 11
+	Accumulated executable components run time : 75
+	Pieces of data pulled                      : 33
+	Pieces of data pushed                      : 3
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/opennlp_tokenizer-reducer-error-4
+	Executable components state                : disposed
+	Times the executable components fired      : 0
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 0
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/token_filter
+	Executable components state                : disposed
+	Times the executable components fired      : 12
+	Accumulated executable components run time : 57
+	Pieces of data pulled                      : 47
+	Pieces of data pushed                      : 11
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/universal_text_extractor_3
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 99
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/universal_text_extractor_2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 188
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/write_to_file_3
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 3
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/push_text_3
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 187
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/write_to_file_2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 7
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/push_text_2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 196
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/flow_parameter_3
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 191
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 6
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/token_counter-parallel-3
+	Executable components state                : disposed
+	Times the executable components fired      : 4
+	Accumulated executable components run time : 16
+	Pieces of data pulled                      : 12
+	Pieces of data pushed                      : 4
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/flow_parameter_2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 189
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 6
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/token_counter-parallel-2
+	Executable components state                : disposed
+	Times the executable components fired      : 4
+	Accumulated executable components run time : 31
+	Pieces of data pulled                      : 12
+	Pieces of data pushed                      : 4
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/token_counter-parallel-1
+	Executable components state                : disposed
+	Times the executable components fired      : 4
+	Accumulated executable components run time : 26
+	Pieces of data pulled                      : 12
+	Pieces of data pushed                      : 4
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/text_cleaner_2-parallel-3
+	Executable components state                : disposed
+	Times the executable components fired      : 654
+	Accumulated executable components run time : 1460
+	Pieces of data pulled                      : 1962
+	Pieces of data pushed                      : 654
+	Number of properties read                  : 10
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/text_cleaner_2-parallel-2
+	Executable components state                : disposed
+	Times the executable components fired      : 654
+	Accumulated executable components run time : 1472
+	Pieces of data pulled                      : 1962
+	Pieces of data pushed                      : 654
+	Number of properties read                  : 10
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/token_counter-parallel-0
+	Executable components state                : disposed
+	Times the executable components fired      : 5
+	Accumulated executable components run time : 52
+	Pieces of data pulled                      : 15
+	Pieces of data pushed                      : 5
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/opennlp_tokenizer_2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 8
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/text_cleaner_2-parallel-1
+	Executable components state                : disposed
+	Times the executable components fired      : 654
+	Accumulated executable components run time : 1493
+	Pieces of data pulled                      : 1962
+	Pieces of data pushed                      : 654
+	Number of properties read                  : 10
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/text_cleaner_2-parallel-0
+	Executable components state                : disposed
+	Times the executable components fired      : 655
+	Accumulated executable components run time : 1462
+	Pieces of data pulled                      : 1965
+	Pieces of data pushed                      : 655
+	Number of properties read                  : 10
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/text_cleaner_2-mapper-text-4
+	Executable components state                : disposed
+	Times the executable components fired      : 2557
+	Accumulated executable components run time : 1273
+	Pieces of data pulled                      : 5114
+	Pieces of data pushed                      : 2617
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/trigger_message
+	Executable components state                : disposed
+	Times the executable components fired      : 12
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 47
+	Pieces of data pushed                      : 22
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Tagcloud_with_Cleaning/instance/csv_to_tuple
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 18
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 4
+
+Cleaning temp dir /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/069abc0c-cac4-4ce2-82df-491cb5f98593/HTRC_Tagcloud_with_Cleaning.mau.run
+Cleaning temp dir /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/069abc0c-cac4-4ce2-82df-491cb5f98593/HTRC_Tagcloud_with_Cleaning.mau.public_resources
+
+Cleaning up working directory...

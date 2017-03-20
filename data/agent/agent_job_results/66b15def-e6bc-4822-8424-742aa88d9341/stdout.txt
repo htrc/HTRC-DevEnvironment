@@ -1,0 +1,480 @@
+Meandre MAU Executor [1.0.2vcli/1.4.12.8759 (Sara)]
+All rights reserved by DITA, NCSA, UofI (2007-2013)
+THIS SOFTWARE IS PROVIDED UNDER University of Illinois/NCSA OPEN SOURCE LICENSE.
+
+Executing MAU file /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/66b15def-e6bc-4822-8424-742aa88d9341/HTRC_Topic_Modeling.mau
+Creating temp dir /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/66b15def-e6bc-4822-8424-742aa88d9341/HTRC_Topic_Modeling.mau.run
+Creating temp dir /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/66b15def-e6bc-4822-8424-742aa88d9341/HTRC_Topic_Modeling.mau.public_resources
+
+Preparing flow: meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/
+Preparation completed correctly
+
+Execution started at: 2017-03-02T19:42:40
+----------------------------------------------------------------------------
+03/02/17 19:44:43 [INFO]: File accessible at: http://c25-eth0:30086/public/resources/../job_results/topic_top_words.xml	[WriteFile.executeCallBack] <write_to_file_2 [write_to_file_2]>
+03/02/17 19:44:43 [INFO]: File accessible at: http://c25-eth0:30086/public/resources/../job_results/topic_tagclouds.html	[WriteFile.executeCallBack] <write_to_file [write_to_file]>
+----------------------------------------------------------------------------
+Execution finished at: 2017-03-02T19:44:44
+Execution finished gracefully.
+----------------------------------------------------------------------------
+
+Flow execution statistics
+
+Flow unique execution ID : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/95A5E919/1488501759911/1726726204/
+Flow state               : ended
+Started at               : Thu Mar 02 19:42:40 EST 2017
+Last update              : Thu Mar 02 19:44:44 EST 2017
+Total run time (ms)      : 124032
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/text_cleaner_3
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 1
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 7
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/text_cleaner_2
+	Executable components state                : disposed
+	Times the executable components fired      : 18558
+	Accumulated executable components run time : 1961
+	Pieces of data pulled                      : 55674
+	Pieces of data pushed                      : 18558
+	Number of properties read                  : 8
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/agg_mallet_inst
+	Executable components state                : disposed
+	Times the executable components fired      : 18558
+	Accumulated executable components run time : 168
+	Pieces of data pulled                      : 55674
+	Pieces of data pushed                      : 3
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/opennlp_sentence_tokenizer-reducer-error-4
+	Executable components state                : disposed
+	Times the executable components fired      : 0
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 0
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/csv_to_token_counts
+	Executable components state                : disposed
+	Times the executable components fired      : 12
+	Accumulated executable components run time : 4
+	Pieces of data pulled                      : 36
+	Pieces of data pushed                      : 12
+	Number of properties read                  : 7
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/frame_maker
+	Executable components state                : disposed
+	Times the executable components fired      : 12
+	Accumulated executable components run time : 47
+	Pieces of data pulled                      : 36
+	Pieces of data pushed                      : 3
+	Number of properties read                  : 8
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/select_nodes_via_xpath
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 99
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 12
+	Number of properties read                  : 7
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/to_mallet_feat_seq
+	Executable components state                : disposed
+	Times the executable components fired      : 18558
+	Accumulated executable components run time : 1008
+	Pieces of data pulled                      : 131990
+	Pieces of data pushed                      : 18558
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/search_text
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 2
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 7
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/htrc_page_retriever
+	Executable components state                : disposed
+	Times the executable components fired      : 5
+	Accumulated executable components run time : 53968
+	Pieces of data pulled                      : 15
+	Pieces of data pushed                      : 55674
+	Number of properties read                  : 11
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/csv_to_tuple
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 13
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/mallet_topic_modeling
+	Executable components state                : disposed
+	Times the executable components fired      : 3
+	Accumulated executable components run time : 67567
+	Pieces of data pulled                      : 9
+	Pieces of data pushed                      : 3
+	Number of properties read                  : 12
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/tuple_value_frequency_counter
+	Executable components state                : disposed
+	Times the executable components fired      : 18558
+	Accumulated executable components run time : 2176
+	Pieces of data pulled                      : 143769
+	Pieces of data pushed                      : 37116
+	Number of properties read                  : 7
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/xml_to_xml_with_xsl
+	Executable components state                : disposed
+	Times the executable components fired      : 13
+	Accumulated executable components run time : 295
+	Pieces of data pulled                      : 50
+	Pieces of data pushed                      : 12
+	Number of properties read                  : 2
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/concatenate_text
+	Executable components state                : disposed
+	Times the executable components fired      : 18558
+	Accumulated executable components run time : 46677
+	Pieces of data pulled                      : 147948
+	Pieces of data pushed                      : 18558
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/stream_delimiter_filter
+	Executable components state                : disposed
+	Times the executable components fired      : 3
+	Accumulated executable components run time : 1
+	Pieces of data pulled                      : 9
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/opennlp_sentence_tokenizer-mapper-sentences-4
+	Executable components state                : disposed
+	Times the executable components fired      : 18558
+	Accumulated executable components run time : 75
+	Pieces of data pulled                      : 37116
+	Pieces of data pushed                      : 18564
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/tuple_value_to_string
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 1
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/fork_x5
+	Executable components state                : disposed
+	Times the executable components fired      : 18558
+	Accumulated executable components run time : 48257
+	Pieces of data pulled                      : 55674
+	Pieces of data pushed                      : 92790
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/flow_parameter
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 150
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 6
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/opennlp_sentence_detector-reducer-error-4
+	Executable components state                : disposed
+	Times the executable components fired      : 0
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 0
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/push_text_3
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 146
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/push_text_2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 150
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/read_text
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 60
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 8
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/top_n_filter
+	Executable components state                : disposed
+	Times the executable components fired      : 12
+	Accumulated executable components run time : 2
+	Pieces of data pulled                      : 36
+	Pieces of data pushed                      : 12
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/tuple_value_filter
+	Executable components state                : disposed
+	Times the executable components fired      : 18558
+	Accumulated executable components run time : 12492
+	Pieces of data pulled                      : 143953
+	Pieces of data pushed                      : 37116
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/write_to_file_2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 10
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/opennlp_pos_tagger-mapper-tokenized_sentences-4
+	Executable components state                : disposed
+	Times the executable components fired      : 18558
+	Accumulated executable components run time : 30201
+	Pieces of data pulled                      : 37116
+	Pieces of data pushed                      : 18564
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/stream_delimiter_filter_2
+	Executable components state                : disposed
+	Times the executable components fired      : 3
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 9
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/opennlp_pos_tagger-reducer-tuples-4
+	Executable components state                : disposed
+	Times the executable components fired      : 18564
+	Accumulated executable components run time : 76
+	Pieces of data pulled                      : 65436
+	Pieces of data pushed                      : 18558
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/opennlp_pos_tagger-reducer-meta_tuple-4
+	Executable components state                : disposed
+	Times the executable components fired      : 18564
+	Accumulated executable components run time : 74
+	Pieces of data pulled                      : 65365
+	Pieces of data pushed                      : 18558
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/create_mallet_instance
+	Executable components state                : disposed
+	Times the executable components fired      : 18558
+	Accumulated executable components run time : 495
+	Pieces of data pulled                      : 445293
+	Pieces of data pushed                      : 18558
+	Number of properties read                  : 2
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/write_to_file
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 3
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/opennlp_pos_tagger-parallel-3
+	Executable components state                : disposed
+	Times the executable components fired      : 4641
+	Accumulated executable components run time : 46678
+	Pieces of data pulled                      : 13923
+	Pieces of data pushed                      : 9282
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/opennlp_pos_tagger-parallel-2
+	Executable components state                : disposed
+	Times the executable components fired      : 4641
+	Accumulated executable components run time : 47294
+	Pieces of data pulled                      : 13923
+	Pieces of data pushed                      : 9282
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/opennlp_pos_tagger-parallel-1
+	Executable components state                : disposed
+	Times the executable components fired      : 4641
+	Accumulated executable components run time : 46988
+	Pieces of data pulled                      : 13923
+	Pieces of data pushed                      : 9282
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/opennlp_pos_tagger-parallel-0
+	Executable components state                : disposed
+	Times the executable components fired      : 4641
+	Accumulated executable components run time : 47240
+	Pieces of data pulled                      : 13923
+	Pieces of data pushed                      : 9282
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/opennlp_sentence_detector-reducer-sentences-4
+	Executable components state                : disposed
+	Times the executable components fired      : 18564
+	Accumulated executable components run time : 81
+	Pieces of data pulled                      : 65648
+	Pieces of data pushed                      : 18558
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/random_sample
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 3
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/opennlp_sentence_tokenizer-parallel-3
+	Executable components state                : disposed
+	Times the executable components fired      : 4641
+	Accumulated executable components run time : 15507
+	Pieces of data pulled                      : 13923
+	Pieces of data pushed                      : 4641
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/text_cleaner
+	Executable components state                : disposed
+	Times the executable components fired      : 18558
+	Accumulated executable components run time : 38073
+	Pieces of data pulled                      : 55674
+	Pieces of data pushed                      : 18558
+	Number of properties read                  : 9
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/opennlp_sentence_tokenizer-parallel-2
+	Executable components state                : disposed
+	Times the executable components fired      : 4641
+	Accumulated executable components run time : 15608
+	Pieces of data pulled                      : 13923
+	Pieces of data pushed                      : 4641
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/strings_to_java_string
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/opennlp_sentence_tokenizer-parallel-1
+	Executable components state                : disposed
+	Times the executable components fired      : 4641
+	Accumulated executable components run time : 15597
+	Pieces of data pulled                      : 13923
+	Pieces of data pushed                      : 4641
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/opennlp_sentence_tokenizer-parallel-0
+	Executable components state                : disposed
+	Times the executable components fired      : 4641
+	Accumulated executable components run time : 15588
+	Pieces of data pulled                      : 13923
+	Pieces of data pushed                      : 4641
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/opennlp_sentence_detector-parallel-3
+	Executable components state                : disposed
+	Times the executable components fired      : 4641
+	Accumulated executable components run time : 681
+	Pieces of data pulled                      : 13923
+	Pieces of data pushed                      : 4641
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/opennlp_pos_tagger-reducer-error-4
+	Executable components state                : disposed
+	Times the executable components fired      : 0
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 0
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/opennlp_sentence_detector-parallel-2
+	Executable components state                : disposed
+	Times the executable components fired      : 4641
+	Accumulated executable components run time : 661
+	Pieces of data pulled                      : 13923
+	Pieces of data pushed                      : 4641
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/read_text_2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 14
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 8
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/opennlp_sentence_detector-parallel-1
+	Executable components state                : disposed
+	Times the executable components fired      : 4641
+	Accumulated executable components run time : 694
+	Pieces of data pulled                      : 13923
+	Pieces of data pushed                      : 4641
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/topic_top_words_to_xml
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 47
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/opennlp_sentence_detector-mapper-text-4
+	Executable components state                : disposed
+	Times the executable components fired      : 18558
+	Accumulated executable components run time : 115
+	Pieces of data pulled                      : 37116
+	Pieces of data pushed                      : 18564
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/opennlp_sentence_detector-parallel-0
+	Executable components state                : disposed
+	Times the executable components fired      : 4641
+	Accumulated executable components run time : 701
+	Pieces of data pulled                      : 13923
+	Pieces of data pushed                      : 4641
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/push_text
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 145
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/opennlp_sentence_tokenizer-reducer-tokenized_sentences-4
+	Executable components state                : disposed
+	Times the executable components fired      : 18564
+	Accumulated executable components run time : 72
+	Pieces of data pulled                      : 65646
+	Pieces of data pushed                      : 18558
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/tag_cloud
+	Executable components state                : disposed
+	Times the executable components fired      : 12
+	Accumulated executable components run time : 46
+	Pieces of data pulled                      : 36
+	Pieces of data pushed                      : 12
+	Number of properties read                  : 19
+
+Cleaning temp dir /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/66b15def-e6bc-4822-8424-742aa88d9341/HTRC_Topic_Modeling.mau.run
+Cleaning temp dir /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/66b15def-e6bc-4822-8424-742aa88d9341/HTRC_Topic_Modeling.mau.public_resources
+
+Cleaning up working directory...

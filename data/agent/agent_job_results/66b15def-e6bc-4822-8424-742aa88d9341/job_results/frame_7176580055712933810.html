@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Tag Cloud</title>
+    <script type='text/javascript' src="https://htrc2.pti.indiana.edu/HTRC-UI-Portal2/js/d3.v2.min.js"></script>
+    <script type='text/javascript' src="https://htrc2.pti.indiana.edu/HTRC-UI-Portal2/js/d3.layout.cloud.js"></script>
+</head>
+<body>
+<script type='text/javascript'>
+    var data = {"words":["love","fair","eyes","nature","true","makes","heart","lady","make","fortune","eye","'d","daughter","find","thoughts","beauty","time","mind","fear"],"counts":[6865,1824,1500,1181,1144,1073,1057,1037,1029,1021,1020,986,947,878,826,818,811,777,750]};
+
+    var width = 300,
+        height = 300,
+        fontMin = 10,
+        fontMax = 100,
+            rotation = 1;
+    
+    var scale = d3.scale.linear();
+    var fill = d3.scale.category20();
+    scale.domain([d3.min(data.counts), d3.max(data.counts)]);
+    scale.range([fontMin, fontMax]);
+
+    d3.layout.cloud().size([width, height])
+        .words(data.words.map(function (d, i) {
+            var count = data.counts[i];
+            return {
+                'text': d ,
+                'size': scale(count)
+            };
+        }))
+                .rotate(function() { return ~~(Math.random() * 2) * rotation; })
+        .fontSize(function(d) { return d.size; })
+                .on("end", draw)
+        .start();
+
+    function draw(words) {
+      if (words.length < data.words.length)
+        console.log("Warning: Could only fit " + words.length + " words in the given space, out of " + data.words.length + " total words");
+      d3.select("body").append("svg")
+          .attr("width", width)
+          .attr("height", height)
+        .append("g")
+          .attr("transform", "translate(" + width/2 + "," + height/2 + ")")
+        .selectAll("text")
+          .data(words)
+        .enter()
+            .append("text")
+              .style("font-size", function(d) { return d.size + "px"; })
+                            .attr("text-anchor", "middle")
+              .attr("transform", function(d) {
+                return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+              })
+              .style("fill", function(d) { return fill(d.text.toLowerCase()); })
+              .text(function(d) { return d.text; })
+                            .append("title")
+                .text(function(d, i) { 
+                    var idx = data.words.indexOf(d.text);
+                    var count = data.counts[idx];
+                    return d.text + "\n" + count; 
+                })
+                            ;
+    }
+</script>
+</body>
+</html>

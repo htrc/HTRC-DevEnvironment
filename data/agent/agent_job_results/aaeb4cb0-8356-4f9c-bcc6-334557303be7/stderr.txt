@@ -1,0 +1,13 @@
+java version "1.7.0_25"
+Java(TM) SE Runtime Environment (build 1.7.0_25-b15)
+Java HotSpot(TM) 64-Bit Server VM (build 23.25-b01, mixed mode)
+
+2017.03.02 18:07:30.122::INFO:  Changing the logging level from INFO to INFO  
+2017.03.02 18:07:30.200::INFO:  Preparing flow meandre://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/95A5E9B6/1488496050199/521672630/  
+ INFO [main] (?:?) - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2017.03.02 18:07:30.622::WARNING:  The system resources missing. Adding them...  
+ INFO [main] (?:?) - jetty-6.1.x
+ INFO [main] (?:?) - Started SocketConnector@0.0.0.0:30079
+2017.03.02 18:07:30.667::INFO:  Flow prepared. meandre://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/95A5E9B6/1488496050199/521672630/ waiting for execution  
+2017.03.02 18:07:30.668::INFO:  Executing flow meandre://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/95A5E9B6/1488496050199/521672630/  
+2017.03.02 18:07:56.707::INFO:  Finishing flow meandre://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/95A5E9B6/1488496050199/521672630/  

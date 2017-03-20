@@ -1,0 +1,5 @@
+Hostname: c116.karst.uits.iu.edu
+17:46:44.627 [main] DEBUG htrc.agent.jobclient.AgentJobClient - Executing command: [/bin/bash, /N/dc2/scratch/drhtrc/htrc-agent/karst/dev/agent_working_directories/5fb65584-6fe9-4640-9e5a-0f74b077bd86/run_marc.sh]
+17:46:51.061 [main] DEBUG htrc.agent.jobclient.AgentJobClient - Job exit value: 0
+17:46:51.061 [main] DEBUG htrc.agent.jobclient.AgentJobClient - Job completion status: Job finished successfully 
+17:46:51.061 [main] DEBUG htrc.agent.jobclient.AgentJobClient - Job runtime: 6 seconds

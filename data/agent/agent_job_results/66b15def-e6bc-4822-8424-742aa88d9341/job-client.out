@@ -1,0 +1,5 @@
+Hostname: c25.karst.uits.iu.edu
+19:42:34.461 [main] DEBUG htrc.agent.jobclient.AgentJobClient - Executing command: [/bin/bash, /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/66b15def-e6bc-4822-8424-742aa88d9341/run_Meandre_Topic_Modeling.sh]
+19:44:45.045 [main] DEBUG htrc.agent.jobclient.AgentJobClient - Job exit value: 0
+19:44:45.045 [main] DEBUG htrc.agent.jobclient.AgentJobClient - Job completion status: Job finished successfully 
+19:44:45.046 [main] DEBUG htrc.agent.jobclient.AgentJobClient - Job runtime: 130 seconds

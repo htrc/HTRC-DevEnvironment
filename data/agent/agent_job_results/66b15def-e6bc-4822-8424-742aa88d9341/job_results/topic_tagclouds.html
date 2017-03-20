@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+
+<body>
+<script type="text/javascript">
+    function createIframe(src, width, height) {
+        var iframe = document.createElement('iframe');
+        iframe.setAttribute('src', src);
+        iframe.setAttribute('width', width);
+        iframe.setAttribute('height', height);
+        iframe.setAttribute('frameborder', 0);
+        iframe.setAttribute('marginwidth', 0);
+        iframe.setAttribute('marginheight', 0);
+        iframe.innerHTML = 'Your browser does not support frames!';
+
+        return iframe;
+    }
+
+    var sz =  300 + 6;
+    var docs = [
+         'frame_6542947855142890179.html',
+ 'frame_35009437111544981.html',
+ 'frame_7418686332337427404.html',
+ 'frame_5979081990171067749.html',
+ 'frame_6770205199267776972.html',
+ 'frame_7176580055712933810.html',
+ 'frame_3273449090834220740.html',
+ 'frame_3783445543392473411.html',
+ 'frame_3211350390318634317.html',
+ 'frame_789232137894005232.html'
+    ];
+
+    for (var i in docs)
+        document.body.appendChild(createIframe(docs[i], sz, sz));
+</script>
+</body>
+</html>

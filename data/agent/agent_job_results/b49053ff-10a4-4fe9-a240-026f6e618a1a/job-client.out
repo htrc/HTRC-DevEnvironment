@@ -1,0 +1,5 @@
+Hostname: c182.karst.uits.iu.edu
+18:04:40.750 [main] DEBUG htrc.agent.jobclient.AgentJobClient - Executing command: [/bin/bash, /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/b49053ff-10a4-4fe9-a240-026f6e618a1a/run_Meandre_OpenNLP_Date_Entities_To_Simile.sh]
+18:08:51.674 [main] DEBUG htrc.agent.jobclient.AgentJobClient - Job exit value: 0
+18:08:51.674 [main] DEBUG htrc.agent.jobclient.AgentJobClient - Job completion status: Job finished successfully 
+18:08:51.675 [main] DEBUG htrc.agent.jobclient.AgentJobClient - Job runtime: 250 seconds

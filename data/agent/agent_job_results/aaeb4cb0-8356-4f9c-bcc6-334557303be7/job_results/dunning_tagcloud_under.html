@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Tagcloud</title>
+    <script type='text/javascript' src="https://htrc2.pti.indiana.edu/HTRC-UI-Portal2/js/d3.v2.min.js"></script>
+    <script type='text/javascript' src="https://htrc2.pti.indiana.edu/HTRC-UI-Portal2/js/d3.layout.cloud.js"></script>
+</head>
+<body>
+<script type='text/javascript'>
+    var data = {"words":["gertrude","cass","cli","2","cato","reg","cawdor","knocking","weird","mia","varro","statue","lightning","adolphe","luc","em","mighty","soldier","dec","d","burgundy","clitus","war","mess","conspiracy","citizens","charlotte","fulvia","edm","alarum","apemantus","fortinbras","oph","thane","mutiny","their","macd","dolabella","lod","alexas","cesar","moor","crown","char","lago","slain","rom","t","othello","ides","lieutenant","noble","bernardo","soothsayer","ambition","io","daughters","volumnius","voi","th","laer","osric","ligarius","oct","mio","emilia","menas","weep","bra","strato","ross","marcus","oh","'","—","thunder","funeral","montague","rod","agrippa","cin","julius","sec","dead","cimber","publius","egypt","sar","0","tent","edg","ccesar","duncan","murder","emil","claudius","trebonius","denmark","castle","mes","iras","octavia","laurence","eno","pol","oswald","marcellus","calpurnia","caius","march","senators","philippi","queen","romans","di","witch","benvolio","pindarus","emi","soldiers","metellus","conspirators","o","malcolm","death","senate","non","battle","cicero","mercutio","sword","roman","desdemona","guildenstern","our","eros","decius","timon","tybalt","cornwall","glos","rosencrantz","cces","albany","otel","lucilius","plutarch","antonius","cinna","ham","capitol","il","capulet","charmian","goneril","juliet","csesar","lepidus","banquo","oth","edmund","macduff","regan","titinius","gods","cleo","cordelia","messala","ophelia","ghost","enobarbus","che","laertes","octavius","polonius","edgar","nurse","cassio","pompey","king","rome","cit","gloster","horatio","lucius","romeo","des","kent","cleopatra","macbeth","lear","casca","iago","hamlet","cas","bru","cassius","antony","brutus","caesar"],"counts":[91,91,91,91,93,93,93,93,94,94,96,97,97,97,99,99,100,101,102,103,104,104,105,106,106,108,108,108,109,109,109,110,110,110,110,115,117,118,119,120,121,121,122,123,123,125,126,126,126,127,128,129,130,130,130,132,135,136,136,137,137,138,139,140,140,141,143,145,146,147,148,150,150,150,151,151,153,157,158,160,160,166,168,171,171,171,171,172,174,175,176,176,178,180,180,180,181,181,182,182,182,185,185,186,190,195,195,195,195,202,205,206,206,207,208,209,211,211,212,213,214,214,220,222,223,228,230,230,234,234,236,237,243,244,246,248,249,251,254,256,257,257,264,274,276,285,288,302,308,315,329,331,333,334,336,349,356,371,374,375,378,380,384,387,391,401,404,408,414,440,443,460,471,491,493,505,508,524,526,572,589,597,600,603,605,647,671,739,877,886,992,1076,1194,1517,1532,1925,2117,2837,3746,4114]};
+
+    var width = 1104,
+        height = 484,
+        fontMin = 20,
+        fontMax = 150,
+            rotation = 0;
+    
+    var scale = d3.scale.log();
+    var fill = d3.scale.category20();
+    scale.domain([d3.min(data.counts), d3.max(data.counts)]);
+    scale.range([fontMin, fontMax]);
+
+    d3.layout.cloud().size([width, height])
+        .words(data.words.map(function (d, i) {
+            var count = data.counts[i];
+            return {
+                'text': d ,
+                'size': scale(count)
+            };
+        }))
+                .rotate(function() { return ~~(Math.random() * 2) * rotation; })
+        .fontSize(function(d) { return d.size; })
+                .on("end", draw)
+        .start();
+
+    function draw(words) {
+      if (words.length < data.words.length)
+        console.log("Warning: Could only fit " + words.length + " words in the given space, out of " + data.words.length + " total words");
+      d3.select("body").append("svg")
+          .attr("width", width)
+          .attr("height", height)
+        .append("g")
+          .attr("transform", "translate(" + width/2 + "," + height/2 + ")")
+        .selectAll("text")
+          .data(words)
+        .enter()
+            .append("text")
+              .style("font-size", function(d) { return d.size + "px"; })
+                            .attr("text-anchor", "middle")
+              .attr("transform", function(d) {
+                return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+              })
+              .style("fill", function(d) { return fill(d.text.toLowerCase()); })
+              .text(function(d) { return d.text; })
+                            .append("title")
+                .text(function(d, i) { 
+                    var idx = data.words.indexOf(d.text);
+                    var count = data.counts[idx];
+                    return d.text + "\n" + count; 
+                })
+                            ;
+    }
+</script>
+</body>
+</html>

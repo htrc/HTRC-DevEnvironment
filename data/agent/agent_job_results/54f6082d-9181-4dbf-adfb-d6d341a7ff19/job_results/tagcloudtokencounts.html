@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Tag Cloud</title>
+    <script type='text/javascript' src="https://htrc2.pti.indiana.edu/HTRC-UI-Portal2/js/d3.v2.min.js"></script>
+    <script type='text/javascript' src="https://htrc2.pti.indiana.edu/HTRC-UI-Portal2/js/d3.layout.cloud.js"></script>
+</head>
+<body>
+<script type='text/javascript'>
+    var data = {"words":[".",",","the","of","'","and","to","I",";","in","a","\"","-","is",":","?","that","you","s","it","his","not","—","my","with","as","!","for","The","be","he","me","this",")","have","(","him","by","And","on","d","but","your","^","was","so","are","will","or","her","i","[","from","all","which","at","do","A","thou","no","To","1","we","2","an","what","shall","That","]","one","more","But","thee","What","would","man","our","thy","they","them","their","if","love","In","here","good","she","had","has","For","am","there","were","well","upon","may","than","see","3","now","It","II","Caesar","=","should","come","then","ii","lord","us","when","like","He","such","know","out","time","O","This","did","some","Scene","Brutus","etc","If","You","Enter","Shakespeare","See","Cf","who","III","*","make","been","let","say","play","much","t","other","must","up","As","these","V","\\","4","go","sir","can","night","most","very","too","any","So","iii","My","yet","day","men","hath","word","two","S","old","Hamlet","How","IV","Why","give","into","first","made","{","take","11","Act","Portia","Antony","life","o","e","5","great","Sir","heart","7","think","iv","own","hand","father","where","before","speak","ll","No","F"],"counts":[531058,436835,180685,122912,105738,103001,88902,79297,72624,71933,70866,63323,58514,55484,52405,43770,40435,40084,38090,33896,32665,32562,32254,32219,30936,30064,28900,28695,28091,27683,26329,26248,24368,24269,22763,20920,20811,20626,20615,18273,17871,17228,16927,16585,16342,15969,15937,15908,15706,15172,15114,14336,14013,13895,13130,13028,12756,12448,12191,11919,11607,11308,10987,10731,10342,10016,9933,9593,9389,9100,9079,8907,8787,8753,8719,8700,8592,8526,8403,8203,8150,7893,7885,7777,7678,7598,7577,7433,7419,7403,7256,7255,6990,6932,6912,6822,6706,6540,6517,6513,6449,6435,6344,6343,6339,6261,6239,6238,6126,6110,6086,6067,6062,6019,6017,5943,5882,5868,5843,5834,5792,5770,5747,5738,5550,5501,5488,5443,5419,5391,5366,5352,5350,5325,5305,5275,5199,5157,5113,5111,5081,5074,5047,4988,4919,4826,4774,4759,4708,4702,4677,4643,4612,4564,4535,4516,4505,4477,4448,4434,4337,4333,4330,4253,4226,4138,4137,4085,4057,4003,3979,3969,3933,3929,3889,3873,3861,3822,3819,3795,3773,3729,3728,3726,3724,3684,3663,3651,3650,3603,3588,3587,3560,3557,3543,3515,3502,3467,3439,3419]};
+
+    var width = 1102,
+        height = 484,
+        fontMin = 20,
+        fontMax = 150,
+            rotation = 0;
+    
+    var scale = d3.scale.log();
+    var fill = d3.scale.category20();
+    scale.domain([d3.min(data.counts), d3.max(data.counts)]);
+    scale.range([fontMin, fontMax]);
+
+    d3.layout.cloud().size([width, height])
+        .words(data.words.map(function (d, i) {
+            var count = data.counts[i];
+            return {
+                'text': d ,
+                'size': scale(count)
+            };
+        }))
+                .rotate(function() { return ~~(Math.random() * 2) * rotation; })
+        .fontSize(function(d) { return d.size; })
+                .on("end", draw)
+        .start();
+
+    function draw(words) {
+      if (words.length < data.words.length)
+        console.log("Warning: Could only fit " + words.length + " words in the given space, out of " + data.words.length + " total words");
+      d3.select("body").append("svg")
+          .attr("width", width)
+          .attr("height", height)
+        .append("g")
+          .attr("transform", "translate(" + width/2 + "," + height/2 + ")")
+        .selectAll("text")
+          .data(words)
+        .enter()
+            .append("text")
+              .style("font-size", function(d) { return d.size + "px"; })
+                            .attr("text-anchor", "middle")
+              .attr("transform", function(d) {
+                return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+              })
+              .style("fill", function(d) { return fill(d.text.toLowerCase()); })
+              .text(function(d) { return d.text; })
+                            .append("title")
+                .text(function(d, i) { 
+                    var idx = data.words.indexOf(d.text);
+                    var count = data.counts[idx];
+                    return d.text + "\n" + count; 
+                })
+                            ;
+    }
+</script>
+</body>
+</html>

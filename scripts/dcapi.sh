@@ -11,13 +11,11 @@ mysql --user=root  --password="y*MS2eb;&!&%p" < /devenv_sources/HTRC-DataCapsule
 # Copy the DC API to tomcapt webapps directory
 /opt/gradle/latest/bin/gradle copyWar
 
-# Copy sites.xml and log4j.properties files to /etc/htrc/dcapi
+# Copy configuration files to /etc/htrc/dcapi
 mkdir -p /etc/htrc/dcapi
 cp sites.xml /etc/htrc/dcapi
 cp log4j.properties /etc/htrc/dcapi
-
-# Copy jwtfilter.conf to /etc/htrc/dcapi
-cp /devenv_sources/HTRC-DataCapsules/webservice/src/main/resources/jwtfilter.conf /etc/htrc/dcapi
+cp jwtfilter.conf /etc/htrc/dcapi
 
 # Create the log file location
 mkdir -p /var/log/htrc/dcapi

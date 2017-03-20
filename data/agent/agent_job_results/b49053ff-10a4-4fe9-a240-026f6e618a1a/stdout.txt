@@ -1,0 +1,505 @@
+Meandre MAU Executor [1.0.2vcli/1.4.12.8759 (Sara)]
+All rights reserved by DITA, NCSA, UofI (2007-2013)
+THIS SOFTWARE IS PROVIDED UNDER University of Illinois/NCSA OPEN SOURCE LICENSE.
+
+Executing MAU file /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/b49053ff-10a4-4fe9-a240-026f6e618a1a/HTRC_OpenNLP_Date_Entities_To_Simile.mau
+Creating temp dir /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/b49053ff-10a4-4fe9-a240-026f6e618a1a/HTRC_OpenNLP_Date_Entities_To_Simile.mau.run
+Creating temp dir /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/b49053ff-10a4-4fe9-a240-026f6e618a1a/HTRC_OpenNLP_Date_Entities_To_Simile.mau.public_resources
+
+Preparing flow: meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/
+Preparation completed correctly
+
+Execution started at: 2017-03-02T18:04:44
+----------------------------------------------------------------------------
+03/02/17 18:08:42 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:42 [WARNING]:    sentence: '?Race and grade , by age?Number of pu 1-ils of each s ] ) ec'i_/ied age in each grade , by sex: and by general nativity and race of other ofpup1'I?? ( onti1111ed .'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:42 [WARNING]:    date: ' onti1111ed'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]:    sentence: 'tt :jaq ) oj aA|}DU jo ajoq-9A|iBN T ?aottj pus Ai|Aiina puanao o ( 833AO LIK3 iO Ad/US ) '	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]:    date: ' 833AO LIK3'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]:    sentence: '?Male breadwinners in the ?rst and second generations of the white population F-It-I F-'Q?@\I@UII50 ) IO F? 9-I N} lQl\'Jl\?!Ol\Dl\?!~DlO\-'9-?P-?F-?F-?P-'F" ~IO>?J\n???9lOI-?Q?Q?'~lO>O'l\&?A1 ? 0#rhrIhbJO?OOCA7?A7C03O9CA3?O??lO l\D*-*??O?\lC>U\vBOJlQ'-?CO 43 8S28% 3882 %3S$ r UNITED STATES .'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]:    date: ' 3882 '	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]:    sentence: 'Per Per Per; Num- ?itflf I~{;1m- l I~{ 1111 5 .'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]:    date: ' 1111 5'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]:    sentence: 'g 0 O 0 O Q 0 I O Q I "?~~~0~~O~~??*' -I??0I?@'~" -0-0'-0v~~?n|~o0000OI--I~ -n~----0---~ o o000 0 - ~onooooo0co? 6 3 .'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]:    date: ' o o000 0 '	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]:    sentence: '?Fe/nale breadwinners in the ?rst and second generations ofthe white ' presented by nationalities , and u ?<5? %8&??8?E??ES?%8?8 llv?lbnbnh ubnb O\7? JOO A3 JO900%QD ??~I G Ghhbsi IQ F-5 pula each ONE OR BOTH PARENTS BORN IN IRELAh'D .'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]:    date: ' JOO A3 JO900'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]:    sentence: '6 QQQ Q OIQCQ Q0 Fl $!B5$$it&l'$t?-188883????? 8883 8 883 '	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]:    date: ' 8883 8 883'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]:    sentence: 'i8l ?--?C181 ????ti8l ??--5181 ?-?9161 ????1181 ????8181 ????0181 '??0881 ?? 1881 ????Z88I ??-6881 ????t88l ?---S88I ????9881 ?? 1881 ????8881 ???'6881 ???0681 ? "1681 ??? Z68I ??' E681 ????t68l ??S681 ??? 9681 ????1681 ???'8081 '	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]:    date: ' 1881'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]:    sentence: 'i8l ?--?C181 ????ti8l ??--5181 ?-?9161 ????1181 ????8181 ????0181 '??0881 ?? 1881 ????Z88I ??-6881 ????t88l ?---S88I ????9881 ?? 1881 ????8881 ???'6881 ???0681 ? "1681 ??? Z68I ??' E681 ????t68l ??S681 ??? 9681 ????1681 ???'8081 '	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]:    date: ' 1881'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]:    sentence: 'i8l ?--?C181 ????ti8l ??--5181 ?-?9161 ????1181 ????8181 ????0181 '??0881 ????1881 ????Z88I ??-6881 ????t88l ?---S88I ????9881 ????1881 ?? 8881 ???'6881 ???0681 ? "1681 ??? Z68I ??' E681 ????t68l ??S681 ??? 9681 ????1681 ???'8081 '	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]:    date: ' 8881'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]:    sentence: 'i8l ?--?C181 ????ti8l ??--5181 ?-?9161 ????1181 ????8181 ????0181 '??0881 ????1881 ????Z88I ??-6881 ????t88l ?---S88I ????9881 ????1881 ????8881 ???'6881 ???0681 ? 1681 ??? Z68I ??' E681 ????t68l ??S681 ??? 9681 ????1681 ???'8081 '	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]:    date: ' 1681'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]:    sentence: 'i8l ?--?C181 ????ti8l ??--5181 ?-?9161 ????1181 ????8181 ????0181 '??0881 ????1881 ????Z88I ??-6881 ????t88l ?---S88I ????9881 ????1881 ????8881 ???'6881 ???0681 ? "1681 ??? Z68I ??' E681 ????t68l ??S681 ??? 9681 ?? 1681 ???'8081 '	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:43 [WARNING]:    date: ' 1681'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:44 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:44 [WARNING]:    sentence: 'Number who were engaged LnNumblelr I?d??*?"Y~ 1210 ???? F in ' ManuIao? am? 5 General Omer ???- nm- ?? .'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:44 [WARNING]:    date: ' 1210'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:44 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:44 [WARNING]:    sentence: 's ??? == ?? Soi? 1823; '?-@? .'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:44 [WARNING]:    date: ' 1823'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:44 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:44 [WARNING]:    sentence: '[ By years in the United States is meant years since first arrival in the United States ] 574 1 gm Years in United States .'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:44 [WARNING]:    date: ' 574 1'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:44 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:44 [WARNING]:    sentence: 'muco? 3295 una nv_oo>> . . . . . . . . . .'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:44 [WARNING]:    date: ' 3295'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:44 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:44 [WARNING]:    sentence: 'egce be- 2106 be- tyveen Weight .'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:44 [WARNING]:    date: ' 2106'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:44 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:44 [WARNING]:    sentence: '0 8 M 29 29 11 2 4 9 80 76 2 10 6 6 15 15 17 17 350 " 20 350 14 350 330 30 30 24 35 1 34 , 25 25 14 14 28 1 28 1 M 990 21 2 . 1 6 963 2 49 161 3 1 157 92 38 37 34 8 25 92 39 1 6 37 14 34 714 4 710 17 1 53 17 109 169 * a 125 :::::: :::::: 125 59 48 5 6 48 "71 133 132 5 33 20 17 11 1 7 2 33 20 17 11 "i3 782 28 754 in ? * 150 150 75 37 13 75 37 17 13 1 Peekskill ?????? 165 '	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:44 [WARNING]:    date: ' 20 350 14'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]:    sentence: 'Canadian , French . . . . . . . . . . . . . . . . . . 3 . . . . . . . . . . . . . . . . . . . . 1 . . . . . . . . . . . . . . . 1 I ( ( : 181Iiln8 , ( li3D , Other . . . . . . . . . . . . . . . . . . . .'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]:    date: ' 181Iiln8'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]:    sentence: '?-E1-403?!-4" q1l 121: , ?-12 Hg 5 .'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]:    date: ' q1l 121'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]:    sentence: 'fselgkted Earnings M- 3335; mES?-o? ? Other 1 .'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]:    date: ' 3335'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]:    sentence: '?Pcr cent of person; 10 years 0} age or over who read and er cent who read and write , by ua: and general nativity and race of {Milli- ( 4411 .'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]:    date: ' 4411'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]:    sentence: ''Et6ES'889'H 8?S'0K"8 ?9l'9Z8'8 *Z8'9Hi'8Z 050'IIZ'? ?S9'IE?'9Z 96E'869'EI 09*'E0?'8Z ?H?'898'Sl I99'98?'?I ?t-?'86?'8 ? ( BU0HB8 ) peonpojd 3jp:p{ 0I9'E?I'I S9?'9?Z 9?Z'988'Z SZ?-'?ZS 0?>'I9?'I ZEe'691'Z ?Z?'S?9 9*6'81I 6Z0'??E 886'EE? 9I5'998 69?'6frZ'I 809'60t> 6f 890 l 9I6'6IZ 9?Z'ZII'Z ??9'?9E'I 6Z9'?E 0?9'6E9 005'?8*0+?'69? 6ZE'8?? It8'96Z Z90'90?'I 169'995'I 66?'0Z6'Z lEfr'OfrO' I *9?'?6S 8t?'?SS 08t'800'Z 89I'005 S66'86S'I 8lfr'9*8 601'968'I ?06'?*I' I IZ9'?H'I OZS'OUt 656'9 I?9'Z ???'? 68?'? 69Z'S I??'9 99?'? 911 ?61'I 060'Z zze'i?09'E 1?8'Z SZZ'? ??Z ?6E'9 Z88'Z 9*16lt-'Z 98?'Z 918' 1 I-OE'E tsz'z ?Z?'9 VSO'E H8'? ??*' Z 8t-S'Z 68fr'E no't H-O'Z E0?'9 Si*'* 08?'5 *??'? Z99'l91-6'Z sionpojd Airep ?e^onpaid iCjrep Jtm 6681 SI XHOi '	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]:    date: ' 6f 890 l'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]:    sentence: '? CO 'O iOimQ XNOX?X'<J''~" ?N lOCOKf CO ?-< T O^t N?hM VfJ N^<?? ? CN IQ N ^" *H ??<* Nffl CO gOX??eOOXXO^OQCON?tO? W XN O ? arfOlOartO WOO CONCD'gi r??t-? ??--NiH?NNa0l"J'?O?0WO? O ? CN X?tC??CON? oeo ocooo ?? h? NC Or 005N 0 riNNNCH iQ *C ? t- ? COJNWCO^CO t- ? N O X -<P W'-'O ?i-h ^ t?*H N-"J*??XCO???? CN Q CON- I- SftOStNO* ?' OS OhSh ( ONt}< N?a<H?4rHO>NHHrtOCf'i-ii5tcca co o co? oc-fOio-ooN ?< r- ? xoo? wos ^NTfNn^OX VCO CN CO 00 t~ X O CO m?M ) h O ?0 ^HCOOSb- ? .'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]:    date: ' NC Or 005N 0 riNNNCH '	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]:    sentence: 'Z9Z'99Z'6Z ZZ6 *ZB EZZ 998 8W tt'8 IS8 ZK 166 ?89 8ZZ 86Z 198 Z89 ZOO 90Z Z8Z UE *Z9 Oil 9EE 61-Z 99Z'9I 9ZO'fr ZZ8 Z90'Tl ZV6 Z? ( '99 I0Z' I 881'9 SOZ'SZ 9SE'9 EZZ'I *9? OOS'9 OSE'Z E6Z Z89 Z89 99Z *?Z'Ol 9Z 009 9*Z'ZI 8Z6'Z?9 601'8Z9 080'Z8 966'9Z0'Z ?99'898'El ?E6'999't 9S?'909 0Z8'ZIt-'I ZZE'190'I 069'8Z9'9 8M ) 988 9? 861'^8 ?86'?!??'8 09E'I9Z'I *Z9'IZ9 ZZ9'6Z6'Z ?99'9Z* 990' ZH *68'l98 lEfr'0I9'* 990'ZO9'8I 9Zfr'8E0'6 9Z6'6*'Z' I 96E'E6I 09?'O6Z'E Z88'Z8? ?8?'8I*'II 9Z9' IH 699'80*'Z OOE'l'Zf-'Zl 609'?Z9'? ZZZ'891'' [ m'ooi 6?9'H9'* *?S'9Z6 Z0Z'Z8 90fr't-9Z EZ8'9ZZ ?6*'0ZZ ZOO'ZZt'9 9Z?'Z Z89'9ZZ 69Z'ZZ8'9 9?9'0Z? 96Z'8ZZ 09Z'9Z Z66'EZI' I 99I'9Z9'Z 9Z*'ZEfr 9Z6'Z9Z 989'f-69 969'89Z ZS8'IH ) 'JO0Z'8IZ'0Z 9Z9'8? 889'88Z'f Z88'99Z'l Wl'Z8Z 6?Z'8??'I HZ'9ZI SQL'Li 6W90E 6Z6'Z IE0' If-I 099' I Z68'6 9Z*' I Z?9'88 009> 09 000'9 0ZE'9 60Z OOZ'II 009'9 669'I OJ-E'OZ E?Z'f-8 OOZ' I 9El'6Z? 01 ZZZ'II ZI?'8 iK'8 9Z9'0Z 068' V* ZZO'IM 09Z'? 009'8 068'* OEI'I IK'9 ?89'6Z 0I*> 991'fr Z\V I 8frZ'9? ozz 8Z9'Z Hi8'Z 066'Ot Z8E' I 09*'Z OOO'E 09?-' I 9?i't 06Z'IZ 09Z 0Z6'Z 008'I t9l' [ 9ZZ'Z LVr'Z Z66'Z 969;Oil 9Z*'l Z66'Z 8Z9'Z 0Z0'9 809 ?81 ZZ 9Z 8 OtZ ?1 II Z9 8 91 91 9 9Z ZEI I ??? 81 ZI 19 no 8 8Z ft LZ Z Wl'9 986'ZI ?8Z'0Z ZJ-?'? ZE9'89Z 166'E 0Z9'Z 09Z 09B'Z 019'EE fr88'?6Z 009 U9'f091-'OZ Z98'KI 919;II ZSZ'OZ 6frZ'ZSI IIZ Z9*'6 Z99' I MZ'ZI If-9'6t 099' Z 9Z8'8? ZZZ'ZI W .'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]:    date: ' 988 9'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]:    sentence: '11" 111 z 7 'Zr2_ 6 3 ?1?O'l?AL .'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]:    date: ' 111 z 7'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]:    sentence: '-- 1 464 4731 _294 , 706 _ 96 . 2 _ ? 169 , 7751 _ 3 .'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]:    date: ' 1 464 '	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]:    sentence: '4 15 , 7_ _ . 1 Cities ?1 100 , 000 and over . . . . . . . . . . . . . . . . . . . . . . . . . . . .'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]:    date: '1 100'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]:    sentence: '- , 38 . 1 15 1 HI 30 30 17 , 22 1201 524 60 r , 2 74 8 36 18 29 30 168 25| is! 1 , 896 111 40 725 183 948 65 35 30 100 74 16 30 11 33 614 16 36 84 48 600 100 748 18 25 105 74 26 12 10 21 650 32 30 92 1 , 144 1 , 09 , 40 30 610 e .'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:46 [WARNING]:    date: ' 40 30 610'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]:    sentence: '5 92 3 77 20 60 1801 76 34 68i 240 70 19 00 61 52 2t 77 8/ 70 30 t70 771 70 20 77 321 77 5 74 3 71 50 65 30 00 15 50 20 3J 80 68 ( 15 77 10 too 150 77 5 ( 1 60 54 55 15t30 115 77 110 77 18 42 24 42 ? 30 7! 75 4 70 3 65 2 , 60 10 , 77 32 75 23 160 7 t50 6 t40 34 f24 20 , 77 1501 77 jo 212 t10 ?2 .'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]:    date: ' 70 30 t70 771 70 20 77 321'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]:    sentence: 'i 16 77 5 77 i 21 77 10 20 i 11 77 i 2 77 3 74 8 70 4 67 1 65 5 60 2 50 1 25 1 17 i 230 77 15 42 1 24 l 1 77 11 77 i 4 77 2 77 4 77 i 25 77 3 71 i 1 80 1 77 13 70 3 70 l 10 77 2 70 3 59 4 41 1 30 i 1 78 4 A0 1 47 1 39 i 8 75 l 20 77 8 60 5 45 l 12 77 1 72 2 60 l a 75 3 02 10 57 3 40 2 40 4 91 3 90 8 77 6 50 i 6 68 ) 3 68 ) 1 62 $231 00 192 50 231 00 no no 205 33 211 00 222 00 210 00 201 00 195 00 180 00 150 00 75 00 51 00 2 , V ) 50 147 00 84 00 102 50 154 00 211 76 192 50 154 00 231 00 213 00 2*0 00 187 50 210 00 178 00 250 25 22 , 50 191 75 133 ?5 9/ 50 234 00 180 00 141 00 117 00 22 .'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]:    date: ' 50 191'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]:    sentence: '4 90 1204 00 5 90 195 00 7 90 1189 00 8 90 180 , 00 ti 90 174 00 111 90 172 50 Zi 90 165 00 IS 90 159 00 16 90 157 50 40 90 150 00 :i i 90 147 00 150 90 144 00 ?2 90 144 00 2 , 90 141 00 3t 90 135 00 20 90 129 00 1 90 127 50 15 go 150 00 17 90 160 71 8 90 147 86 III .'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]:    date: ' 90 141'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]:    sentence: 'If ^fj! 1118 tor'by such officers are of the opinion that he is not clearly and beyond a doubt ?oat'1' entitled to land , he shall be held for a board of special inquiry , which shall determine his case as promptly as the circumstances permit .'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]:    date: ' 1118'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]:    sentence: '00 ------------------------------------------------------- 11 1877 Russian---------------------------------------------------------------- *500 .'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]:    date: ' 11 1877'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]:    sentence: '1996 ALPHABETICAL LISTING OF PRECEDENT DECISIONS ( CONTINUED ) NAME CERNA --------------------------------------------- ??3161 CHAIREZ?-?-~ --------- -; -------------------- --_------324a CHANG --------------------------------------------- --3107 CHAVEZ?CALDERON ----------------------------------- --3212 CHEN ---------------------------------------------- --3104 CHOW ---------------------------------------------- --3199 COELHO -------------------------------------------- --3172 COMPEAN ------------------------------------------- --3249 CORREA-GARCES ------------------------------------- --3169 CUELLO -------------------------------------------- --3117 D? ----------------------------------------------- --3223 D? ----------------------------------------------- -?3236 D?L? & A?M? -------------------------------------- 3162 o-v- --------------------------------------------- --3252 DASS ---------------------------------------------- --3122 DAVIS --------------------------------------------- --3181 DE LA cauz ---------------------------------------- --3155 DEL RISCO ----------------------------------------- --3119 DERIS --------------------------------------------- --3102 DOBERE -------------------------------------------- --3133 \ ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA 1991 ) 1995 ) 1989 ) 1993 ) 1989 ) 1993 ) 1992 ) 1995 ) 199; ) 1989 ) 1994 ) 1994 ) 1991 ) 1993 ) 1989 ) 1992 ) 1991 ) 1989 ) 1989 )'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]:    date: ' 3162'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]:    sentence: '1996 ALPHABETICAL LISTING OF PRECEDENT DECISIONS ( CONTINUED ) NAME CERNA --------------------------------------------- ??3161 CHAIREZ?-?-~ --------- -; -------------------- --_------324a CHANG --------------------------------------------- --3107 CHAVEZ?CALDERON ----------------------------------- --3212 CHEN ---------------------------------------------- --3104 CHOW ---------------------------------------------- --3199 COELHO -------------------------------------------- --3172 COMPEAN ------------------------------------------- --3249 CORREA-GARCES ------------------------------------- --3169 CUELLO -------------------------------------------- --3117 D? ----------------------------------------------- --3223 D? ----------------------------------------------- -?3236 D?L? & A?M? -------------------------------------- --3162 o-v- --------------------------------------------- --3252 DASS ---------------------------------------------- --3122 DAVIS --------------------------------------------- --3181 DE LA cauz ---------------------------------------- --3155 DEL RISCO ----------------------------------------- --3119 DERIS --------------------------------------------- --3102 DOBERE -------------------------------------------- 3133 \ ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA 1991 ) 1995 ) 1989 ) 1993 ) 1989 ) 1993 ) 1992 ) 1995 ) 199; ) 1989 ) 1994 ) 1994 ) 1991 ) 1993 ) 1989 ) 1992 ) 1991 ) 1989 ) 1989 )'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]:    date: ' 3133'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]:    sentence: 'HERNANDEZ-PUENTE ---------------------------------- --3153 ( BIA HOU ----------------------------------------------- ?-3l78 ( BIA HUETE --------------------------------------------- --3l44 ( BIA IGE ----------------------------------------------- --3230 ( BIA ISBER --------------------------------------------- ?-3203 ( BIA IZATULA ------------------------------------------- --3127 ( BIA JIMENEZ?LOPEZ ------------------------------------- --3211 ( BIA \ 1991 ) 1995 ) 1993 ) 1994 ) 1989 ) 1995 ) 1994 ) 1989 ) 1991 ) 1992 ) 1993 ) 1993 ) 1991 ) 1991 ) 1992 ) 1991 ) 1994 ) 1993 ) 1990 ) '	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]:    date: ' 1995'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]:    sentence: '1996 ALPHABETICAL LISTING OF PRECEDENT DECISIONS ( CONTINUED ) n__E JUAREZ -------------------------------------------- --3154 K- ----------------------------------------------- -?3163 K-L- --------------------------------------------- 3200 x-s- --------------------------------------------- --3209 KEYTE --------------------------------------------- --3128 KHALIFAH ------------------------------------------ --3255 L? ----------------------------------------------- ??3183 L?G- --------------------------------------------- --3234 L-G? --------------------------------------------- --3254 LEMHAMMAD ----------------------------------------- --3151 LI ------------------------------------------------ --3207 LIGIDAKIS ----------------------------------------- --3120 LOPEZ?AMARO --------------------------------------- --3202 LOPEZ-BARRIOS ------------------------------------- --3135 LUTHERAN MINISTRIES OF FLORIDA -------------------- --3132 MQP- --------------------------------------------- --3217 M?S? --------------------------------------------- -?3258 MA -------------------------------- -; --------------- --3160 MANRIQUE ------------------------------------------ --3250 MARQUEZ ------------------------------------------- --3129 \ ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA 1991 ) 1991 ) 1993 ) 1993 ) 1990 ) 1995 ) 1992 ) 1994 ) 1995 ) 1991 ) 1993 ) 1989 ) 1993 ) 1990 ) 1990 ) 1990 ) 1995 ) 1991 ) 1995 ) 1990 )'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]:    date: ' 3200'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]:    sentence: '1996 ALPHABETICAL LISTING OF PRECEDENT DECISIONS ( CONTINUED ) n__E JUAREZ -------------------------------------------- --3154 K- ----------------------------------------------- -?3163 K-L- --------------------------------------------- --3200 x-s- --------------------------------------------- --3209 KEYTE --------------------------------------------- --3128 KHALIFAH ------------------------------------------ --3255 L? ----------------------------------------------- ??3183 L?G- --------------------------------------------- --3234 L-G? --------------------------------------------- --3254 LEMHAMMAD ----------------------------------------- --3151 LI ------------------------------------------------ --3207 LIGIDAKIS ----------------------------------------- --3120 LOPEZ?AMARO --------------------------------------- --3202 LOPEZ-BARRIOS ------------------------------------- --3135 LUTHERAN MINISTRIES OF FLORIDA -------------------- --3132 MQP- --------------------------------------------- --3217 M?S? --------------------------------------------- -?3258 MA -------------------------------- -; --------------- --3160 MANRIQUE ------------------------------------------ --3250 MARQUEZ ------------------------------------------- 3129 \ ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA 1991 ) 1991 ) 1993 ) 1993 ) 1990 ) 1995 ) 1992 ) 1994 ) 1995 ) 1991 ) 1993 ) 1989 ) 1993 ) 1990 ) 1990 ) 1990 ) 1995 ) 1991 ) 1995 ) 1990 )'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]:    date: ' 3129'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]: Could not find the position of the date in the sentence! This should not happen!	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]:    sentence: '1996 ALPHABETICAL LISTING OF PRECEDENT DECISIONS ( CONTINUED ) n__g SCANDINAVIAN AIRLINES FLIGHT #SK 911 -------------- --3149 SERNA --------------------------------------------- --3188 SHIH ---------------------------------------------- ?-3206 SHORT --------------------------------------------- --3125 SILVA?RODRIGUEZ ----------------------------------- -?3168 SOLEIMANI ----------------------------------------- --3118 SOSA-HERNANDEZ ------------------------------------ --3214 SPARROW ------------------------------------------- --3237 STOCKWELL ----------------------------------------- --3150 T? ----------------------------------------------- --3l87 TAWFIK -------------------------------------------- --3130 TEE ----------------------------------------------- --3240 THOMAS -------------------------------------------- --3245 TIWARI -------------------------------------------- --3145 TOBOSO-ALFONSO ------------------------------------ --3222 U?M? ------------------ -? ------------------------- --3152 ULUOCHA ------------------------------------------- -~3124 VILLALTA ------------------------------------------ ??3126 WALSH AND POLLARD --------------------------------- 3111 xru HONG LI --------------------------------------- --3244 ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA ( BIA 1991 ) 1992 ) 1993 ) 1989 ) 1992 ) 1989 ) 1993 ) 1994 ) 1991 ) 1992 ) 1990 ) 1995 ) 1995 ) 1991 ) 1990 ) 1991 ) 1989 ) 1990 ) 1988 ) 1995 )'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:47 [WARNING]:    date: ' 3111'	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:48 [INFO]: Minimum date found: 0	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:48 [INFO]: Maximum date found: 9999	[EntityXMLToSimileXML.executeCallBack] <entity_xml_to_simile_xml [entity_xml_to_simile_xml]>
+03/02/17 18:08:50 [INFO]: File accessible at: http://c182-eth0:30080/public/resources/../job_results/date_entity_simile.html	[WriteFile.executeCallBack] <write_to_file [write_to_file]>
+----------------------------------------------------------------------------
+Execution finished at: 2017-03-02T18:08:51
+Execution finished gracefully.
+----------------------------------------------------------------------------
+
+Flow execution statistics
+
+Flow unique execution ID : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/95A5E9B6/1488495883991/1387414041/
+Flow state               : ended
+Started at               : Thu Mar 02 18:04:44 EST 2017
+Last update              : Thu Mar 02 18:08:51 EST 2017
+Total run time (ms)      : 246355
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/opennlp_sentence_tokenizer-parallel-0
+	Executable components state                : disposed
+	Times the executable components fired      : 11592
+	Accumulated executable components run time : 25869
+	Pieces of data pulled                      : 34776
+	Pieces of data pushed                      : 11592
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/opennlp_named_entity-reducer-meta_tuple-4
+	Executable components state                : disposed
+	Times the executable components fired      : 46366
+	Accumulated executable components run time : 254
+	Pieces of data pulled                      : 162719
+	Pieces of data pushed                      : 46360
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/htrc_page_retriever
+	Executable components state                : disposed
+	Times the executable components fired      : 4
+	Accumulated executable components run time : 217420
+	Pieces of data pulled                      : 12
+	Pieces of data pushed                      : 139080
+	Number of properties read                  : 11
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/opennlp_named_entity-reducer-tuples-4
+	Executable components state                : disposed
+	Times the executable components fired      : 46366
+	Accumulated executable components run time : 253
+	Pieces of data pulled                      : 163160
+	Pieces of data pushed                      : 46360
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/opennlp_named_entity-reducer-error-4
+	Executable components state                : disposed
+	Times the executable components fired      : 0
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 0
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/simile_timeline_generator
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 173
+	Pieces of data pulled                      : 12
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 8
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/concatenate_text
+	Executable components state                : disposed
+	Times the executable components fired      : 46360
+	Accumulated executable components run time : 213359
+	Pieces of data pulled                      : 370847
+	Pieces of data pushed                      : 46360
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/opennlp_sentence_tokenizer-reducer-tokenized_sentences-4
+	Executable components state                : disposed
+	Times the executable components fired      : 46366
+	Accumulated executable components run time : 257
+	Pieces of data pulled                      : 163450
+	Pieces of data pushed                      : 46360
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/opennlp_sentence_detector-parallel-3
+	Executable components state                : disposed
+	Times the executable components fired      : 11591
+	Accumulated executable components run time : 3930
+	Pieces of data pulled                      : 34773
+	Pieces of data pushed                      : 11591
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/opennlp_sentence_detector-parallel-2
+	Executable components state                : disposed
+	Times the executable components fired      : 11591
+	Accumulated executable components run time : 3875
+	Pieces of data pulled                      : 34773
+	Pieces of data pushed                      : 11591
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/opennlp_sentence_detector-parallel-1
+	Executable components state                : disposed
+	Times the executable components fired      : 11592
+	Accumulated executable components run time : 4009
+	Pieces of data pulled                      : 34776
+	Pieces of data pushed                      : 11592
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/opennlp_sentence_detector-parallel-0
+	Executable components state                : disposed
+	Times the executable components fired      : 11592
+	Accumulated executable components run time : 3968
+	Pieces of data pulled                      : 34776
+	Pieces of data pushed                      : 11592
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/stream_delimiter_filter
+	Executable components state                : disposed
+	Times the executable components fired      : 3
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 9
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/opennlp_sentence_tokenizer-reducer-error-4
+	Executable components state                : disposed
+	Times the executable components fired      : 0
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 0
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/fork_x2
+	Executable components state                : disposed
+	Times the executable components fired      : 46360
+	Accumulated executable components run time : 133898
+	Pieces of data pulled                      : 139080
+	Pieces of data pushed                      : 92720
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/push_text
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 130
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/opennlp_sentence_tokenizer-mapper-sentences-4
+	Executable components state                : disposed
+	Times the executable components fired      : 46360
+	Accumulated executable components run time : 253
+	Pieces of data pulled                      : 92720
+	Pieces of data pushed                      : 46366
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/opennlp_sentence_detector-mapper-text-4
+	Executable components state                : disposed
+	Times the executable components fired      : 46360
+	Accumulated executable components run time : 269
+	Pieces of data pulled                      : 92720
+	Pieces of data pushed                      : 46366
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/tuple_value_to_string
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 1
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/text_cleaner_4
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 1
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 7
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/text_cleaner
+	Executable components state                : disposed
+	Times the executable components fired      : 46360
+	Accumulated executable components run time : 155068
+	Pieces of data pulled                      : 139080
+	Pieces of data pushed                      : 46360
+	Number of properties read                  : 10
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/text_cleaner_3
+	Executable components state                : disposed
+	Times the executable components fired      : 46360
+	Accumulated executable components run time : 2480
+	Pieces of data pulled                      : 139080
+	Pieces of data pushed                      : 46360
+	Number of properties read                  : 7
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/text_cleaner_2
+	Executable components state                : disposed
+	Times the executable components fired      : 46360
+	Accumulated executable components run time : 6455
+	Pieces of data pulled                      : 139080
+	Pieces of data pushed                      : 46360
+	Number of properties read                  : 10
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/entity_xml_to_simile_xml
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 14103
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 3
+	Number of properties read                  : 2
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/xml_to_xml_with_xsl_2
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 1533
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 2
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/search_text
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 1
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 6
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/opennlp_named_entity-mapper-tokenized_sentences-4
+	Executable components state                : disposed
+	Times the executable components fired      : 46360
+	Accumulated executable components run time : 191
+	Pieces of data pulled                      : 92720
+	Pieces of data pushed                      : 46366
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/write_to_file
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 27
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 5
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/date_filter
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 14
+	Pieces of data pulled                      : 7
+	Pieces of data pushed                      : 3
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/strings_to_java_string
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/opennlp_sentence_detector-reducer-error-4
+	Executable components state                : disposed
+	Times the executable components fired      : 0
+	Accumulated executable components run time : 0
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 0
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/opennlp_named_entity-parallel-3
+	Executable components state                : disposed
+	Times the executable components fired      : 11591
+	Accumulated executable components run time : 185400
+	Pieces of data pulled                      : 34773
+	Pieces of data pushed                      : 23182
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/opennlp_named_entity-parallel-2
+	Executable components state                : disposed
+	Times the executable components fired      : 11591
+	Accumulated executable components run time : 191016
+	Pieces of data pulled                      : 34773
+	Pieces of data pushed                      : 23182
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/random_sample
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 7
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/opennlp_named_entity-parallel-1
+	Executable components state                : disposed
+	Times the executable components fired      : 11592
+	Accumulated executable components run time : 183909
+	Pieces of data pulled                      : 34776
+	Pieces of data pushed                      : 23184
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/flow_parameter
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 135
+	Pieces of data pulled                      : 0
+	Pieces of data pushed                      : 1
+	Number of properties read                  : 6
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/opennlp_named_entity-parallel-0
+	Executable components state                : disposed
+	Times the executable components fired      : 11592
+	Accumulated executable components run time : 172492
+	Pieces of data pulled                      : 34776
+	Pieces of data pushed                      : 23184
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/csv_to_tuple
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 36
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 4
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/read_text
+	Executable components state                : disposed
+	Times the executable components fired      : 1
+	Accumulated executable components run time : 28
+	Pieces of data pulled                      : 3
+	Pieces of data pushed                      : 2
+	Number of properties read                  : 8
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/opennlp_sentence_detector-reducer-sentences-4
+	Executable components state                : disposed
+	Times the executable components fired      : 46366
+	Accumulated executable components run time : 258
+	Pieces of data pulled                      : 163987
+	Pieces of data pushed                      : 46360
+	Number of properties read                  : 1
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/tuple_to_entity_xml
+	Executable components state                : disposed
+	Times the executable components fired      : 46360
+	Accumulated executable components run time : 13807
+	Pieces of data pulled                      : 1053891
+	Pieces of data pushed                      : 3
+	Number of properties read                  : 6
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/opennlp_sentence_tokenizer-parallel-3
+	Executable components state                : disposed
+	Times the executable components fired      : 11591
+	Accumulated executable components run time : 25496
+	Pieces of data pulled                      : 34773
+	Pieces of data pushed                      : 11591
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/opennlp_sentence_tokenizer-parallel-2
+	Executable components state                : disposed
+	Times the executable components fired      : 11591
+	Accumulated executable components run time : 25148
+	Pieces of data pulled                      : 34773
+	Pieces of data pushed                      : 11591
+	Number of properties read                  : 3
+
+	Executable components instance ID          : meandre://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/opennlp_sentence_tokenizer-parallel-1
+	Executable components state                : disposed
+	Times the executable components fired      : 11592
+	Accumulated executable components run time : 25320
+	Pieces of data pulled                      : 34776
+	Pieces of data pushed                      : 11592
+	Number of properties read                  : 3
+
+Cleaning temp dir /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/b49053ff-10a4-4fe9-a240-026f6e618a1a/HTRC_OpenNLP_Date_Entities_To_Simile.mau.run
+Cleaning temp dir /N/dc2/scratch/drhtrc/htrc-agent/karst/prod/agent_working_directories/b49053ff-10a4-4fe9-a240-026f6e618a1a/HTRC_OpenNLP_Date_Entities_To_Simile.mau.public_resources
+
+Cleaning up working directory...

@@ -1,0 +1,6 @@
+
+hookless = {bookless};
+patterns = {patternf};
+rights = {rightf};
+section = {fection};
+singe = {finge};
