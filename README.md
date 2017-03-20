@@ -48,6 +48,8 @@ $ brew install wget
 ```
 
 # How To
+You should have sudo access in the host. If you don't have sudo access, please add following line to sudoers file.
+``<USERNAME>  ALL=(ALL)``
 
 Run ```vagrant up``` to create an instance of HTRC development environment locally and use ```vagrant ssh``` to log into the VM.
 
