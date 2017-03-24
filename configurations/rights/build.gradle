@@ -1,0 +1,23 @@
+apply plugin: "java"
+repositories {
+  maven {
+    url "http://nexus.htrc.illinois.edu/content/groups/public/"
+  }
+}
+
+configurations.all {
+    transitive = false
+}
+
+configurations {
+  rightsapi
+}
+
+dependencies {
+  rightsapi "edu.indiana.d2i.htrc:rights-api:1.1.0-SNAPSHOT"
+}
+
+task copyWar(type: Copy) {
+  from configurations.rightsapi
+  into "/usr/share/tomcat/webapps"
+}

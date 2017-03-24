@@ -3,9 +3,18 @@
 unzip /devenv_downloads/wso2is-5.3.0.zip -d /usr/share
 ln -s /usr/share/wso2is-5.3.0 /usr/share/wso2is
 
+cp /devenv_configurations/wso2is/carbon.xml /usr/share/wso2is/repository/conf/carbon.xml
+cp /devenv_configurations/wso2is/identity.xml /usr/share/wso2is/repository/conf/identity/identity.xml
+cp /devenv_configurations/wso2is/catalina-server.xml /usr/share/wso2is/repository/conf/tomcat/catalina-server.xml
+
+
 # Copying Registry Extension war to WSO2IS using gradle
-cd /devenv_configurations/regx
+cd /devenv_configurations/regex
 /opt/gradle/latest/bin/gradle copyWar
+
+# Copy configuration files to /etc/htrc/regx
+mkdir -p /etc/htrc/regex
+cp jwtfilter.conf /etc/htrc/regex
 
 cat > /etc/default/wso2is <<EOF
 JAVA_HOME=/usr/java/default

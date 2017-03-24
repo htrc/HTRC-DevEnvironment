@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
   config.vm.box_check_update = false
   config.vm.network "private_network", ip: PRIVATE_IP
   config.vm.hostname = "devenv"
-  config.hostsupdater.aliases = ["devenv-is", "devenv-dc", "devenv-agent", "devenv-regx"]
+  config.hostsupdater.aliases = ["devenv-is", "devenv-dc", "devenv-agent", "devenv-regx", "devenv-rights", "devenv-auth", "devenv-notls-is", "devenv-notls-dc", "devenv-notls-agent", "devenv-notls-regx", "devenv-notls-rights" ]
 
   config.vm.synced_folder RESOURCE_DIR, "/devenv_sources"
   config.vm.synced_folder "configurations", "/devenv_configurations"
@@ -90,4 +90,7 @@ Vagrant.configure("2") do |config|
    config.vm.provision "shell", path: "scripts/nginx.sh"
    config.vm.provision "shell", path: "scripts/start-services.sh"
    config.vm.provision "shell", path: "scripts/agent.sh"
+   config.vm.provision "shell", path: "scripts/rights.sh"
+   config.vm.provision "shell", inline: "timedatectl set-timezone America/Indiana/Indianapolis"
+   config.vm.provision "shell", inline: "timedatectl set-ntp yes"
 end

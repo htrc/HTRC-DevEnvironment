@@ -55,18 +55,22 @@ updatedb
 downloadLatestVersion ()
 {
   sleep 5s
-  wget -cN http://services.gradle.org/distributions/gradle-${gradle_version}-all.zip
+  wget -cN http://services.gradle.org/distributions/gradle-3.4.1-all.zip
   sleep 5s
-  unzip -od /opt/gradle gradle-${gradle_version}-all.zip
+  unzip -od /opt/gradle gradle-3.4.1-all.zip
   sleep 5s
-  ln -sfn gradle-${gradle_version} /opt/gradle/latest
-  printf "export GRADLE_HOME=/opt/gradle/latest\nexport PATH=\$PATH:\$GRADLE_HOME/bin\nexport GRADLE_INSTALLED_VERSION='${gradle_version}'" > gradle.sh
+  ln -sfn gradle-3.4.1 /opt/gradle/latest
+  printf "export GRADLE_HOME=/opt/gradle/latest\nexport PATH=\$PATH:\$GRADLE_HOME/bin\nexport GRADLE_INSTALLED_VERSION='3.4.1'" > gradle.sh
   chmod +x gradle.sh
   mv gradle.sh /etc/profile.d/
   . /etc/profile.d/gradle.sh
 }
 
-gradle_service_url='http://services.gradle.org/versions/current'
-gradle_version=$(echo $(wget -O - -q -t 1 $gradle_service_url) | grep version | awk '{ print $2 }' | sed s/\"//g | sed s/,//g | sed s/version://g)
-
 downloadLatestVersion
+
+yum -y install ntp
+chkconfig ntpd on
+ntpdate pool.ntp.org
+systemctl start ntpd.service
+timedatectl set-timezone America/Indiana/Indianapolis
+timedatectl set-ntp yes
