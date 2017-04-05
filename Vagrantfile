@@ -6,6 +6,8 @@ require 'fileutils'
 RESOURCE_DIR = ".sources"
 DC_SRC = "HTRC-DataCapsules"
 DC_GIT_REPO = "https://github.com/htrc/HTRC-DataCapsules.git"
+LDAP_SRC      = "openLDAP"
+LDAP_REPO     = "https://github.com/htrc/openLDAP.git"
 DOWNLOADS_DIR = ".devenv_downloads"
 WSO2IS_ZIP = "wso2is-5.3.0.zip"
 HTRC_FILES = "https://analytics.hathitrust.org/files"
@@ -17,14 +19,14 @@ Vagrant.configure("2") do |config|
   config.vm.box_check_update = false
   config.vm.network "private_network", ip: PRIVATE_IP
   config.vm.hostname = "devenv"
-  config.hostsupdater.aliases = ["devenv-is", "devenv-dc", "devenv-agent", "devenv-regx", "devenv-rights", "devenv-auth", "devenv-notls-is", "devenv-notls-dc", "devenv-notls-agent", "devenv-notls-regx", "devenv-notls-rights" ]
+  config.hostsupdater.aliases = ["devenv-is", "devenv-dc", "devenv-agent", "devenv-regx", "devenv-rights", "devenv-auth", "devenv-notls-is", "devenv-notls-dc", "devenv-notls-agent", "devenv-notls-regx", "devenv-notls-rights", "devenv-openldap" ]
 
   config.vm.synced_folder RESOURCE_DIR, "/devenv_sources"
   config.vm.synced_folder "configurations", "/devenv_configurations"
   config.vm.synced_folder "certs", "/devenv_certs"
   config.vm.synced_folder "data" , "/devenv_data"
   config.vm.synced_folder "~/#{DOWNLOADS_DIR}", "/devenv_downloads"
-
+  
   config.trigger.before :up do
     # Create a directory in home directory to hold downloads
     devenv_downloads_dir = File.join(File.expand_path('~'), DOWNLOADS_DIR)
@@ -64,6 +66,9 @@ Vagrant.configure("2") do |config|
           exit 1
         end
     end
+
+    setup_git_ssh(config)
+    clone_update_ldap_repo(resources_dir, LDAP_REPO, LDAP_SRC) 
   end
 
   config.trigger.after :destroy do
@@ -93,4 +98,54 @@ Vagrant.configure("2") do |config|
    config.vm.provision "shell", path: "scripts/rights.sh"
    config.vm.provision "shell", inline: "timedatectl set-timezone America/Indiana/Indianapolis"
    config.vm.provision "shell", inline: "timedatectl set-ntp yes"
+   config.vm.provision "shell", inline: <<-SHELL
+      sudo yum -y install openldap-servers openldap-clients openssl-devel
+      sudo yum -y install python-setuptools
+      sudo yum -y install python-devel
+      sudo easy_install pip
+      sudo pip install ansible
+      ansible-playbook /devenv_sources/openLDAP/vagrant/scripts/prereqs.yml
+      ansible-playbook /devenv_sources/openLDAP/vagrant/scripts/ldap.yml
+    SHELL
+
+end
+
+def setup_git_ssh(config)
+  config.ssh.forward_agent = true
+  config.vm.provision "shell", inline: <<-SHELL
+    sudo yum install -y git
+    mkdir -p ~/.ssh
+    chmod 700 ~/.ssh
+    ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+  SHELL
+end
+
+def clone_update_ldap_repo(resources_dir, url_repo, source_name)
+  unless File.exists?(resources_dir)
+    FileUtils.mkdir_p(resources_dir)
+  else
+    print "#{resources_dir} directory is already there.\n"
+  end
+
+  src_dir = File.join(resources_dir, source_name)
+  unless File.exists?(src_dir)
+    print "Cloning #{source_name}..."
+    system "bash", "-c", "pwd"
+    git_cmd = <<-SHELL
+      ssh -T git@github.com ;
+      git clone git@github.com:htrc/openLDAP.git ;
+    SHELL
+    system "bash", "-c", "cd #{resources_dir} && #{git_cmd}"
+
+    if $?.exitstatus > 0
+        print "Failed to clone: "  + source_name
+        exit 1
+    end
+  else
+    system "bash", "-c", "cd #{src_dir} && git pull"
+    if $?.exitstatus > 0
+      print "Failed to pull updates from source repo: " + url_repo
+      exit 1
+    end
+  end
 end
