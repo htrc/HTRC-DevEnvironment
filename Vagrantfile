@@ -66,8 +66,6 @@ Vagrant.configure("2") do |config|
           exit 1
         end
     end
-
-    setup_git_ssh(config)
     clone_update_ldap_repo(resources_dir, LDAP_REPO, LDAP_SRC) 
   end
 
@@ -110,15 +108,6 @@ Vagrant.configure("2") do |config|
 
 end
 
-def setup_git_ssh(config)
-  config.ssh.forward_agent = true
-  config.vm.provision "shell", inline: <<-SHELL
-    sudo yum install -y git
-    mkdir -p ~/.ssh
-    chmod 700 ~/.ssh
-    ssh-keyscan -H github.com >> ~/.ssh/known_hosts
-  SHELL
-end
 
 def clone_update_ldap_repo(resources_dir, url_repo, source_name)
   unless File.exists?(resources_dir)
