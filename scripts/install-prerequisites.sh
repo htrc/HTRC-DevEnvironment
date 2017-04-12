@@ -28,7 +28,7 @@ echo 'newpass must be written here and must meet Mysql Password Policies'
 oldpass=$( grep 'temporary.*root@localhost' /var/log/mysqld.log |
         tail -n 1 |  sed 's/.*root@localhost: //' )
 newpass="y*MS2eb;&!&%p"
-mysqladmin -u root --password=${oldpass} password $newpass
+mysql  -h localhost -u root -p'y*MS2eb;&!&%p' -e 'exit' 2>/dev/null || mysqladmin -u root --password=${oldpass} password $newpass
 
 yum -y install epel-release
 yum -y install redis
