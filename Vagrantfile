@@ -8,6 +8,8 @@ DC_SRC = "HTRC-DataCapsules"
 DC_GIT_REPO = "https://github.com/htrc/HTRC-DataCapsules.git"
 LDAP_SRC      = "openLDAP"
 LDAP_REPO     = "https://github.com/htrc/openLDAP.git"
+CASS_SRC      = "HTRC-DevEnvCassandra"
+CASS_REPO     = "https://jimlambrt@github.com/htrc/HTRC-DevEnvCassandra.git"
 DOWNLOADS_DIR = ".devenv_downloads"
 WSO2IS_ZIP = "wso2is-5.3.0.zip"
 HTRC_FILES = "https://analytics.hathitrust.org/files"
@@ -66,7 +68,8 @@ Vagrant.configure("2") do |config|
           exit 1
         end
     end
-    clone_update_ldap_repo(resources_dir, LDAP_REPO, LDAP_SRC) 
+    clone_update_repo(resources_dir, LDAP_REPO, LDAP_SRC)
+    clone_update_repo(resources_dir, CASS_REPO, CASS_SRC) 
   end
 
   config.trigger.after :destroy do
@@ -96,20 +99,35 @@ Vagrant.configure("2") do |config|
    config.vm.provision "shell", path: "scripts/rights.sh"
    config.vm.provision "shell", inline: "timedatectl set-timezone America/Indiana/Indianapolis"
    config.vm.provision "shell", inline: "timedatectl set-ntp yes"
+   provision_ansible(config)
+   provision_ldap(config)
+   provision_cassandra(config)
+ 
+end
+
+def provision_ansible(config)
    config.vm.provision "shell", inline: <<-SHELL
-      sudo yum -y install openldap-servers openldap-clients openssl-devel
+      sudo yum -y install openssl-devel
       sudo yum -y install python-setuptools
       sudo yum -y install python-devel
       sudo easy_install pip
       sudo pip install ansible
+   SHELL
+end
+  
+def provision_ldap(config)
+   config.vm.provision "shell", inline: <<-SHELL
       ansible-playbook /devenv_sources/openLDAP/vagrant/scripts/prereqs.yml
       ansible-playbook /devenv_sources/openLDAP/vagrant/scripts/ldap.yml
     SHELL
-
+end  
+def provision_cassandra(config)
+    config.vm.provision "shell", inline: <<-SHELL
+      ansible-playbook /devenv_sources/#{CASS_SRC}/scripts/cassandra.yml
+  SHELL
 end
 
-
-def clone_update_ldap_repo(resources_dir, url_repo, source_name)
+def clone_update_repo(resources_dir, url_repo, source_name)
   unless File.exists?(resources_dir)
     FileUtils.mkdir_p(resources_dir)
   else
@@ -121,8 +139,7 @@ def clone_update_ldap_repo(resources_dir, url_repo, source_name)
     print "Cloning #{source_name}..."
     system "bash", "-c", "pwd"
     git_cmd = <<-SHELL
-      ssh -T git@github.com ;
-      git clone git@github.com:htrc/openLDAP.git ;
+      git clone #{url_repo};
     SHELL
     system "bash", "-c", "cd #{resources_dir} && #{git_cmd}"
 
