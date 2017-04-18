@@ -14,6 +14,7 @@ DOWNLOADS_DIR = ".devenv_downloads"
 WSO2IS_ZIP = "wso2is-5.3.0.zip"
 HTRC_FILES = "https://analytics.hathitrust.org/files"
 PRIVATE_IP = "192.168.100.100"
+PROVISION_CASSANDRA = true
 
 Vagrant.configure("2") do |config|
   config.vm.box = "centos/7"
@@ -28,7 +29,7 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "certs", "/devenv_certs"
   config.vm.synced_folder "data" , "/devenv_data"
   config.vm.synced_folder "~/#{DOWNLOADS_DIR}", "/devenv_downloads"
-  
+
   config.trigger.before :up do
     # Create a directory in home directory to hold downloads
     devenv_downloads_dir = File.join(File.expand_path('~'), DOWNLOADS_DIR)
@@ -68,8 +69,9 @@ Vagrant.configure("2") do |config|
           exit 1
         end
     end
+
     clone_update_repo(resources_dir, LDAP_REPO, LDAP_SRC)
-    clone_update_repo(resources_dir, CASS_REPO, CASS_SRC) 
+    clone_update_repo(resources_dir, CASS_REPO, CASS_SRC)
   end
 
   config.trigger.after :destroy do
@@ -101,8 +103,10 @@ Vagrant.configure("2") do |config|
    config.vm.provision "shell", inline: "timedatectl set-ntp yes"
    provision_ansible(config)
    provision_ldap(config)
-   provision_cassandra(config)
- 
+
+   if PROVISION_CASSANDRA
+     provision_cassandra(config)
+   end
 end
 
 def provision_ansible(config)
@@ -114,14 +118,16 @@ def provision_ansible(config)
       sudo pip install ansible
    SHELL
 end
-  
+
 def provision_ldap(config)
    config.vm.provision "shell", inline: <<-SHELL
       ansible-playbook /devenv_sources/openLDAP/vagrant/scripts/prereqs.yml
       ansible-playbook /devenv_sources/openLDAP/vagrant/scripts/ldap.yml
     SHELL
-end  
+end
+
 def provision_cassandra(config)
+    config.vm.provision "shell", path: "scripts/download-pairtree.sh"
     config.vm.provision "shell", inline: <<-SHELL
       ansible-playbook /devenv_sources/#{CASS_SRC}/scripts/cassandra.yml
   SHELL

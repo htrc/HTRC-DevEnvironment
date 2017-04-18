@@ -4,7 +4,12 @@ unzip /devenv_downloads/wso2is-5.3.0.zip -d /usr/share
 ln -s /usr/share/wso2is-5.3.0 /usr/share/wso2is
 
 cp /devenv_configurations/wso2is/carbon.xml /usr/share/wso2is/repository/conf/carbon.xml
+cp /devenv_configurations/wso2is/claim-config.xml /usr/share/wso2is/repository/conf/claim-config.xml
+cp /devenv_configurations/wso2is/user-mgt.xml /usr/share/wso2is/repository/conf/user-mgt.xml
+cp /devenv_configurations/wso2is/output-event-adapters.xml /usr/share/wso2is/repository/conf/output-event-adapters.xml
 cp /devenv_configurations/wso2is/identity.xml /usr/share/wso2is/repository/conf/identity/identity.xml
+cp /devenv_configurations/wso2is/embedded-ldap.xml /usr/share/wso2is/repository/conf/identity/embedded-ldap.xml
+cp /devenv_configurations/wso2is/oidc-scope-config.xml /usr/share/wso2is/repository/conf/identity/oidc-scope-config.xml
 cp /devenv_configurations/wso2is/catalina-server.xml /usr/share/wso2is/repository/conf/tomcat/catalina-server.xml
 
 
