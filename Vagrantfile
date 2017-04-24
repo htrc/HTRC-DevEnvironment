@@ -14,7 +14,7 @@ DOWNLOADS_DIR = ".devenv_downloads"
 WSO2IS_ZIP = "wso2is-5.3.0.zip"
 HTRC_FILES = "https://analytics.hathitrust.org/files"
 PRIVATE_IP = "192.168.100.100"
-PROVISION_CASSANDRA = true
+PROVISION_CASSANDRA = false
 
 Vagrant.configure("2") do |config|
   config.vm.box = "centos/7"
