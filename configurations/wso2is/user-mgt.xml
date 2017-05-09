@@ -170,7 +170,7 @@
         <UserStoreManager class="org.wso2.carbon.user.core.ldap.ReadWriteLDAPUserStoreManager">
             <Property name="TenantManager">org.wso2.carbon.user.core.tenant.CommonHybridLDAPTenantManager</Property>
             <Property name="ConnectionURL">ldap://localhost:389</Property>
-            <Property name="ConnectionName">uid=example_idm_acct,ou=ldapusers,ou=systems,o=htrc</Property>
+            <Property name="ConnectionName">uid=example_idm_acct,ou=people,o=htrc</Property>
             <Property name="ConnectionPassword">htrc default password</Property>
             <Property name="AnonymousBind">false</Property>
             <Property name="UserSearchBase">ou=people,o=htrc</Property>

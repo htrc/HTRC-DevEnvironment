@@ -44,4 +44,4 @@ EOF
 
 systemctl daemon-reload
 systemctl enable wso2is.service
-systemctl start wso2is.service
+

@@ -96,14 +96,14 @@ Vagrant.configure("2") do |config|
    config.vm.provision "shell", path: "scripts/dcapi.sh"
    config.vm.provision "shell", path: "scripts/wso2is.sh"
    config.vm.provision "shell", path: "scripts/nginx.sh"
-   config.vm.provision "shell", path: "scripts/start-services.sh"
    config.vm.provision "shell", path: "scripts/agent.sh"
    config.vm.provision "shell", path: "scripts/rights.sh"
    config.vm.provision "shell", inline: "timedatectl set-timezone America/Indiana/Indianapolis"
    config.vm.provision "shell", inline: "timedatectl set-ntp yes"
    provision_ansible(config)
    provision_ldap(config)
-
+   config.vm.provision "shell", path: "scripts/start-services.sh"
+   
    if PROVISION_CASSANDRA
      provision_cassandra(config)
    end

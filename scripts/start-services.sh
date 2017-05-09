@@ -1,3 +1,6 @@
+# Start WSO2 IS
+systemctl start wso2is.service
+
 # Start tomcat
 systemctl start tomcat
 
