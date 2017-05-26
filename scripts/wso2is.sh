@@ -1,17 +1,33 @@
 #!/bin/sh -eux
 
+WSO2IS_HOME=/usr/share/wso2is
+WSO2IS_CONF="$WSO2IS_HOME/repository/conf"
+WSO2IS_CONF_SRC=/devenv_configurations/wso2is
+WSO2IS_WEBAPPS="$WSO2IS_HOME/repository/deployment/server/webapps"
+WSO2IS_AUTH_ENDPOINT="$WSO2IS_WEBAPPS/authenticationendpoint"
+WSO2IS_AUTH_ENDPOINT_WAR="$WSO2IS_WEBAPPS/authenticationendpoint.war"
+
 unzip /devenv_downloads/wso2is-5.3.0.zip -d /usr/share
-ln -s /usr/share/wso2is-5.3.0 /usr/share/wso2is
+ln -s /usr/share/wso2is-5.3.0 $WSO2IS_HOME
 
-cp /devenv_configurations/wso2is/carbon.xml /usr/share/wso2is/repository/conf/carbon.xml
-cp /devenv_configurations/wso2is/claim-config.xml /usr/share/wso2is/repository/conf/claim-config.xml
-cp /devenv_configurations/wso2is/user-mgt.xml /usr/share/wso2is/repository/conf/user-mgt.xml
-cp /devenv_configurations/wso2is/output-event-adapters.xml /usr/share/wso2is/repository/conf/output-event-adapters.xml
-cp /devenv_configurations/wso2is/identity.xml /usr/share/wso2is/repository/conf/identity/identity.xml
-cp /devenv_configurations/wso2is/embedded-ldap.xml /usr/share/wso2is/repository/conf/identity/embedded-ldap.xml
-cp /devenv_configurations/wso2is/oidc-scope-config.xml /usr/share/wso2is/repository/conf/identity/oidc-scope-config.xml
-cp /devenv_configurations/wso2is/catalina-server.xml /usr/share/wso2is/repository/conf/tomcat/catalina-server.xml
+cp $WSO2IS_CONF_SRC/carbon.xml $WSO2IS_CONF/carbon.xml
+cp $WSO2IS_CONF_SRC/claim-config.xml $WSO2IS_CONF/claim-config.xml
+cp $WSO2IS_CONF_SRC/user-mgt.xml $WSO2IS_CONF/user-mgt.xml
+cp $WSO2IS_CONF_SRC/output-event-adapters.xml $WSO2IS_CONF/output-event-adapters.xml
+cp $WSO2IS_CONF_SRC/identity.xml $WSO2IS_CONF/identity/identity.xml
+cp $WSO2IS_CONF_SRC/embedded-ldap.xml $WSO2IS_CONF/identity/embedded-ldap.xml
+cp $WSO2IS_CONF_SRC/oidc-scope-config.xml $WSO2IS_CONF/identity/oidc-scope-config.xml
+cp $WSO2IS_CONF_SRC/catalina-server.xml $WSO2IS_CONF/tomcat/catalina-server.xml
 
+# Copy customized web pages
+mkdir -p $WSO2IS_AUTH_ENDPOINT
+cd $WSO2IS_AUTH_ENDPOINT
+unzip $WSO2IS_AUTH_ENDPOINT_WAR
+
+cp $WSO2IS_CONF_SRC/login.jsp $WSO2IS_AUTH_ENDPOINT/login.jsp
+cp $WSO2IS_CONF_SRC/logout.jsp $WSO2IS_AUTH_ENDPOINT/logout.jsp
+cp $WSO2IS_CONF_SRC/basicauth.jsp $WSO2IS_AUTH_ENDPOINT/basicauth.jsp
+cp $WSO2IS_CONF_SRC/is-htrc-theme.css $WSO2IS_AUTH_ENDPOINT/css/is-htrc-theme.css
 
 # Copying Registry Extension war to WSO2IS using gradle
 cd /devenv_configurations/regex
@@ -44,4 +60,3 @@ EOF
 
 systemctl daemon-reload
 systemctl enable wso2is.service
-

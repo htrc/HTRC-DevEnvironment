@@ -3,17 +3,19 @@
 
 require 'fileutils'
 
-RESOURCE_DIR = ".sources"
-DC_SRC = "HTRC-DataCapsules"
-DC_GIT_REPO = "https://github.com/htrc/HTRC-DataCapsules.git"
-LDAP_SRC      = "openLDAP"
-LDAP_REPO     = "https://github.com/htrc/openLDAP.git"
-CASS_SRC      = "HTRC-DevEnvCassandra"
-CASS_REPO     = "https://jimlambrt@github.com/htrc/HTRC-DevEnvCassandra.git"
-DOWNLOADS_DIR = ".devenv_downloads"
-WSO2IS_ZIP = "wso2is-5.3.0.zip"
-HTRC_FILES = "https://analytics.hathitrust.org/files"
-PRIVATE_IP = "192.168.100.100"
+RESOURCE_DIR        = ".sources"
+DC_SRC              = "HTRC-DataCapsules"
+DC_REPO             = "https://github.com/htrc/HTRC-DataCapsules.git"
+LDAP_SRC            = "openLDAP"
+LDAP_REPO           = "https://github.com/htrc/openLDAP.git"
+CASS_SRC            = "HTRC-DevEnvCassandra"
+CASS_REPO           = "https://jimlambrt@github.com/htrc/HTRC-DevEnvCassandra.git"
+EMAIL_SRC           = "Email-Validator"
+EMAIL_REPO          = "https://github.com/htrc/Email-Validator.git"
+DOWNLOADS_DIR       = ".devenv_downloads"
+WSO2IS_ZIP          = "wso2is-5.3.0.zip"
+HTRC_FILES          = "https://analytics.hathitrust.org/files"
+PRIVATE_IP          = "192.168.100.100"
 PROVISION_CASSANDRA = false
 
 Vagrant.configure("2") do |config|
@@ -22,7 +24,7 @@ Vagrant.configure("2") do |config|
   config.vm.box_check_update = false
   config.vm.network "private_network", ip: PRIVATE_IP
   config.vm.hostname = "devenv"
-  config.hostsupdater.aliases = ["devenv-is", "devenv-dc", "devenv-agent", "devenv-regx", "devenv-rights", "devenv-auth", "devenv-notls-is", "devenv-notls-dc", "devenv-notls-agent", "devenv-notls-regx", "devenv-notls-rights", "devenv-openldap" ]
+  config.hostsupdater.aliases = ["devenv-is", "devenv-dc", "devenv-agent", "devenv-regx", "devenv-rights", "devenv-auth", "devenv-notls-is", "devenv-notls-dc", "devenv-notls-agent", "devenv-notls-regx", "devenv-notls-rights", "devenv-openldap", "devenv-email", "devenv-notls-email" ]
 
   config.vm.synced_folder RESOURCE_DIR, "/devenv_sources"
   config.vm.synced_folder "configurations", "/devenv_configurations"
@@ -52,24 +54,8 @@ Vagrant.configure("2") do |config|
       info "#{RESOURCE_DIR} directory is already there."
     end
 
-    # Cloning/updating HTRC-DataCapsules source
-    dc_src = File.join(resources_dir, DC_SRC)
-    unless File.exists?(dc_src)
-      info "Cloning #{DC_SRC}..."
-      system "bash", "-c", "pwd"
-      system "bash", "-c", "cd #{RESOURCE_DIR} && git clone #{DC_GIT_REPO}"
-      if $?.exitstatus > 0
-        error "Failed to clone data capsules source!"
-        exit 1
-      end
-    else
-        system "bash", "-c", "cd #{RESOURCE_DIR}/#{DC_SRC} && git pull"
-        if $?.exitstatus > 0
-          error "Failed to pull updates from data capsules source repo!"
-          exit 1
-        end
-    end
-
+    clone_update_repo(resources_dir, DC_REPO, DC_SRC)
+    clone_update_repo(resources_dir, EMAIL_REPO, EMAIL_SRC)
     clone_update_repo(resources_dir, LDAP_REPO, LDAP_SRC)
     clone_update_repo(resources_dir, CASS_REPO, CASS_SRC)
   end
@@ -94,6 +80,7 @@ Vagrant.configure("2") do |config|
 
    config.vm.provision "shell", path: "scripts/install-prerequisites.sh"
    config.vm.provision "shell", path: "scripts/dcapi.sh"
+   config.vm.provision "shell", path: "scripts/email-validator.sh"
    config.vm.provision "shell", path: "scripts/wso2is.sh"
    config.vm.provision "shell", path: "scripts/nginx.sh"
    config.vm.provision "shell", path: "scripts/agent.sh"
@@ -103,7 +90,7 @@ Vagrant.configure("2") do |config|
    provision_ansible(config)
    provision_ldap(config)
    config.vm.provision "shell", path: "scripts/start-services.sh"
-   
+
    if PROVISION_CASSANDRA
      provision_cassandra(config)
    end
