@@ -20,4 +20,6 @@ dependencies {
 task copyWar(type: Copy) {
   from configurations.dcapi
   into "/usr/share/tomcat/webapps"
+  include('sloan-ws-1.2-SNAPSHOT.war')
+  rename ('sloan-ws-1.2-SNAPSHOT.war', 'sloan-ws.war')
 }

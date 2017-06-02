@@ -10,16 +10,16 @@ configurations.all {
 }
 
 configurations {
-  agent
+  email
 }
 
 dependencies {
-  agent "edu.indiana.d2i.htrc:agent:3.2.6-SNAPSHOT"
+  email "edu.indiana.d2i.htrc:email-validator:1.0.1"
 }
 
 task copyWar(type: Copy) {
-  from configurations.agent
+  from configurations.email
   into "/usr/share/tomcat/webapps"
-  include('agent-3.2.6-SNAPSHOT.war')
-  rename ('agent-3.2.6-SNAPSHOT.war', 'agent.war')
+  include('email-validator-1.0.1.war')
+  rename ('email-validator-1.0.1.war', 'email-validator.war')
 }
