@@ -15,6 +15,7 @@ cp $WSO2IS_CONF_SRC/claim-config.xml $WSO2IS_CONF/claim-config.xml
 cp $WSO2IS_CONF_SRC/user-mgt.xml $WSO2IS_CONF/user-mgt.xml
 cp $WSO2IS_CONF_SRC/output-event-adapters.xml $WSO2IS_CONF/output-event-adapters.xml
 cp $WSO2IS_CONF_SRC/identity.xml $WSO2IS_CONF/identity/identity.xml
+cp $WSO2IS_CONF_SRC/identity-mgt.properties $WSO2IS_CONF/identity/identity-mgt.properties
 cp $WSO2IS_CONF_SRC/embedded-ldap.xml $WSO2IS_CONF/identity/embedded-ldap.xml
 cp $WSO2IS_CONF_SRC/oidc-scope-config.xml $WSO2IS_CONF/identity/oidc-scope-config.xml
 cp $WSO2IS_CONF_SRC/catalina-server.xml $WSO2IS_CONF/tomcat/catalina-server.xml
