@@ -101,7 +101,6 @@ def provision_ansible(config)
       sudo yum -y install openssl-devel
       sudo yum -y install python-setuptools
       sudo yum -y install python-devel
-      sudo easy_install pip
       sudo pip install ansible
    SHELL
 end

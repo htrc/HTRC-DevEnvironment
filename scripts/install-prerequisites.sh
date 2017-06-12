@@ -43,6 +43,8 @@ easy_install pip
 yum -y install mlocate
 yum -y install openssl-devel
 yum -y install openssl-perl
+yum -y install libffi-devel
+yum -y install python-cffi
 
 systemctl daemon-reload
 systemctl enable tomcat
