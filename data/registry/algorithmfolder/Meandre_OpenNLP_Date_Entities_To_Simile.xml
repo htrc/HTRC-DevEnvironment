@@ -1,0 +1,90 @@
+<algorithm>
+  <info>
+    <name>Meandre_OpenNLP_Date_Entities_To_Simile</name>
+    <short_name>DateEnt</short_name>
+    <version>1.1</version>
+    <shortdesc>Visualize the dates in a workset on a timeline. Each date (ex. May 4, 1803) is displayed with its unique HathiTrust Digital Library volume identifier, the page on which it occurred, and a snippet of the sentence in which it occurred.</shortdesc>
+    <description>Visualize the dates in a workset on a timeline. Each date (ex. May 4, 1803) is displayed with its unique HathiTrust Digital Library volume identifier, the page on which it occurred, and a snippet of the sentence in which it occurred.
+
+**How it works:**
+Using the [OpenNLP](https://opennlp.apache.org/) system to automatically extract the entities from the text:
+
+&#8226; loads each page of each volume;
+
+&#8226; removes the first and last line of each page;
+
+&#8226;  joins hyphenated words that occur at the end of the line;
+
+&#8226; for cleaning purposes, puts spaces around each of the following characters ", . ( ) [ ]";
+
+&#8226; extracts date entity types from the text;
+
+&#8226; displays each entity with the volume_id, page_id, and sentence snippet in [Simile Timeline](http://simile.mit.edu/timeline/examples/)
+
+**Note:** The upper limit on the number of volumes is 100.
+
+**Result of job:** timeline visualization
+    </description>
+    <authors>
+      <author name="Loretta Auvil"/>
+    </authors>
+    <supportUrl></supportUrl>
+
+    <parameters>
+      <param
+        name="input_collection"
+        type="collection"
+        required="true">
+        <label>Please select a workset for analysis</label>
+        <description>The workset containing the volume ids to be used for analysis.</description>
+      </param>
+      <param
+        name="min_value"
+        type="int"
+        required="false"
+        defaultValue="1800">
+        <label>Please provide a minimum year for filtering. (default: 1800)"</label>
+        <description>The minimum year for filtering dates.</description>
+      </param>
+      <param
+        name="max_value"
+        type="int"
+        required="false"
+        defaultValue="1900">
+        <label>Please provide a maximum year for filtering. (default: 1900)"</label>
+        <description>The maximum year for filtering dates.</description>
+      </param>
+    </parameters>
+  </info>
+
+    <execution_info>
+      <number_of_processors>8</number_of_processors>
+    </execution_info>
+
+  <run_script>run_Meandre_OpenNLP_Date_Entities_To_Simile.sh</run_script>
+  <properties_file_name>HTRC_OpenNLP_Date_Entities_To_Simile.properties</properties_file_name>
+
+  <dependencies>
+    <dependency name="run_Meandre_OpenNLP_Date_Entities_To_Simile.sh" path="dependencies/run_Meandre_OpenNLP_Date_Entities_To_Simile.sh"/>
+  </dependencies>
+
+  <system_properties>
+        <e key="volume_id">$input_collection</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/htrc_page_retriever#data_api_url">${data_api_url}/data-api</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/htrc_page_retriever#auth_token">$auth_token</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/htrc_page_retriever#auth_selfsign">false</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/write_to_file#default_folder">../${output_dir}</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/date_filter#min_value">$min_value</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/date_filter#max_value">$max_value</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/random_sample#count">100</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/csv_to_tuple#header">true</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/csv_to_tuple#labels"></e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/search_text#expression">(?:[^|]+\\|?){1,50}</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/simile_timeline_generator#timeline_api_url">https://data.analytics.hathitrust.org/data/resources/prod/timeline/2.3.1/timeline-api.js</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_OpenNLP_Date_Entities_To_Simile/instance/simile_timeline_generator#timeline_css">height: 450px; border: 1px solid #aaa</e>
+  </system_properties>
+
+  <results>
+    <result type="text/html" name="date_entity_simile.html"/>
+  </results>
+</algorithm>

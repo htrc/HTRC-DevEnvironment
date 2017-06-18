@@ -1,0 +1,73 @@
+<algorithm>
+    <info>
+        <name>Meandre_Tagcloud</name>
+        <short_name>Tagcld</short_name>
+        <version>1.2</version>
+        <shortdesc>Create a tag cloud visualization of the most frequently occurring words in a workset, as well as a list of the most frequent words. In a tag cloud, the size of the word is displayed in proportion to the number of times it occurred.</shortdesc>
+        <description>Create a tag cloud visualization of the most frequently occurring words in a workset, as well as a list of the most frequent words. In a tag cloud, the size of the word is displayed in proportion to the number of times it occurred.
+
+**How it works:**
+
+&#8226; performs token counts and displays the most frequent tokens in a tag cloud;
+
+&#8226; counts the tokens for all volumes and displays the top 200 tokens in a tag cloud
+
+**Notes:**The upper limit on the number of volumes is 1000. No cleaning of the text is performed.
+
+**Result of job:** list of most frequent words and a tag cloud visualization of them
+        </description>
+        <authors>
+            <author name="Loretta Auvil"/>
+        </authors>
+        <supportUrl></supportUrl>
+
+        <parameters>
+            <param
+                name="input_collection"
+                type="collection"
+                required="true">
+                <label>Please select a workset for analysis</label>
+                <description>The workset containing the volume ids to be used for analysis.</description>
+            </param>
+
+        </parameters>
+    </info>
+
+    <execution_info>
+      <number_of_processors>8</number_of_processors>
+    </execution_info>
+
+    <run_script>run_Meandre_Tagcloud.sh</run_script>
+    <properties_file_name>HTRC_Tagcloud.properties</properties_file_name>
+
+    <dependencies>
+        <dependency name="run_Meandre_Tagcloud.sh" path="dependencies/run_Meandre_Tagcloud.sh"/>
+    </dependencies>
+
+    <system_properties>
+
+        <e key="volume_id">$input_collection</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Tagcloud/instance/random_sample#count">1000</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Tagcloud/instance/htrc_page_retriever#auth_token">$auth_token</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Tagcloud/instance/htrc_page_retriever#auth_selfsign">false</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Tagcloud/instance/htrc_page_retriever#data_api_url">${data_api_url}/data-api</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Tagcloud/instance/write_to_file#default_folder">../${output_dir}</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Tagcloud/instance/write_to_file_2#default_folder">../${output_dir}</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Tagcloud/instance/push_text#message">tagcloudtokencounts.html</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Tagcloud/instance/push_text_2#message">tagcloudtokencounts.csv</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Tagcloud/instance/top_n_filter#n_top_tokens">200</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Tagcloud/instance/tag_cloud#height">484</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Tagcloud/instance/tag_cloud#width">1102</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Tagcloud/instance/csv_to_tuple#labels"></e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Tagcloud/instance/csv_to_tuple#header">true</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Tagcloud/instance/search_text#expression">(?:[^|]+\\|?){1,50}</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Tagcloud/instance/tag_cloud#d3_api_url">https://htrc2.pti.indiana.edu/HTRC-UI-Portal2/js/d3.v2.min.js</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Tagcloud/instance/tag_cloud#d3_cloud_api_url">https://htrc2.pti.indiana.edu/HTRC-UI-Portal2/js/d3.layout.cloud.js</e>
+
+    </system_properties>
+
+    <results>
+        <result type="text/html" name="tagcloudtokencounts.html"/>
+        <result type="text/csv" name="tagcloudtokencounts.csv"/>
+    </results>
+</algorithm>

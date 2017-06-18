@@ -1,0 +1,82 @@
+<algorithm>
+  <info>
+    <name>Meandre_OpenNLP_Entities_List</name>
+    <short_name>EntityXt</short_name>
+    <version>1.2</version>
+    <shortdesc>Generate a list of all of the names of people and places, as well as dates, times, percentages, and monetary terms, found in a workset. You can choose which entities you would like to extract.</shortdesc>
+    <description>Generate a list of all of the names of people and places, as well as dates, times, percentages, and monetary terms, found in a workset. You can choose which entities you would like to extract.
+
+**How it works:**
+Using the [OpenNLP](https://opennlp.apache.org/) system to automatically extract entities:
+
+&#8226; loads each page of each volume from HTRC;
+
+&#8226; removes the first and last line of each page;
+
+&#8226; joins hypenated words that occur at the end of the line;
+
+&#8226; extracts entity types specified from the text;
+
+&#8226; displays each entity with the volume_id, page_id, sentence_id and character position within the sentence
+
+**Note:** The volume limit is 100.
+
+**Result of job:** table of the named entities found in a workset
+
+    </description>
+    <authors>
+      <author name="Loretta Auvil"/>
+    </authors>
+    <supportUrl></supportUrl>
+
+    <parameters>
+      <param
+        name="input_collection"
+        type="collection"
+        required="true">
+        <label>Please select a workset for analysis</label>
+        <description>The workset containing the volume ids to be used for analysis.</description>
+      </param>
+      <param
+        name="entity_types"
+        type="string"
+        required="false"
+        defaultValue="person">
+        <label>Please provide a comma separated list of entity types to be extracted. Acceptable values are: date, location, money, organization, percentage, person, time. (default: person)</label>
+        <description>The entity type to be extracted.</description>
+      </param>
+    </parameters>
+  </info>
+
+    <execution_info>
+      <number_of_processors>8</number_of_processors>
+    </execution_info>
+
+  <run_script>run_Meandre_OpenNLP_Entities_List.sh</run_script>
+  <properties_file_name>HTRC_OpenNLP_Entities_List.properties</properties_file_name>
+
+  <dependencies>
+    <dependency name="run_Meandre_OpenNLP_Entities_List.sh" path="dependencies/run_Meandre_OpenNLP_Entities_List.sh"/>
+  </dependencies>
+
+  <system_properties>
+            <e key="volume_id">$input_collection</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/htrc_page_retriever#auth_token">$auth_token</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/htrc_page_retriever#auth_selfsign">false</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/htrc_page_retriever#data_api_url">${data_api_url}/data-api</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/write_to_file#default_folder">../${output_dir}</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_named_entity-parallel-1#entity_types">$entity_types</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_named_entity-parallel-2#entity_types">$entity_types</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_named_entity-parallel-3#entity_types">$entity_types</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/opennlp_named_entity-parallel-0#entity_types">$entity_types</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/push_text#message">named_entities_list.html</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/random_sample#count">100</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/csv_to_tuple#header">true</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/csv_to_tuple#labels"></e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_OpenNLP_Entities_List/instance/search_text#expression">(?:[^|]+\\|?){1,50}</e>
+  </system_properties>
+
+  <results>
+    <result type="text/html" name="named_entities_list.html"/>
+  </results>
+</algorithm>

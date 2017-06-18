@@ -1,0 +1,117 @@
+<algorithm>
+  <info>
+    <name>Meandre_Spellcheck_Report_Per_Volume</name>
+    <short_name>SpellChk</short_name>
+    <version>1.2</version>
+    <shortdesc>Find misspelled words that are the result of OCR errors in the text of a workset's volumes, with suggested replacements. Currently the replacements cannot be made within the Portal.</shortdesc>
+    <description>Find misspelled words that are the result of OCR errors in the text of a workset's volumes, with suggested replacements. Currently the replacements cannot be made within the Portal.
+
+**How it works:**
+
+&#8226; loads each page of each volume in the workset supplied to the algorithm as a parameter;
+
+&#8226; performs lowercase transformation of text;
+
+&#8226; provides several spelling statistics at a volume level for the html report; for the text file reports, information for each volume is displayed with a blank line separating the volumes; there are options to customize the dictionary, token counts, and transformation rules
+
+The token counts data is used to determine if a suggested dictionary word occurs in the token counts data, and whether it should be used. There are options for customizing the transformation rules which indicate the types of [OCR](http://en.wikipedia.org/wiki/Optical_character_recognition) errors that should be corrected. For instance, a known problem is the transformation of an "li" to an "h" and vice versa, and this is expressed with the transformation rule "li=h", which says that, for all misspelled words with an "h", a check will be done to see if a conversion to "li" forms a correctly spelled word.
+
+**Note:** The upper limit on the number of volumes is 100.
+
+**Result of job:** lists of the misspellings in a workset, the number of times they occur, and suggested corrected spellings
+    </description>
+    <authors>
+      <author name="Loretta Auvil"/>
+    </authors>
+    <supportUrl></supportUrl>
+
+    <parameters>
+      <param
+        name="input_collection"
+        type="collection"
+        required="true">
+        <label>Please select a workset for analysis</label>
+        <description>The workset containing the volume ids to be used for analysis.</description>
+      </param>
+      <param
+        name="transformation_rules"
+        type="text"
+        required="false"
+        defaultValue="s=f; h={li,b}; li=h; rn=m; m=rn; o=0; i=1; l=1;">
+        <label>Please provide a text for transformation, e.g. h=li; li=h; rn=m; m=rn; s=f; (default: s=f; h={li,b}; li=h; rn=m; m=rn; o=0; i=1; l=1;)</label>
+        <description>The transformation rules to be applied to try to create a correctly spelled word.</description>
+      </param>
+      <param
+        name="dictionary"
+        type="url"
+        required="false"
+        defaultValue="http://data.sharc.hathitrust.org/data/text/TedMainDictionary.txt">
+        <label>Please provide a url that contains a text file of words considered in the dictionary (default: http://data.sharc.hathitrust.org/data/text/TedMainDictionary.txt).</label>
+        <description>The dictionary of words.</description>
+      </param>
+      <param
+        name="token_counts"
+        type="url"
+        required="false"
+        defaultValue="http://data.sharc.hathitrust.org/data/text/TedCounts.txt">
+        <label>Please provide a url for token counts that can be used for choosing the best correctly spelled word based on popularity (default: http://data.sharc.hathitrust.org/data/text/TedCounts.txt).</label>
+        <description>The url for a set of token counts.</description>
+      </param>
+
+    </parameters>
+  </info>
+
+    <execution_info>
+      <number_of_processors>8</number_of_processors>
+    </execution_info>
+
+  <run_script>run_Meandre_Spellcheck_Report_Per_Volume.sh</run_script>
+  <properties_file_name>HTRC_Spellcheck_Report_Per_Volume.properties</properties_file_name>
+
+  <dependencies>
+    <dependency name="run_Meandre_Spellcheck_Report_Per_Volume.sh" path="dependencies/run_Meandre_Spellcheck_Report_Per_Volume.sh"/>
+  </dependencies>
+
+  <system_properties>
+       <e key="volume_id">$input_collection</e>
+        <e key="transformation_rules">$transformation_rules</e>
+        <e key="dictionary">$dictionary</e>
+        <e key="token_counts">$token_counts</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/htrc_page_retriever#auth_token">$auth_token</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/htrc_page_retriever#auth_selfsign">false</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/htrc_page_retriever#data_api_url">${data_api_url}/data-api</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/write_to_file#default_folder">../${output_dir}</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/write_to_file_2#default_folder">../${output_dir}</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/write_to_file_3#default_folder">../${output_dir}</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/write_to_file_4#default_folder">../${output_dir}</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/spell_check_with_counts#levenshtein_distance">.20</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/random_sample#count">100</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/push_text#message">misspellings.txt</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/push_text_2#message">spellcheck_report.html</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/push_text_3#message">misspellings_with_counts.txt</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/push_text_4#message">replacement_rules.txt</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/csv_to_tuple#labels"></e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/csv_to_tuple#header">true</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/search_text#expression">(?:[^|]+\\|?){1,50}</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/text_cleaner_2-parallel-0#find4">(?&lt;=(^|\s))[\pP\pN]+(?=($|\s))</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/text_cleaner_2-parallel-0#replace4"> </e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/text_cleaner_2-parallel-1#find4">(?&lt;=(^|\s))[\pP\pN]+(?=($|\s))</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/text_cleaner_2-parallel-1#replace4"> </e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/text_cleaner_2-parallel-2#find4">(?&lt;=(^|\s))[\pP\pN]+(?=($|\s))</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/text_cleaner_2-parallel-2#replace4"> </e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/text_cleaner_2-parallel-3#find4">(?&lt;=(^|\s))[\pP\pN]+(?=($|\s))</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/text_cleaner_2-parallel-3#replace4"> </e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/opennlp_tokenizer-parallel-0#tokenizer_type">simple</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/opennlp_tokenizer-parallel-1#tokenizer_type">simple</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/opennlp_tokenizer-parallel-2#tokenizer_type">simple</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/opennlp_tokenizer-parallel-3#tokenizer_type">simple</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Spellcheck_Report_Per_Volume/instance/spell_check_with_counts#transform_threshold">20</e>
+ </system_properties>
+
+  <results>
+    <result type="text/html" name="spellcheck_report.html"/>
+    <result type="text/plain" name="misspellings.txt"/>
+    <result type="text/html" name="misspellings_with_counts.txt"/>
+    <result type="text/plain" name="replacement_rules.txt"/>
+  </results>
+</algorithm>

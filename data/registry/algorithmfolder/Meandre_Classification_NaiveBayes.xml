@@ -1,0 +1,122 @@
+<algorithm>
+    <info>
+        <name>Meandre_Classification_NaiveBayes</name>
+        <short_name>Bayes</short_name>
+        <version>1.2</version>
+        <shortdesc>Classify the volumes in a workset into categories of your choosing. Na&#239;ve Bayes classification is based on Bayes' Theorem from statistics, and uses machine learning to estimate the correct classification for a volume based on information present in the volumes of each particular class. You will need to upload a custom csv file with volumes classified in order to use this algorithm.</shortdesc>
+        <description>Classify the volumes in a workset into categories of your choosing. Na&#239;ve Bayes classification is based on Bayes' Theorem from statistics, and uses machine learning to estimate the correct classification for a volume based on information present in the volumes of each particular class. You will need to upload a custom csv file with volumes classified in order to use this algorithm.
+
+**How it works:** From a custom workset (uploaded as a csv file) that contains the workset&#39;s volume identifiers as the "volume_id" attribute and labeled data as the "class" attribute, this algorithm:  
+&#8226; loads each page of each volume in the workset;
+&#8226; removes the first and last line of each page;
+&#8226; joins hyphenated words (if any) occurring at the end of each remaining line;
+&#8226; removes all tokens that do not consist of alphanumeric characters;
+&#8226; performs part-of-speech tagging (selecting nouns, verbs, adjectives and adverbs);
+&#8226; lowercases all tokens and counts the tokens remaining for each volume, eliminating all tokens with a count of 1;
+&#8226; the number of attributes (specified by the paramter num_attributes) to use is noted by the algorithm; the algorithm removes any attributes that exist in only one volume and also removes any attributes that exist in all volumes;
+&#8226; splits the data randomly into a training set (60% of the data) and a test set (40% of the data);
+&#8226; uniform discretization of frequency counts of the tokens is performed, by creating 2 equally spaced bins between the minimum and maximum for each scalar column; a Na&#239;ve Bayes model is created on the training set, the accuracy of the training set and the test set is calculated, and the confusion matrix is produced as output; the predicted value of the volumes in the training and testing sets are also produced as output.
+
+**Note:** Can only take up to 1000 volumes.
+
+**Result of job:** text files of the results of the classification and the confusion matrix for the model
+        </description>
+        <authors>
+            <author name="Loretta Auvil"/>
+        </authors>
+        <supportUrl></supportUrl>
+
+        <parameters>
+            <param
+                name="labelled_input_collection"
+                type="collection"
+                required="true">
+                <label>Please select a workset that has a "volume_id" and "class" attribute.</label>
+                <description>The labelled input workset is a workset (csv file) that you have uploaded containing the "volume_id" and "class" attributes.</description>
+            </param>
+            <param
+                name="replacement_rules_url"
+                type="url"
+                required="false"
+                defaultValue="http://data.sharc.hathitrust.org/data/text/ngram_corrections.txt">
+                <label>Please provide a url that contains a text file of replacement rules (default: http://data.sharc.hathitrust.org/data/text/ngram_corrections.txt)</label>
+                <description>The replacement rules are used for cleaning and normalizing tokens.</description>
+            </param>
+            <param
+                name="num_attributes"
+                type="int"
+                required="false"
+                defaultValue="1000">
+                <label>Please provide the number of attributes to keep for modeling.</label>
+                <description>The number of attributes to keep for modeling.</description>
+            </param>
+            <param
+                name="train_percent"
+                type="int"
+                required="false"
+                defaultValue="60">
+                <label>Please provide the percentage to use for the training set.</label>
+                <description>The percentage to use for the training sets.</description>
+            </param>
+            <param
+                name="test_percent"
+                type="int"
+                required="false"
+                defaultValue="40">
+                <label>Please provide the percentage to use for the testing set.</label>
+                <description>The percentage to use for the testing set.</description>
+            </param>
+            <param
+                name="seed"
+                type="int"
+                required="false"
+                defaultValue="123">
+                <label>Please provide a seed value to use for creating the training and testing set.</label>
+                <description>The seed value to use for creating the training and testing set.</description>
+            </param>
+        </parameters>
+    </info>
+
+    <execution_info>
+      <number_of_processors>8</number_of_processors>
+    </execution_info>
+
+    <run_script>run_Meandre_Classification_NaiveBayes.sh</run_script>
+    <properties_file_name>HTRC_Classification_NaiveBayes.properties</properties_file_name>
+
+    <dependencies>
+        <dependency name="run_Meandre_Classification_NaiveBayes.sh" path="dependencies/run_Meandre_Classification_NaiveBayes.sh"/>
+    </dependencies>
+
+    <system_properties>
+        <e key="volume_id_labelled">$labelled_input_collection</e>
+        <e key="replacement_rules_url">$replacement_rules_url</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/htrc_page_retriever#data_api_url">${data_api_url}/data-api</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/htrc_page_retriever#auth_selfsign">false</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/htrc_page_retriever#auth_token">$auth_token</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/random_sample#count">1000</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/write_to_file#default_folder">../${output_dir}</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/write_to_file_2#default_folder">../${output_dir}</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/write_to_file_3#default_folder">../${output_dir}</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/write_to_file_4#default_folder">../${output_dir}</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/tuple_value_frequency_counter-parallel-0#max_size">$num_attributes</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/tuple_value_frequency_counter-parallel-1#max_size">$num_attributes</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/tuple_value_frequency_counter-parallel-2#max_size">$num_attributes</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/tuple_value_frequency_counter-parallel-3#max_size">$num_attributes</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/simpletraintest#trainPercent">$train_percent</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/simpletraintest#testPercent">$test_percent</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/push_text#message">test_confusion_matrix.csv.txt</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/push_text_2#message">test_prediction.csv.txt</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/push_text_3#message">train_confusion_matrix.csv.txt</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/push_text_4#message">train_prediction.csv.txt</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/simpletraintest#seed">$seed</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Classification_NaiveBayes/instance/search_text#expression">(?:[^|]+\\|?){1,50}</e>
+    </system_properties>
+
+    <results>
+        <result type="text/plain" name="test_prediction.csv.txt"/>
+        <result type="text/plain" name="test_confusion_matrix.csv.txt"/>
+        <result type="text/plain" name="train_prediction.csv.txt"/>
+        <result type="text/plain" name="train_confusion_matrix.csv.txt"/>
+    </results>
+</algorithm>

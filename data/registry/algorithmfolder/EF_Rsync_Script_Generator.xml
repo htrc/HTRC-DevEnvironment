@@ -1,0 +1,50 @@
+<algorithm>
+  <info>
+    <name>EF_Rsync_Script_Generator</name>
+    <short_name>EFRsync</short_name>
+    <version>3.0.2</version>
+    <shortdesc>Generate a script that allows you to download extracted features data for your workset of choice. The script can be run locally, listing the Rsync commands to access the volumes of the workset. For more information on the extracted features data see the [documentation](http://dx.doi.org/10.13012/J8X63JT3).
+ </shortdesc>
+    <description>Generate a script that allows you to download extracted features data for your workset of choice. The script can be run locally, listing the Rsync commands to access the volumes of the workset. For more information on the extracted features data see the [documentation](http://dx.doi.org/10.13012/J8X63JT3).
+
+**Note:** Extracted features data was not created for a small number of volumes, so it is possible that not all of your workset volumes will be processed.
+
+**Result of job:** script to download extracted features data files</description>
+    <authors>
+        <author name="Colleen Fallaw"/>
+        <author name="Boris Capitanu"/>
+    </authors>
+
+    <parameters>
+      <param
+          name="input_collection"
+          type="collection"
+          required="true">
+        <label>Please select a workset for analysis</label>
+        <description>The workset containing the volume ids to be added to the rsync script.</description>
+      </param>
+    </parameters>
+
+</info>
+
+    <execution_info>
+      <number_of_processors>1</number_of_processors>
+    </execution_info>
+
+    <run_script>run_FE_Rsync_Script_Generator.sh</run_script>
+    <properties_file_name>collection.properties</properties_file_name>
+
+    <dependencies>
+        <dependency name="run_FE_Rsync_Script_Generator.sh" path="dependencies/run_FE_Rsync_Script_Generator.sh"/>
+    </dependencies>
+
+    <system_properties>
+      <e key="collectionLocation">$input_collection</e>
+      <e key="outputDir">$output_dir</e>
+      <e key="outputFile">EF_Rsync.sh</e>
+    </system_properties>
+
+    <results>
+      <result type="sh" name="EF_Rsync.sh"/>
+    </results>
+</algorithm>

@@ -1,0 +1,139 @@
+<algorithm>
+  <info>
+    <name>Meandre_Dunning_LogLikelihood_to_Tagcloud</name>
+    <short_name>Dunning</short_name>
+    <version>1.2</version>
+    <shortdesc>Compare and contrast two worksets by identifying the words that are more and less common in one workset, called the analysis workset, than in another workset, called the reference workset.</shortdesc>
+    <description>Compare and contrast two worksets by identifying the words that are more and less common in one workset, called the analysis workset, than in another workset, called the reference workset.
+
+**How it works:**
+&#8226; calculates Dunning Log-likelihood based on two worksets provided as inputs: an "analysis workset" and a "reference workset"
+&#8226; loads each page of each workset, removes the first and last line of each page, joins hyphenated words that occur at the end of the line;
+&#8226; performs part of speech tagging (selecting only NN|NNS|JJ.\*|RB.\*|PRP.\*|RP|VB.\*|IN);
+&#8226; lowercases the tokens remaining;
+&#8226; counts the tokens remaining for all volumes for each collection;
+&#8226; compares counts from each collection using the Dunning Log-likelihood statistic; the "overused" tokens in the analysis collection (relative to the reference collection), 200 tokens by default, are displayed as a tag cloud and made available via a csv file; the "underused tokens" (also 200 tokens by default) in the analysis collection relative to the reference collection are, likewise, displayed as a tag cloud and made available via a csv file
+
+**Note:** The upper limit on the number of volumes is 1000. This major functionality was developed as part of the [Monk Project](http://monkproject.org/). Currently you cannot use this algorithm to classify an unlabeled workset, and therefore it does not work as fully as possible.
+
+**Result of job:** tag cloud visualizations and lists of most and least commonly shared words in csv format
+    </description>
+    <authors>
+      <author name="Loretta Auvil"/>
+    </authors>
+    <supportUrl></supportUrl>
+
+    <parameters>
+      <param
+        name="input_collection_analysis"
+        type="collection"
+        required="true">
+        <label>Please select a workset for analysis</label>
+        <description>The workset containing the volume ids to be used for analysis.</description>
+      </param>
+      <param
+        name="input_collection_reference"
+        type="collection"
+        required="true">
+        <label>Please select a workset for reference</label>
+        <description>The workset containing the volume ids to be used for reference.</description>
+      </param>
+      <param
+        name="n_top_tokens"
+        type="int"
+        required="false"
+        defaultValue="200">
+        <label>Please provide the number of tokens to be displayed in the tagcloud (default: 200)</label>
+        <description>The number of tokens to be displayed in tagcloud.</description>
+      </param>
+      <param
+        name="filter_condition"
+        type="string"
+        required="false"
+        defaultValue="n==1">
+        <label>Please provide a condition for filtering tokens based on total counts for each workset; n==1 removes single occurring tokens (default: n==1)</label>
+        <description>The condition indicates if any filtering of tokens should occur based on token counts for each workset. By default n==0, meaning that no filtering is done. If you want to remove single occurrences of tokens then set n==1.</description>
+      </param>
+
+    </parameters>
+  </info>
+
+    <execution_info>
+      <number_of_processors>8</number_of_processors>
+    </execution_info>
+
+  <run_script>run_Meandre_Dunning_LogLikelihood_to_Tagcloud.sh</run_script>
+  <properties_file_name>HTRC_Dunning_LogLikelihood_to_Tagcloud.properties</properties_file_name>
+
+  <dependencies>
+    <dependency name="run_Meandre_Dunning_LogLikelihood_to_Tagcloud.sh" path="dependencies/run_Meandre_Dunning_LogLikelihood_to_Tagcloud.sh"/>
+  </dependencies>
+
+  <system_properties>
+  <e key="volume_id_dunning_reference">$input_collection_reference</e>
+        <e key="volume_id_dunning_analysis">$input_collection_analysis</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/htrc_page_retriever#auth_selfsign">false</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/htrc_page_retriever_2#auth_selfsign">false</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/htrc_page_retriever#data_api_url">${data_api_url}/data-api</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/htrc_page_retriever_2#data_api_url">${data_api_url}/data-api</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/htrc_page_retriever#auth_token">$auth_token</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/htrc_page_retriever_2#auth_token">$auth_token</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/write_to_file_2#default_folder">../${output_dir}</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/write_to_file#default_folder">../${output_dir}</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/write_to_file_4#default_folder">../${output_dir}</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/write_to_file_3#default_folder">../${output_dir}</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/top_n_filter#n_top_tokens">$n_top_tokens</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/top_n_filter_2#n_top_tokens">$n_top_tokens</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/random_sample#count">1000</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/random_sample_2#count">1000</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/tag_cloud#height">484</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/tag_cloud#width">1104</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/tag_cloud_2#height">484</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/tag_cloud_2#width">1104</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/push_text#message">dunning_tagcloud_over.html</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/push_text_2#message">dunning_over_represented.csv</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/push_text_3#message">dunning_tagcloud_under.html</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/push_text_4#message">dunning_under_represented.csv</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/csv_to_tuple_2#labels"></e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/csv_to_tuple#labels"></e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/csv_to_tuple_2#header">true</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/csv_to_tuple#header">true</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/search_text#expression">(?:[^|]+\\|?){1,50}</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/search_text_2#expression">(?:[^|]+\\|?){1,50}</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/token_count_filter#condition">$filter_condition</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/token_count_filter_2#condition">$filter_condition</e>
+
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/text_cleaner-parallel-0#find4">(?&lt;=(^|\s))[\pP\pN]+(?=($|\s))</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/text_cleaner_2-parallel-0#find4">(?&lt;=(^|\s))[\pP\pN]+(?=($|\s))</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/text_cleaner-parallel-0#replace4"> </e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/text_cleaner_2-parallel-0#replace4"> </e>
+
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/text_cleaner-parallel-1#find4">(?&lt;=(^|\s))[\pP\pN]+(?=($|\s))</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/text_cleaner_2-parallel-1#find4">(?&lt;=(^|\s))[\pP\pN]+(?=($|\s))</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/text_cleaner-parallel-1#replace4"> </e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/text_cleaner_2-parallel-1#replace4"> </e>
+
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/text_cleaner-parallel-2#find4">(?&lt;=(^|\s))[\pP\pN]+(?=($|\s))</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/text_cleaner_2-parallel-2#find4">(?&lt;=(^|\s))[\pP\pN]+(?=($|\s))</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/text_cleaner-parallel-2#replace4"> </e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/text_cleaner_2-parallel-2#replace4"> </e>
+
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/text_cleaner-parallel-3#find4">(?&lt;=(^|\s))[\pP\pN]+(?=($|\s))</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/text_cleaner_2-parallel-3#find4">(?&lt;=(^|\s))[\pP\pN]+(?=($|\s))</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/text_cleaner-parallel-3#replace4"> </e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/text_cleaner_2-parallel-3#replace4"> </e>
+
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/tag_cloud#d3_api_url">https://htrc2.pti.indiana.edu/HTRC-UI-Portal2/js/d3.v2.min.js</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/tag_cloud_2#d3_api_url">https://htrc2.pti.indiana.edu/HTRC-UI-Portal2/js/d3.v2.min.js</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/tag_cloud#d3_cloud_api_url">https://htrc2.pti.indiana.edu/HTRC-UI-Portal2/js/d3.layout.cloud.js</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Dunning_LogLikelihood_to_Tagcloud/instance/tag_cloud_2#d3_cloud_api_url">https://htrc2.pti.indiana.edu/HTRC-UI-Portal2/js/d3.layout.cloud.js</e>
+
+  </system_properties>
+
+  <results>
+    <result type="text/html" name="dunning_tagcloud_over.html"/>
+    <result type="text/html" name="dunning_over_represented.csv"/>
+    <result type="text/html" name="dunning_tagcloud_under.html"/>
+    <result type="text/html" name="dunning_under_represented.csv"/>
+  </results>
+</algorithm>

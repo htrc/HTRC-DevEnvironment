@@ -1,0 +1,64 @@
+<algorithm>
+<info>
+  <name>Simple_Deployable_Word_Count</name>
+  <short_name>WrdCount</short_name>
+  <version>1.4</version>
+  <shortdesc>Identify the words that occur most often in a workset and the number of times they occur.</shortdesc>
+  <description>Identify the words that occur most often in a workset and the number of times they occur.
+
+**How it works:**A simple word count Java client that uses the HTRC Data API to access the volumes in the specified workset, and displays the top N most frequently occurring words within that workset.
+
+**Result of job:** list of the most frequent words in a workset and the number of times they occur</description>
+  <authors>
+    <author name="Yiming Sun" email="yimsun@umail.iu.edu"/>
+  </authors>
+
+  <parameters>
+    <param name="input_collection"
+           type="collection"
+           required="true">
+        <label>The workset to be word counted</label>
+        <description>This is the input workset the simple word count will be run on.</description>
+    </param>
+
+    <param name="concat"
+           type="boolean"
+           required="true">
+
+      <label>Concatenate pages of a volume into a single file?</label>
+      <description>False: each page is a separate file; True: entire volume is one file</description>
+    </param>
+
+    <param name="topN"
+           type="integer"
+           required="true">
+
+      <label>Top N most frequently occurred words to display</label>
+      <description>Top N most frequently occurred words to display</description>
+    </param>
+  </parameters>
+</info>
+
+    <execution_info>
+      <number_of_processors>1</number_of_processors>
+    </execution_info>
+
+  <dependencies>
+    <dependency name="runwc.sh" path="dependencies/runwc.sh"/>
+    <dependency name="htrc-uncamp-deplwc-1.4.jar" path="dependencies/htrc-uncamp-deplwc-1.4.jar"/>
+  </dependencies>
+
+  <run_script>runwc.sh</run_script>
+  <properties_file_name>wc.properties</properties_file_name>
+
+  <system_properties>
+    <e key="volume.limit">25</e>
+    <e key="data.api.epr">$data_api_url</e>
+    <e key="volume.list.file">$input_collection</e>
+    <e key="concat">$concat</e>
+    <e key="top.n">$topN</e>
+    <e key="oauth2.token">$auth_token</e>
+  </system_properties>
+
+
+</algorithm>

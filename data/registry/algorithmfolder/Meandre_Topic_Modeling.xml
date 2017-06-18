@@ -1,0 +1,101 @@
+<algorithm>
+  <info>
+    <name>Meandre_Topic_Modeling</name>
+    <short_name>TopicMod</short_name>
+    <version>1.2</version>
+    <shortdesc>Identify "topics" in a workset based on words that have a high probability of occurring close together in the text. Topics are models trained on co-occurring text using Latent Dirichlet Allocation (LDA), where each topic is treated as a generative model and volumes are assigned a probability of how likely each topic is to have generated that text. The most likely words for a topic are displayed as a word cloud.</shortdesc>
+    <description>Identify "topics" in a workset based on words that have a high probability of occurring close together in the text. Topics are models trained on co-occurring text using Latent Dirichlet Allocation (LDA), where each topic is treated as a generative model and volumes are assigned a probability of how likely each topic is to have generated that text. The most likely words for a topic are displayed as a word cloud.
+
+**How it works:**
+
+&#8226; loads each page of each volume from HTRC;
+
+&#8226; removes the first and last line of each page;
+
+&#8226; joins hyphenated words that occur at the end of the line;
+
+&#8226; removes all tokens that do not consist of alphanumeric characters
+
+&#8226; filters stop words;
+
+&#8226; replaces "not " with "not_" to deal with negations;
+
+&#8226; creates a topic model using Mallet;
+
+&#8226; displays the top 200 tokens in a tag cloud
+
+**Note:** The upper limit on the number of volumes is 1000.
+
+**Result of job:** xml file with topics, and visualizations of them in the form of tag clouds.
+    </description>
+    <authors>
+      <author name="Loretta Auvil"/>
+    </authors>
+    <supportUrl></supportUrl>
+
+    <parameters>
+      <param
+        name="input_collection"
+        type="collection"
+        required="true">
+        <label>Please select a workset for analysis</label>
+        <description>The workset containing the volume ids to be used for analysis.</description>
+      </param>
+      <param
+        name="n_top_tokens"
+        type="int"
+        required="false"
+        defaultValue="200">
+        <label>Please provide the number of tokens to be displayed in the tagcloud (default: 200)</label>
+        <description>The number of tokens to be displayed in tagcloud.</description>
+      </param>
+      <param
+        name="num_topics"
+        type="int"
+        required="false"
+        defaultValue="10">
+        <label>Please provide the number of topics to be created (default: 10)</label>
+        <description>The number of topics to be created.</description>
+      </param>
+    </parameters>
+  </info>
+
+    <execution_info>
+      <number_of_processors>8</number_of_processors>
+    </execution_info>
+
+  <run_script>run_Meandre_Topic_Modeling.sh</run_script>
+  <properties_file_name>HTRC_Topic_Modeling.properties</properties_file_name>
+
+  <dependencies>
+    <dependency name="run_Meandre_Topic_Modeling.sh" path="dependencies/run_Meandre_Topic_Modeling.sh"/>
+  </dependencies>
+
+  <system_properties>
+      <e key="volume_id">$input_collection</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/top_n_filter#n_top_tokens">$n_top_tokens</e>
+       <e key="meandre\://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/push_text#message">http://data.sharc.hathitrust.org/data/text/xslt/topicTopWordsToCSV.xslt</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/push_text_2#message">topic_top_words.xml</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/push_text_3#message">topic_tagclouds.html</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/random_sample#count">1000</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/htrc_page_retriever#auth_selfsign">false</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/htrc_page_retriever#data_api_url">${data_api_url}/data-api</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/htrc_page_retriever#auth_token">$auth_token</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/frame_maker#output_folder">../${output_dir}</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/write_to_file#default_folder">../${output_dir}</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/write_to_file_2#default_folder">../${output_dir}</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/mallet_topic_modeling#num_threads">8</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/mallet_topic_modeling#num_top_words">200</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/mallet_topic_modeling#num_topics">$num_topics</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/csv_to_tuple#labels"></e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/csv_to_tuple#header">true</e>
+        <e key="meandre\://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/tag_cloud#d3_api_url">https://htrc2.pti.indiana.edu/HTRC-UI-Portal2/js/d3.v2.min.js</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/tag_cloud#d3_cloud_api_url">https://htrc2.pti.indiana.edu/HTRC-UI-Portal2/js/d3.layout.cloud.js</e>
+	<e key="meandre\://htrc.illinois.edu/flows/HTRC_Topic_Modeling/instance/search_text#expression">(?:[^|]+\\|?){1,50}</e>
+ </system_properties>
+
+  <results>
+    <result type="text/html" name="topic_tagclouds.html"/>
+    <result type="text/xml" name="topic_top_words.xml"/>
+  </results>
+</algorithm>

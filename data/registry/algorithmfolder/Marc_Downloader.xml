@@ -1,0 +1,49 @@
+<algorithm>
+  <info>
+    <name>Marc_Downloader</name>
+    <short_name>Marc</short_name>
+    <version>1.7</version>
+    <shortdesc>Download the bibliographic information for each volume in a workset.</shortdesc>
+    <description>Download the bibliographic information for each volume in a workset.
+
+**How it works:** Takes a workset as input and outputs the MARC (Machine Readable Cataloging) record for each volume in MarcXML format.
+
+**Result of job:** zip file that, when downloaded and expanded, contains the bibliographic metadata for each volume </description>
+    <authors>
+        <author name="Zong Peng"/>
+    </authors>
+
+    <parameters>
+      <param
+          name="input_collection"
+          type="collection"
+          required="true">
+        <label>Please select a workset for analysis</label>
+        <description>A marc record will be fetched for each volume in this workset</description>
+      </param>
+    </parameters>
+
+</info>
+
+    <execution_info>
+      <number_of_processors>1</number_of_processors>
+    </execution_info>
+
+    <run_script>run_marc.sh</run_script>
+    <properties_file_name>collection.properties</properties_file_name>
+
+    <dependencies>
+        <dependency name="run_marc.sh" path="dependencies/run_marc.sh"/>
+    </dependencies>
+
+    <system_properties>
+      <e key="collectionLocation">$input_collection</e>
+      <e key="SolrProxy">$solr_proxy</e>
+      <e key="outputDir">$output_dir</e>
+      <e key="outputFile">result.zip</e>
+    </system_properties>
+
+    <results>
+      <result type="zip" name="result.zip"/>
+    </results>
+</algorithm>
