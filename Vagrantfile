@@ -12,6 +12,8 @@ CASS_SRC            = "HTRC-DevEnvCassandra"
 CASS_REPO           = "https://jimlambrt@github.com/htrc/HTRC-DevEnvCassandra.git"
 EMAIL_SRC           = "Email-Validator"
 EMAIL_REPO          = "https://github.com/htrc/Email-Validator.git"
+ANALYTICS_SRC       = "Analytics-Gateway"
+ANALYTICS_REPO      = "https://github.com/htrc/Analytics-Gateway.git"
 DOWNLOADS_DIR       = ".devenv_downloads"
 WSO2IS_ZIP          = "wso2is-5.3.0.zip"
 HTRC_FILES          = "https://analytics.hathitrust.org/files"
@@ -23,7 +25,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.box_check_update = false
   config.vm.network "private_network", ip: PRIVATE_IP
-  config.vm.hostname = "devenv"
+  config.vm.hostname = "devenv-notls-is"
   config.hostsupdater.aliases = ["devenv-is", "devenv-dc", "devenv-agent", "devenv-regx", "devenv-rights", "devenv-auth", "devenv-notls-is", "devenv-notls-dc", "devenv-notls-agent", "devenv-notls-regx", "devenv-notls-rights", "devenv-openldap", "devenv-email", "devenv-notls-email" ]
 
   config.vm.synced_folder RESOURCE_DIR, "/devenv_sources"
@@ -58,6 +60,7 @@ Vagrant.configure("2") do |config|
     clone_update_repo(resources_dir, EMAIL_REPO, EMAIL_SRC)
     clone_update_repo(resources_dir, LDAP_REPO, LDAP_SRC)
     clone_update_repo(resources_dir, CASS_REPO, CASS_SRC)
+    clone_update_repo(resources_dir, ANALYTICS_REPO, ANALYTICS_SRC)
   end
 
   config.trigger.after :destroy do
@@ -85,6 +88,7 @@ Vagrant.configure("2") do |config|
    config.vm.provision "shell", path: "scripts/nginx.sh"
    config.vm.provision "shell", path: "scripts/agent.sh"
    config.vm.provision "shell", path: "scripts/rights.sh"
+   config.vm.provision "shell", path: "scripts/analytics.sh"
    config.vm.provision "shell", inline: "timedatectl set-timezone America/Indiana/Indianapolis"
    config.vm.provision "shell", inline: "timedatectl set-ntp yes"
    provision_ansible(config)
