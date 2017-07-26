@@ -13,12 +13,12 @@ Install VirtualBox from [https://www.virtualbox.org](https://www.virtualbox.org)
 
 Please follow the [Vagrant installation guide](https://www.vagrantup.com/docs/installation/).
 
-## Vagrant Host Updater
+## Vagrant Host Manager
 
-Vagrant::Hostupdater can be found [here](vagrant host updater). Install hostupdater using following command:
+Vagrant::Hostmanager can be found [here](https://github.com/devopsgroup-io/vagrant-hostmanager). Install hostupdater using following command:
 
 ```
-$ vagrant plugin install vagrant-hostsupdater
+$ vagrant plugin install vagrant-hostmanager
 ```
 
 ## vagrant-vbguest plugin
