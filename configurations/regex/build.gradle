@@ -20,4 +20,5 @@ dependencies {
 task copyWar(type: Copy) {
   from configurations.regex
   into "/usr/share/wso2is/repository/deployment/server/webapps"
+  rename '(.+?)-(.+(-SNAPSHOT)?)\\.war', '$1.war'
 }

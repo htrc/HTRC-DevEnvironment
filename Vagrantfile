@@ -5,34 +5,49 @@ require 'fileutils'
 
 RESOURCE_DIR        = ".sources"
 DC_SRC              = "HTRC-DataCapsules"
-DC_REPO             = "https://github.com/htrc/HTRC-DataCapsules.git"
+DC_REPO             = "git@github.com:htrc/HTRC-DataCapsules.git"
 LDAP_SRC            = "openLDAP"
-LDAP_REPO           = "https://github.com/htrc/openLDAP.git"
+LDAP_REPO           = "git@github.com:htrc/openLDAP.git"
 CASS_SRC            = "HTRC-DevEnvCassandra"
-CASS_REPO           = "https://jimlambrt@github.com/htrc/HTRC-DevEnvCassandra.git"
+CASS_REPO           = "git@github.com:htrc/HTRC-DevEnvCassandra.git"
 EMAIL_SRC           = "Email-Validator"
-EMAIL_REPO          = "https://github.com/htrc/Email-Validator.git"
+EMAIL_REPO          = "git@github.com:htrc/Email-Validator.git"
 ANALYTICS_SRC       = "Analytics-Gateway"
-ANALYTICS_REPO      = "https://github.com/htrc/Analytics-Gateway.git"
+ANALYTICS_REPO      = "git@github.com:htrc/Analytics-Gateway.git"
 DOWNLOADS_DIR       = ".devenv_downloads"
 WSO2IS_ZIP          = "wso2is-5.3.0.zip"
 HTRC_FILES          = "https://analytics.hathitrust.org/files"
-PRIVATE_IP          = "192.168.100.100"
 PROVISION_CASSANDRA = false
 
 Vagrant.configure("2") do |config|
   config.vm.box = "centos/7"
 
   config.vm.box_check_update = false
-  config.vm.network "private_network", ip: PRIVATE_IP
+  config.vm.network "private_network", type: "dhcp"
   config.vm.hostname = "devenv-notls-is"
-  config.hostsupdater.aliases = ["devenv-is", "devenv-dc", "devenv-agent", "devenv-regx", "devenv-rights", "devenv-auth", "devenv-notls-is", "devenv-notls-dc", "devenv-notls-agent", "devenv-notls-regx", "devenv-notls-rights", "devenv-openldap", "devenv-email", "devenv-notls-email" ]
 
   config.vm.synced_folder RESOURCE_DIR, "/devenv_sources"
   config.vm.synced_folder "configurations", "/devenv_configurations"
   config.vm.synced_folder "certs", "/devenv_certs"
   config.vm.synced_folder "data" , "/devenv_data"
   config.vm.synced_folder "~/#{DOWNLOADS_DIR}", "/devenv_downloads"
+
+  if Vagrant.has_plugin?("vagrant-hostmanager")
+    config.hostmanager.ip_resolver = proc do |vm, resolving_vm|
+      if vm.id
+        `VBoxManage guestproperty get #{vm.id} "/VirtualBox/GuestInfo/Net/1/V4/IP"`.split()[1]
+      end
+    end
+
+    config.hostmanager.enabled = true
+    config.hostmanager.manage_host = true
+    config.hostmanager.ignore_private_ip = false
+    config.hostmanager.include_offline = true
+    config.hostmanager.aliases = ["devenv-is", "devenv-dc", "devenv-agent", "devenv-regx", "devenv-rights", "devenv-auth", "devenv-notls-dc", "devenv-notls-agent", "devenv-notls-regx", "devenv-notls-rights", "devenv-openldap", "devenv-email", "devenv-notls-email" ]
+  else
+    puts 'vagrant-hostmanager plugin required. To install simply run `vagrant plugin install vagrant-hostmanager`'
+    abort
+  end
 
   config.trigger.before :up do
     # Create a directory in home directory to hold downloads
