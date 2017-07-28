@@ -19,6 +19,14 @@ cp $WSO2IS_CONF_SRC/identity-mgt.properties $WSO2IS_CONF/identity/identity-mgt.p
 cp $WSO2IS_CONF_SRC/embedded-ldap.xml $WSO2IS_CONF/identity/embedded-ldap.xml
 cp $WSO2IS_CONF_SRC/oidc-scope-config.xml $WSO2IS_CONF/identity/oidc-scope-config.xml
 cp $WSO2IS_CONF_SRC/catalina-server.xml $WSO2IS_CONF/tomcat/catalina-server.xml
+cp $WSO2IS_CONF_SRC/master-datasources.xml $WSO2IS_CONF/datasources/master-datasources.xml
+cp $WSO2IS_CONF_SRC/wso2server.sh $WSO2IS_HOME/bin/wso2server.sh
+cp $WSO2IS_CONF_SRC/mysql_connector_java_*.jar $WSO2IS_HOME/repository/components/dropins/
+
+# Set up database for WSO2IS
+mysql -u root -p'y*MS2eb;&!&%p' < $WSO2IS_CONF_SRC/wso2is.sql
+mysql -u wso2 -p'zaq1!QAZxsw2@WSX' wso2is < $WSO2IS_HOME/dbscripts/mysql5.7.sql
+mysql -u wso2 -p'zaq1!QAZxsw2@WSX' wso2is < $WSO2IS_HOME/dbscripts/identity/mysql-5.7.sql
 
 # Copy customized web pages
 mkdir -p $WSO2IS_AUTH_ENDPOINT
