@@ -451,6 +451,7 @@
 			<!-- Proper attribute Id in your user store must be configured for this -->
 				<AttributeID>accountLock</AttributeID>
 				<Description>Account Locked</Description>
+				<SupportedByDefault />
 		    </Claim>
 			<Claim>
 				<ClaimURI>http://wso2.org/claims/identity/emailVerified</ClaimURI>

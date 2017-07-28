@@ -92,11 +92,12 @@ Vagrant.configure("2") do |config|
   # VM configurations
   config.vm.provider "virtualbox" do |vb|
     vb.gui = false
-    vb.memory = "2048"
+    vb.memory = "3096"
     vb.cpus = 2
   end
 
    config.vm.provision "shell", path: "scripts/install-prerequisites.sh"
+   config.vm.provision "shell", path: "scripts/mysql.sh"
    config.vm.provision "shell", path: "scripts/dcapi.sh"
    config.vm.provision "shell", path: "scripts/email-validator.sh"
    config.vm.provision "shell", path: "scripts/wso2is.sh"
