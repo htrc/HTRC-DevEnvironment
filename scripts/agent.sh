@@ -13,6 +13,8 @@ cp jwtfilter.conf /etc/htrc/agent
 
 # Create the log file location
 mkdir -p /var/log/htrc/agent
+chown -R tomcat:vagrant /var/log/htrc/agent
+chmod -R 660 /var/log/htrc/agent
 
 # Create job_results folder
 mkdir -p /var/lib/htrc/agent
