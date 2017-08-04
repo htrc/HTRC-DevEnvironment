@@ -16,8 +16,3 @@ mkdir -p /etc/htrc/dcapi
 cp sites.xml /etc/htrc/dcapi
 cp log4j.properties /etc/htrc/dcapi
 cp jwtfilter.conf /etc/htrc/dcapi
-
-# Create the log file location
-mkdir -p /var/log/htrc/dcapi
-chown -R tomcat:vagrant /var/log/htrc/dcapi
-chmod -R 660 /var/log/htrc/dcapi

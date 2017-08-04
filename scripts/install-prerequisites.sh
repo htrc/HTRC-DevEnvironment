@@ -51,6 +51,10 @@ systemctl enable tomcat
 systemctl enable mysqld
 systemctl enable nginx
 
+# Configure global logging for tomcat web apps
+cp /devenv_configurations/tomcat/tomcat.conf /etc/tomcat
+cp /devenv_configurations/tomcat/logback.xml /etc/tomcat
+
 updatedb
 
 

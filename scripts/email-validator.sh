@@ -14,8 +14,3 @@ mysql --user=root  --password="y*MS2eb;&!&%p" email_validator < /devenv_sources/
 # Copy configuration files to /etc/htrc/email-validator
 mkdir -p /etc/htrc/email-validator
 cp default.properties /etc/htrc/email-validator
-
-# Create the log file location
-mkdir -p /var/log/htrc/email-validator
-chown -R tomcat:vagrant /var/log/htrc/email-validator
-chmod -R 660 /var/log/htrc/email-validator

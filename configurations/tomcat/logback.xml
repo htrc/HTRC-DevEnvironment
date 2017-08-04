@@ -1,0 +1,11 @@
+<configuration debug="false">
+    <appender name="loggly" class="ch.qos.logback.classic.net.SyslogAppender">
+        <syslogHost>localhost</syslogHost>
+        <facility>SYSLOG</facility>
+        <port>514</port>
+        <suffixPattern>aget %d{ISO8601,UTC} %p %t %c %M - %m%n</suffixPattern>
+    </appender>
+   <root level="info">
+       <appender-ref ref="loggly" />
+   </root>
+</configuration>
