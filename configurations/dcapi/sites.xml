@@ -25,7 +25,7 @@
     <!--  -->
     <property>
 		    <name>sloan.ws.hosts</name>
-		    <value>smoketree.cs.indiana.edu</value>
+		    <value>oilpalm2.pti.indiana.edu</value>
     </property>
     <property>
 		    <name>sloan.ws.port.range.min</name>

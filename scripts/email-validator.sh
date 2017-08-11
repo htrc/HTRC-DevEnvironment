@@ -17,3 +17,5 @@ cp default.properties /etc/htrc/email-validator
 
 # Create the log file location
 mkdir -p /var/log/htrc/email-validator
+chown -R tomcat:vagrant /var/log/htrc/email-validator
+chmod -R 660 /var/log/htrc/email-validator

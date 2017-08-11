@@ -12,6 +12,8 @@ cp jwtfilter.conf /etc/htrc/rights
 
 # Create the log file location
 mkdir -p /var/log/htrc/rights
+chown -R tomcat:vagrant /var/log/htrc/rights
+chmod -R 660 /var/log/htrc/rights
 
 # Create data folder
 mkdir -p /var/lib/htrc/rights
