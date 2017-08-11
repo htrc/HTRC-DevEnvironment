@@ -60,7 +60,7 @@ Vagrant.configure("2") do |config|
     wso2is_zip = File.join(devenv_downloads_dir, WSO2IS_ZIP)
     unless File.exists?(wso2is_zip)
       info "Downloading #{WSO2IS_ZIP}..."
-      system "bash", "-c", "wget -O #{wso2is_zip} #{HTRC_FILES}/#{WSO2IS_ZIP}"
+      system "bash", "-c", "curl -L -o #{wso2is_zip} #{HTRC_FILES}/#{WSO2IS_ZIP}"
     end
 
     # Create a directory to hold HTRC git repos
