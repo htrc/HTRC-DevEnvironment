@@ -55,7 +55,7 @@ cat > /etc/systemd/system/wso2is.service <<EOF
 [Unit]
 Description=WSO2 Identity Server service
 Wants=syslog.target network.target
-After=syslog.target network.target
+After=syslog.target network.target mysqld.service
 
 [Service]
 WorkingDirectory=/usr/share/wso2is

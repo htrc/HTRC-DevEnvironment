@@ -46,6 +46,8 @@ yum -y install openssl-perl
 yum -y install libffi-devel
 yum -y install python-cffi
 
+pip install httpie
+
 systemctl daemon-reload
 systemctl enable tomcat
 systemctl enable mysqld
