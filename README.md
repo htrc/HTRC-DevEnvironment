@@ -15,7 +15,7 @@ Please follow the [Vagrant installation guide](https://www.vagrantup.com/docs/in
 
 ## Vagrant Host Manager
 
-Vagrant::Hostmanager can be found [here](https://github.com/devopsgroup-io/vagrant-hostmanager). Install hostupdater using following command:
+Vagrant::Hostmanager can be found [here](https://github.com/devopsgroup-io/vagrant-hostmanager). Install hostmanager plugin using the following command:
 
 ```
 $ vagrant plugin install vagrant-hostmanager
@@ -37,14 +37,6 @@ This plugin is used to perform some tasks before provisioning, after provisionin
 
 ```
 $ vagrant plugin install vagrant-triggers
-```
-
-## Wget
-
-If you are on Mac OS X you need to install Wget using Homebrew.
-
-```
-$ brew install wget
 ```
 
 # How To
