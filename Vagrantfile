@@ -14,6 +14,8 @@ EMAIL_SRC           = "Email-Validator"
 EMAIL_REPO          = "git@github.com:htrc/Email-Validator.git"
 ANALYTICS_SRC       = "Analytics-Gateway"
 ANALYTICS_REPO      = "git@github.com:htrc/Analytics-Gateway.git"
+DEVOPS_SRC          = "HTRC-DevOps"
+DEVOPS_REPO         = "git@github.com:htrc/HTRC-DevOps.git"
 DOWNLOADS_DIR       = ".devenv_downloads"
 WSO2IS_ZIP          = "wso2is-5.3.0.zip"
 USERMANAGER_ZIP     = "htrc-user-manager-2.1.0.zip"
@@ -44,7 +46,7 @@ Vagrant.configure("2") do |config|
     config.hostmanager.manage_host = true
     config.hostmanager.ignore_private_ip = false
     config.hostmanager.include_offline = true
-    config.hostmanager.aliases = ["devenv-is", "devenv-dc", "devenv-agent", "devenv-regx", "devenv-rights", "devenv-auth", "devenv-notls-dc", "devenv-notls-agent", "devenv-notls-regx", "devenv-notls-rights", "devenv-openldap", "devenv-email", "devenv-notls-email" ]
+    config.hostmanager.aliases = ["devenv-ag","devenv-is", "devenv-dc", "devenv-agent", "devenv-regx", "devenv-rights", "devenv-auth", "devenv-notls-dc", "devenv-notls-agent", "devenv-notls-regx", "devenv-notls-rights", "devenv-openldap", "devenv-email", "devenv-notls-email" ]
   else
     puts 'vagrant-hostmanager plugin required. To install simply run `vagrant plugin install vagrant-hostmanager`'
     abort
@@ -84,6 +86,7 @@ Vagrant.configure("2") do |config|
     clone_update_repo(resources_dir, LDAP_REPO, LDAP_SRC)
     clone_update_repo(resources_dir, CASS_REPO, CASS_SRC)
     clone_update_repo(resources_dir, ANALYTICS_REPO, ANALYTICS_SRC)
+    clone_update_repo(resources_dir, DEVOPS_REPO, DEVOPS_SRC)
   end
 
   config.trigger.after :destroy do

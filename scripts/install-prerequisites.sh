@@ -30,6 +30,17 @@ oldpass=$( grep 'temporary.*root@localhost' /var/log/mysqld.log |
 newpass="y*MS2eb;&!&%p"
 mysql  -h localhost -u root -p'y*MS2eb;&!&%p' -e 'exit' 2>/dev/null || mysqladmin -u root --password=${oldpass} password $newpass
 
+# Install sbt, NodeJS and npm packages
+
+echo 'Installing sbt'
+curl https://bintray.com/sbt/rpm/rpm | sudo tee /etc/yum.repos.d/bintray-sbt-rpm.repo
+yum -y install sbt
+
+echo 'Installing NodeJS'
+curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -
+yum -y install nodejs
+yum -y install gcc-c++ make
+
 yum -y install epel-release
 yum -y install redis
 yum -y install tomcat

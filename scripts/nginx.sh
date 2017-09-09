@@ -12,4 +12,5 @@ mkdir /etc/nginx/sites-enabled
 ln -s /etc/nginx/sites-available/is-notls.conf /etc/nginx/sites-enabled/is-notls.conf
 ln -s /etc/nginx/sites-available/email-notls.conf /etc/nginx/sites-enabled/email-notls.conf
 ln -s /etc/nginx/sites-available/regex-notls.conf /etc/nginx/sites-enabled/regex-notls.conf
+ln -s /etc/nginx/sites-available/ag.conf /etc/nginx/sites-enabled/ag.conf
 chown -R vagrant:root /etc/nginx
