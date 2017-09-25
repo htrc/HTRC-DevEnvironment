@@ -45,19 +45,21 @@ You should have sudo access in the host. If you don't have sudo access, please a
 
 Run ```vagrant up``` to create an instance of HTRC development environment locally and use ```vagrant ssh``` to log into the VM.
 
+You can go to portal in your browser with this url - https://devenv-ag/
+
 ## Setting Up Mutual TLS for Firefox
 
 * https://blog.codeship.com/how-to-set-up-mutual-tls-authentication/
-
 
 # CA and certs generation
 
 * https://jamielinux.com/docs/openssl-certificate-authority/create-the-root-pair.html
 
 ## Services Deployed in HTRC-DevEnvironment
-| Service name  | Deployed at  | Start Command inside the Dev-environment | Log file |
-|---|---|---|---|
-|wso2is - 5.3.0   | /usr/share/wso2is  | sudo systemctl start wso2is | /usr/share/wso2is/repository/logs/wso2carbon.log |
-|Registry Extension API   | /usr/share/wso2is/repository/deployment/server/webapps/  | sudo systemctl start wso2is | /usr/share/wso2is/repository/logs/wso2carbon.log |
-| DC API, Agent, Email-Validator  |/usr/share/tomcat   | sudo systemctl start tomcat | journalctl -u tomcat |
+| Service name | Access URL  | Deployed at  | Start Command inside the Dev-environment | Log file |
+|---|---|---|---|---|
+|wso2is - 5.3.0   | https://devenv-notls-is | /usr/share/wso2is  | sudo systemctl start wso2is | /usr/share/wso2is/repository/logs/wso2carbon.log |
+|Registry Extension API   | | /usr/share/wso2is/repository/deployment/server/webapps/  | sudo systemctl start wso2is | /usr/share/wso2is/repository/logs/wso2carbon.log |
+|Analytics Gateway| https://devenv-ag | /devenv_sources/Analytics-Gateway | sbt run (from the deploy folder) | /devenv_sources/Analytics-Gateway/logs/analytics-gateway.log |
+| DC API, Agent, Email-Validator  | | /usr/share/tomcat   | sudo systemctl start tomcat | journalctl -u tomcat |
 
