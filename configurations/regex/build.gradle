@@ -14,7 +14,7 @@ configurations {
 }
 
 dependencies {
-  regex "edu.illinois.i3.htrc.registry:ExtensionAPI:1.5.1"
+  regex "edu.illinois.i3.htrc.registry:ExtensionAPI:1.5.2"
 }
 
 task copyWar(type: Copy) {
