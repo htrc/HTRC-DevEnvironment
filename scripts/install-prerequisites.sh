@@ -67,6 +67,9 @@ systemctl enable nginx
 # For getting /usr/sbin/semanage
 yum -y install policycoreutils-python
 
+# To get vimdiff
+yum -y install vim-enhanced
+
 # Configure global logging for tomcat web apps
 cp /devenv_configurations/tomcat/tomcat.conf /etc/tomcat
 cp /devenv_configurations/tomcat/logback.xml /etc/tomcat
