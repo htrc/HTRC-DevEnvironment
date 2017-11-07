@@ -1,7 +1,7 @@
 #!/bin/sh -eux
 
 # Set up and install certificates
-cp -R /devenv_certs/ /etc/pki/CA
+rsync -av /devenv_certs/* /etc/pki/CA
 groupadd certs
 chgrp -R certs /etc/pki/CA
 
