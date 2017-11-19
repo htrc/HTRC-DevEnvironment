@@ -117,6 +117,7 @@ Vagrant.configure("2") do |config|
   end
 
    config.vm.provision "shell", path: "scripts/install-prerequisites.sh"
+   config.vm.provision "shell", path: "scripts/setup-certs.sh"
    config.vm.provision "shell", path: "scripts/mysql.sh"
    config.vm.provision "shell", path: "scripts/dcapi.sh"
    config.vm.provision "shell", path: "scripts/email-validator.sh"

@@ -1,10 +1,5 @@
 #!/bin/sh -eux
 
-# Set up and install certificates
-rsync -av /devenv_certs/* /etc/pki/CA
-groupadd certs
-chgrp -R certs /etc/pki/CA
-
 # Set SELinux to permissive mode (cannot be disabled without reboot)
 setenforce 0
 

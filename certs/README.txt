@@ -22,6 +22,7 @@ chgrp certs certs/newcert.cert.pem
 # Note: adjust the 'extensions', and 'days' as needed
 # -extensions server_cert generates a cert for use with a Web Server
 # -extensions usr_cert generates a cert for use as client authentication
+# -extensions client_cert generates a TLS client certificate
 
 # All done, the certificate is in certs/newcert.cert.pem and private key in private/newcert.key.pem
 
