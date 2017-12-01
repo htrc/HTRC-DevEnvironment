@@ -168,7 +168,7 @@ end
 
 def provision_mongodb(config)
   config.vm.provision "shell", inline: <<-SHELL
-    ansible-playbook /devenv_sources/#{DEVOPS_SRC}/configurations/metadata-service/mongodb.yml
+    ansible-playbook /devenv_configurations/metadata-service/mongodb.yml
   SHELL
 end
 
