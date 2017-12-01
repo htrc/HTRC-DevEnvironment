@@ -9,8 +9,8 @@ ln -s /etc/nginx/sites-available/idp.conf /etc/nginx/sites-enabled
 ln -s /etc/nginx/sites-available/email.conf /etc/nginx/sites-enabled
 ln -s /etc/nginx/sites-available/registry.conf /etc/nginx/sites-enabled
 ln -s /etc/nginx/sites-available/ag.conf /etc/nginx/sites-enabled
+ln -s /etc/nginx/sites-available/metadata.conf /etc/nginx/sites-enabled
 chown -R vagrant:root /etc/nginx
 
 # Give NGINX access to certificates in /etc/pki/CA
 usermod -a -G certs nginx
-

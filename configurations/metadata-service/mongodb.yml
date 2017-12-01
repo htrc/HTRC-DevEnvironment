@@ -1,0 +1,27 @@
+# Install MongoDB 3.4
+---
+- hosts: localhost
+  tasks:
+    - name: Add MongoDB repository
+      become: yes
+      yum_repository:
+        name: mongodb-org-3.4
+        description: MongoDB Repository
+        baseurl: https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.4/x86_64/
+        gpgkey: https://www.mongodb.org/static/pgp/server-3.4.asc
+        gpgcheck: yes
+
+    - name: Install MongoDB
+      become: yes
+      yum:
+        name: mongodb-org
+        state: present
+
+    - name: Start MongoDB
+      become: yes
+      service:
+        name: mongod
+        state: started
+
+    - name: Load the sample metadata collection
+      shell: mongorestore --drop --archive=/devenv_data/metadata-service/sample-metadata_mongodb.dump

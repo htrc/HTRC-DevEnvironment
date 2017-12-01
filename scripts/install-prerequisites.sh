@@ -34,7 +34,7 @@ mysql  -h localhost -u root -p'y*MS2eb;&!&%p' -e 'exit' 2>/dev/null || mysqladmi
 
 echo 'Installing sbt'
 curl https://bintray.com/sbt/rpm/rpm | sudo tee /etc/yum.repos.d/bintray-sbt-rpm.repo
-yum -y install sbt bc
+yum -y install sbt bc tmux
 
 echo 'Installing NodeJS'
 curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -
