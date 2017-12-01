@@ -11,6 +11,7 @@ chgrp -R certs /etc/pki/CA
 
 # Install trusted CA certificates into the proper system location
 cp /etc/pki/CA/certs/incommon_rsa.cert.pem /etc/pki/ca-trust/source/anchors/incommon_rsa.cert.pem
+cp /etc/pki/CA/certs/ca.cert.pem /etc/pki/ca-trust/source/anchors/htrc-ca.cert.pem
 
 # Update the system truststores (generates all certificates in /etc/pki/ca-trust/extracted)
 update-ca-trust extract
