@@ -121,7 +121,7 @@
     <!-- result download url prefix -->
     <property>
       	<name>result.download.prefix</name>
-		    <value>https://devenv-dc/download?randomid=</value>
+		    <value>https://dc-tls.vagrant.vm/download?randomid=</value>
     </property>
     <property>
     	<!-- -1 means never expire -->

@@ -27,7 +27,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.box_check_update = false
   config.vm.network "private_network", type: "dhcp"
-  config.vm.hostname = "devenv-notls-is"
+  config.vm.hostname = "idp.vagrant.vm"
 
   config.vm.synced_folder RESOURCE_DIR, "/devenv_sources"
   config.vm.synced_folder DOWNLOADS_DIR, "/devenv_downloads"
@@ -46,7 +46,7 @@ Vagrant.configure("2") do |config|
     config.hostmanager.manage_host = true
     config.hostmanager.ignore_private_ip = false
     config.hostmanager.include_offline = true
-    config.hostmanager.aliases = ["devenv-ag","devenv-is", "devenv-dc", "devenv-agent", "devenv-regx", "devenv-rights", "devenv-auth", "devenv-notls-dc", "devenv-notls-agent", "devenv-notls-regx", "devenv-notls-rights", "devenv-openldap", "devenv-email", "devenv-notls-email" ]
+    config.hostmanager.aliases = ["ag.vagrant.vm","idp.vagrant.vm", "dc.vagrant.vm", "agent.vagrant.vm", "registry.vagrant.vm", "rights.vagrant.vm", "email.vagrant.vm", "dc-tls.vagrant.vm", "agent-tls.vagrant.vm", "registry-tls.vagrant.vm", "rights-tls.vagrant.vm", "email-tls.vagrant.vm" ]
   else
     puts 'vagrant-hostmanager plugin required. To install simply run `vagrant plugin install vagrant-hostmanager`'
     abort
@@ -117,6 +117,7 @@ Vagrant.configure("2") do |config|
   end
 
    config.vm.provision "shell", path: "scripts/install-prerequisites.sh"
+   config.vm.provision "shell", path: "scripts/setup-certs.sh"
    config.vm.provision "shell", path: "scripts/mysql.sh"
    config.vm.provision "shell", path: "scripts/dcapi.sh"
    config.vm.provision "shell", path: "scripts/email-validator.sh"

@@ -1,18 +1,18 @@
 #!/bin/sh -eux
+
+# Set SELinux to permissive mode (cannot be disabled without reboot)
+setenforce 0
+
 yum -y install wget
 cd /tmp
 
 wget -nc -P /tmp/ --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.rpm"
 
-yum -y install /tmp/jdk-8u131-linux-x64.rpm
-
-rm /tmp/jdk-8u131-linux-x64.rpm
+yum -y install /tmp/jdk-8u131-linux-x64.rpm && rm /tmp/jdk-8u131-linux-x64.rpm
 
 wget -nc -P /tmp/ https://repo.mysql.com//mysql57-community-release-el7-9.noarch.rpm
 
-rpm -ivh /tmp/mysql57-community-release-el7-9.noarch.rpm
-
-rm /tmp/mysql57-community-release-el7-9.noarch.rpm
+rpm -ivh /tmp/mysql57-community-release-el7-9.noarch.rpm && rm /tmp/mysql57-community-release-el7-9.noarch.rpm
 
 yum -y install mysql-server
 
