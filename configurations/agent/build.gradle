@@ -14,12 +14,12 @@ configurations {
 }
 
 dependencies {
-  agent "edu.indiana.d2i.htrc:agent:3.2.6-SNAPSHOT"
+  agent "edu.indiana.d2i.htrc:agent:3.2.8-SNAPSHOT"
 }
 
 task copyWar(type: Copy) {
   from configurations.agent
   into "/usr/share/tomcat/webapps"
-  include('agent-3.2.6-SNAPSHOT.war')
-  rename ('agent-3.2.6-SNAPSHOT.war', 'agent.war')
+  include('agent-3.2.8-SNAPSHOT.war')
+  rename ('agent-3.2.8-SNAPSHOT.war', 'agent.war')
 }
