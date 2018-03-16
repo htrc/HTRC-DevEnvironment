@@ -40,6 +40,8 @@ echo 'Installing NodeJS'
 curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -
 yum -y install nodejs
 yum -y install gcc-c++ make
+# the below are needed to resolve npm install issues
+yum -y install cairo-devel libjpeg-devel giflib-devel
 
 yum -y install epel-release
 yum -y install redis
