@@ -7,11 +7,11 @@ keytool -import -trustcacerts -alias htrc-ca -file /devenv_certs/certs/ca.cert.p
 
 # Generate the distribution
 cd /devenv_sources/Analytics-Gateway/
-npm install webpack -g
-npm install webpack
-npm install webpack-cli -g
-npm install webpack-cli
+npm install -g webpack@2.7.0
+npm install -D webpack-cli@2.1.3
+rm -rf node_modules
 npm install
+
 cp -r /devenv_sources/HTRC-DevOps/configuration/vagrant-dev-env/ag/conf ./
 # sbt dist
 #
