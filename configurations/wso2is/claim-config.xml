@@ -19,6 +19,27 @@
 	<Dialects>
 		<Dialect dialectURI="http://wso2.org/claims">
 			<Claim>
+				<ClaimURI>http://wso2.org/claims/displayName</ClaimURI>
+				<DisplayName>Display Name</DisplayName>
+				<AttributeID>displayName</AttributeID>
+				<Description>Display Name</Description>
+				<SupportedByDefault />
+			</Claim>
+			<Claim>
+				<ClaimURI>http://wso2.org/claims/employeeType</ClaimURI>
+				<DisplayName>Position Or Role</DisplayName>
+				<AttributeID>employeeType</AttributeID>
+				<Description>Position Or Role</Description>
+				<SupportedByDefault />
+			</Claim>
+			<Claim>
+				<ClaimURI>http://wso2.org/claims/departmentNumber</ClaimURI>
+				<DisplayName>Department Or Affiliation</DisplayName>
+				<AttributeID>departmentNumber</AttributeID>
+				<Description>Department Or Affiliation</Description>
+				<SupportedByDefault />
+			</Claim>
+			<Claim>
 				<ClaimURI>http://wso2.org/claims/givenname</ClaimURI>
 				<DisplayName>First Name</DisplayName>
 				<AttributeID>givenName</AttributeID>
@@ -388,12 +409,12 @@
 				<AttributeID>postOfficeBox</AttributeID>
 				<Description>Temporary claim to invoke email ask Password feature</Description>
 			</Claim>
-			<Claim>
-				<ClaimURI>http://wso2.org/claims/identity/adminForcedPasswordReset</ClaimURI>
-				<DisplayName>Force Password Reset</DisplayName>
-				<AttributeID>departmentNumber</AttributeID>
-				<Description>Temporary claim to invoke email force password feature</Description>
-			</Claim>
+			<!--<Claim>-->
+				<!--<ClaimURI>http://wso2.org/claims/identity/adminForcedPasswordReset</ClaimURI>-->
+				<!--<DisplayName>Force Password Reset</DisplayName>-->
+				<!--<AttributeID>departmentNumber</AttributeID>-->
+				<!--<Description>Temporary claim to invoke email force password feature</Description>-->
+			<!--</Claim>-->
 			<Claim>
 				<ClaimURI>http://wso2.org/claims/entitlements</ClaimURI>
 				<DisplayName>Entitlements</DisplayName>
@@ -523,12 +544,6 @@
 			<!-- Proper attribute Id in your user store must be used configured for this -->
 				<AttributeID>secondChallenge</AttributeID>
 				<Description>Challenge Question2</Description>
-			</Claim>
-			<Claim>
-				<ClaimURI>http://wso2.org/claims/displayName</ClaimURI>
-				<DisplayName>Display Name</DisplayName>
-				<AttributeID>displayName</AttributeID>
-				<Description>Display Name</Description>
 			</Claim>
 			<Claim>
 				<ClaimURI>http://wso2.org/claims/active</ClaimURI>
