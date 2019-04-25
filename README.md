@@ -45,7 +45,7 @@ You should have sudo access in the host. If you don't have sudo access, please a
 
 Run ```vagrant up``` to create an instance of HTRC development environment locally and use ```vagrant ssh``` to log into the VM.
 
-You can go to portal in your browser with this url - https://devenv-ag/
+Run ```vagrant destroy``` to stop or destroy the VM.
 
 ## Setting Up Mutual TLS for Firefox
 
@@ -58,8 +58,8 @@ You can go to portal in your browser with this url - https://devenv-ag/
 ## Services Deployed in HTRC-DevEnvironment
 | Service name | Access URL  | Deployed at  | Start Command inside the Dev-environment | Log file |
 |---|---|---|---|---|
-|wso2is - 5.3.0   | https://devenv-notls-is | /usr/share/wso2is  | sudo systemctl start wso2is | /usr/share/wso2is/repository/logs/wso2carbon.log |
+|wso2is - 5.3.0   | https://idp.vagrant.vm | /usr/share/wso2is  | sudo systemctl start wso2is | /usr/share/wso2is/repository/logs/wso2carbon.log |
 |Registry Extension API   | | /usr/share/wso2is/repository/deployment/server/webapps/  | sudo systemctl start wso2is | /usr/share/wso2is/repository/logs/wso2carbon.log |
-|Analytics Gateway| https://devenv-ag | /devenv_sources/Analytics-Gateway | sbt run (from the deploy folder) | /devenv_sources/Analytics-Gateway/logs/analytics-gateway.log |
+|Analytics Gateway| https://ag.vagrant.vm | /devenv_sources/Analytics-Gateway | sbt run (from the deploy folder) | /devenv_sources/Analytics-Gateway/logs/analytics-gateway.log |
 | DC API, Agent, Email-Validator  | | /usr/share/tomcat   | sudo systemctl start tomcat | journalctl -u tomcat |
 
