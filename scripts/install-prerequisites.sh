@@ -82,7 +82,7 @@ updatedb
 downloadLatestVersion ()
 {
   sleep 5s
-  wget -cN http://services.gradle.org/distributions/gradle-3.4.1-all.zip
+  wget -cN https://services.gradle.org/distributions/gradle-3.4.1-all.zip
   sleep 5s
   unzip -od /opt/gradle gradle-3.4.1-all.zip
   sleep 5s

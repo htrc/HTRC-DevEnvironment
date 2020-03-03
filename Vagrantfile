@@ -135,7 +135,7 @@ Vagrant.configure("2") do |config|
    provision_ansible(config)
    provision_ldap(config)
    provision_mongodb(config)
-   config.vm.provision "shell", path: "scripts/metadata-service.sh"
+   #config.vm.provision "shell", path: "scripts/metadata-service.sh"
    config.vm.provision "shell", path: "scripts/start-services.sh"
 
    if PROVISION_CASSANDRA
